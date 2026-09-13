@@ -4,48 +4,48 @@ import type { ProjectItem } from "@/lib/data";
 
 export default function ProjectCard({ project }: { project: ProjectItem }) {
   return (
-    <div className="flex w-full flex-col items-center border-b border-neutral-300 px-[80px] py-[64px]">
-      <div className="flex w-[927px] flex-col gap-[32px]">
+    <div className="flex w-full flex-col items-center border-b border-neutral-300 px-[16px] py-[32px] md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
+      <div className="flex w-full max-w-[927px] flex-col gap-[20px] lg:gap-[32px]">
         {/* Showcase */}
-        <div className="relative h-[390px] w-[927px] overflow-hidden border border-[rgba(213,232,255,0.49)] bg-gradient-to-b from-slate-100 to-blue-100">
+        <div className="relative h-[160px] w-full overflow-hidden border border-[rgba(213,232,255,0.49)] bg-gradient-to-b from-slate-100 to-blue-100 md:h-[270px] lg:h-[390px]">
           <img
             src={A.ornament}
             alt=""
             aria-hidden
-            className="absolute left-[-1px] top-[-1px] h-[282px] w-[257px] max-w-none"
+            className="absolute left-[-1px] top-[-1px] hidden h-[282px] w-[257px] max-w-none md:block"
           />
           <img
             src={A.ornament}
             alt=""
             aria-hidden
-            className="absolute left-[669px] top-[107px] h-[282px] w-[257px] max-w-none"
+            className="absolute left-[669px] top-[107px] hidden h-[282px] w-[257px] max-w-none lg:block"
           />
-          <div className="absolute inset-0 flex items-center justify-between px-[40px] py-[16px]">
+          <div className="absolute inset-0 flex items-center justify-between px-[10px] py-[10px] md:px-[24px] lg:px-[40px] lg:py-[16px]">
             {project.shots.map((shot, i) => (
               <img
                 key={i}
                 src={shot}
                 alt=""
                 aria-hidden
-                className="h-[312px] w-[144px] rounded-[8px] border-5 border-neutral-800 object-cover"
+                className="h-[120px] w-[56px] rounded-[4px] border-2 border-neutral-800 object-cover md:h-[215px] md:w-[100px] lg:h-[312px] lg:w-[144px] lg:rounded-[8px] lg:border-5"
               />
             ))}
           </div>
         </div>
 
         {/* Teks */}
-        <div className="flex w-full flex-col gap-[16px]">
-          <h3 className="text-[32px] leading-[36px] font-medium text-neutral-800">
+        <div className="flex w-full flex-col gap-[8px] lg:gap-[16px]">
+          <h3 className="text-[18px] font-medium leading-[26px] text-neutral-800 md:text-[24px] md:leading-[32px] lg:text-[32px] lg:leading-[36px]">
             {project.title}
           </h3>
-          <p className="text-[24px] leading-[36px] text-neutral-500">
+          <p className="text-[14px] leading-[22px] text-neutral-500 md:text-[18px] md:leading-[28px] lg:text-[24px] lg:leading-[36px]">
             {project.summary}
           </p>
         </div>
 
         <Link
           href={`/portfolio/${project.slug}`}
-          className="flex w-full items-center justify-center border border-neutral-200 bg-neutral-600 px-[32px] py-[24px] text-[24px] font-medium text-neutral-100"
+          className="flex w-full items-center justify-center border border-neutral-200 bg-neutral-600 px-[20px] py-[12px] text-[15px] font-medium text-neutral-100 transition-colors hover:bg-neutral-800 md:py-[18px] md:text-[19px] lg:px-[32px] lg:py-[24px] lg:text-[24px]"
         >
           View Case Study
         </Link>

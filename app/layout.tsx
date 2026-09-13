@@ -16,10 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={GeistSans.variable}>
-      <body className="font-sans text-neutral-800">
+      <body className="bg-white font-sans text-neutral-800">
         <SiteBackground />
-        <div className="relative z-10 flex justify-center px-[175px] max-[1440px]:px-0">
-          <div className="flex w-[1089px] max-w-full flex-col items-start border-l border-r border-neutral-300 bg-white">
+        <div className="relative z-10 flex justify-center px-0 min-[1440px]:px-[175px]">
+          <div className="flex w-full max-w-[1089px] flex-col items-start border-l border-r border-neutral-300 bg-white">
             {children}
           </div>
         </div>
