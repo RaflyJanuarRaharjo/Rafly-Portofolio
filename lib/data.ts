@@ -3,7 +3,11 @@ import { A } from "./assets";
 export const profile = {
   name: "Rafly Januar Raharjo",
   role: "UI / UX Designer",
-  bio: "As a UI/UX Designer Intern at Alfagift, I contribute to creating user-centered design solutions by leveraging skills in UX research, Figma, and design systems.",
+  bio: [
+    "As a UI/UX Designer Intern at Alfagift, I contribute to creating user-centered design solutions for digital products by applying UX research, Figma, and design system principles. I work closely with stakeholders to understand user needs, identify usability issues, and translate insights into intuitive and scalable interface solutions.",
+    "My responsibilities include conducting user research and needs analysis, mapping user flows, creating wireframes and interactive prototypes, developing high-fidelity UI designs, and providing redesign recommendations based on identified pain points. I also contribute to improving information architecture, navigation, and overall user experience to support more efficient operational workflows.",
+    "Through an iterative, user-centered approach, I help bridge user needs and business requirements while maintaining consistency, usability, and visual quality across the product experience.",
+  ],
 };
 
 export type ExperienceItem = {
