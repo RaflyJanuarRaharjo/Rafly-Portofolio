@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capture Fun Moments — Photo Booth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Rethink+Sans:wght@300;400;500;600;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --neutral-50:#fafafa;
+    --neutral-100:#f5f5f5;
+    --neutral-200:#e5e5e5;
+    --neutral-400:#a3a3a3;
+    --neutral-600:#525252;
+    --neutral-700:#404040;
+    --neutral-800:#262626;
+    --neutral-900:#171717;
+    --neutral-950:#0a0a0a;
+    --blue-100:#dbeafe;
+    --white:#ffffff;
+    --black:#000000;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family:'Rethink Sans', sans-serif;
+    color:var(--neutral-900);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  .display{
+    font-family:'IM Fell French Canon', serif;
+    font-weight:400;
+  }
+
+  .container{
+    max-width:1440px;
+    margin:0 auto;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar-wrap{
+    position:sticky;
+    top:24px;
+    z-index:100;
+    display:flex;
+    justify-content:center;
+    margin-bottom:-90px;
+  }
+
+  .navbar{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:8px;
+    border:1px solid var(--white);
+    border-radius:8px;
+    background:linear-gradient(90deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.55) 100%);
+    backdrop-filter:blur(30px);
+    box-shadow:0 0 4px rgba(0,0,0,0.25), inset 0 4px 4px rgba(255,255,255,0.25);
+  }
+
+  .navbar img.logo{
+    width:40px;
+    height:40px;
+    border-radius:4px;
+    border:1px solid var(--neutral-100);
+    object-fit:cover;
+  }
+
+  .navbar .links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:-0.16px;
+  }
+
+  .navbar .links a{
+    color:var(--neutral-600);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+
+  .navbar .links a.active{
+    color:var(--neutral-950);
+  }
+
+  .navbar .cta-btn{
+    background:var(--black);
+    color:var(--white);
+    border:none;
+    border-radius:8px;
+    padding:10px 24px;
+    font-family:'Rethink Sans', sans-serif;
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:-0.16px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    width:100%;
+    min-height:1024px;
+    overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 50% 0%, #fdf6ee 0%, #f3e7d8 45%, #e9d9c4 100%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero-glow{
+    position:absolute;
+    top:-30%;
+    left:50%;
+    transform:translateX(-50%);
+    width:1400px;
+    height:1400px;
+    background:radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%);
+    mix-blend-mode:screen;
+    pointer-events:none;
+  }
+
+  .hero-content{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:88px;
+    padding:32px 32px 0;
+    padding-top:120px;
+    width:100%;
+    max-width:1440px;
+  }
+
+  .hero-text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:32px;
+    text-align:center;
+  }
+
+  .hero-headline{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    align-items:center;
+  }
+
+  .hero-headline h1{
+    font-size:56px;
+    line-height:72px;
+    letter-spacing:-0.5px;
+    color:var(--black);
+    font-weight:400;
+  }
+
+  .hero-headline h1 .regular{
+    font-family:'Rethink Sans', sans-serif;
+    font-weight:400;
+  }
+
+  .hero-headline h1 .italic{
+    font-family:'IM Fell French Canon', serif;
+    font-style:italic;
+  }
+
+  .hero-sub{
+    font-size:16px;
+    line-height:24px;
+    font-weight:500;
+    color:var(--neutral-800);
+    max-width:820px;
+  }
+
+  .hero-actions{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .btn{
+    height:57px;
+    padding:10px 32px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:400;
+    letter-spacing:-0.18px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    text-decoration:none;
+    border:none;
+  }
+
+  .btn-ghost{
+    background:var(--white);
+    border:1px solid var(--neutral-200);
+    color:var(--neutral-950);
+  }
+
+  .btn-dark{
+    background:linear-gradient(90deg, var(--black) 0%, var(--neutral-800) 50%, #131313 100%);
+    color:var(--neutral-50);
+    font-weight:500;
+    border:1px solid var(--blue-100);
+    box-shadow:inset 0 4px 4px rgba(255,255,255,0.25);
+  }
+
+  .hero-mock{
+    position:relative;
+    z-index:2;
+    width:min(90%, 900px);
+    aspect-ratio:16/9.2;
+    margin-top:24px;
+    border-radius:16px;
+    background:linear-gradient(160deg,#ffffff 0%, #f1e8dc 100%);
+    box-shadow:0 30px 80px rgba(0,0,0,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--neutral-400);
+    font-size:14px;
+  }
+
+  /* ===== FEATURES ===== */
+  .features{
+    background:var(--neutral-50);
+    padding:72px 80px;
+    display:flex;
+    flex-direction:column;
+    gap:64px;
+    align-items:center;
+  }
+
+  .section-heading{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    width:100%;
+    gap:32px;
+    flex-wrap:wrap;
+  }
+
+  .section-heading h2{
+    font-size:48px;
+    line-height:66px;
+    letter-spacing:-2px;
+    color:var(--neutral-950);
+    font-weight:400;
+    max-width:620px;
+  }
+
+  .section-heading p{
+    font-weight:300;
+    font-size:20px;
+    line-height:24px;
+    color:var(--neutral-400);
+    max-width:500px;
+  }
+
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:24px;
+    width:100%;
+  }
+
+  .feature-grid .wide{ grid-column:span 2; }
+
+  .feature-card{
+    background:var(--neutral-50);
+    filter:drop-shadow(0 0 1px rgba(0,0,0,0.1));
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    padding:24px;
+  }
+
+  .feature-card .thumb{
+    background:#fafafa;
+    border:1px solid var(--neutral-200);
+    border-radius:8px;
+    height:293px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--neutral-400);
+    font-size:13px;
+  }
+
+  .feature-card h3{
+    font-family:'Rethink Sans', sans-serif;
+    font-weight:500;
+    font-size:24px;
+    letter-spacing:-0.15px;
+    color:var(--black);
+  }
+
+  .feature-card p{
+    font-size:16px;
+    line-height:22px;
+    letter-spacing:-0.18px;
+    color:var(--neutral-600);
+  }
+
+  /* ===== HOW IT WORKS ===== */
+  .how{
+    background:var(--white);
+    padding:72px 80px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:64px;
+  }
+
+  .how-card{
+    width:100%;
+    max-width:1280px;
+    display:flex;
+    gap:33px;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    border:1px solid var(--neutral-200);
+    filter:drop-shadow(0 0 2px var(--neutral-200));
+    background:var(--white);
+  }
+
+  .how-visual{
+    flex:1 1 60%;
+    min-height:480px;
+    border-radius:8px;
+    background:linear-gradient(150deg,#efe3d5,#fbf8f3);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--neutral-400);
+    font-size:14px;
+    overflow:hidden;
+  }
+
+  .how-steps{
+    flex:1 1 40%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:24px;
+    gap:8px;
+  }
+
+  .how-step{
+    width:100%;
+    background:none;
+    border:none;
+    border-bottom:1px solid var(--neutral-200);
+    padding:16px 0;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    cursor:pointer;
+    text-align:left;
+    font-family:inherit;
+  }
+
+  .how-step:last-child{ border-bottom:none; }
+
+  .how-step-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding:10px;
+  }
+
+  .how-step-left{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+
+  .how-step-icon{
+    width:24px;
+    height:24px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--neutral-800);
+  }
+
+  .how-step-title{
+    font-family:'IM Fell French Canon', serif;
+    font-size:20px;
+    letter-spacing:-0.16px;
+    color:var(--neutral-800);
+  }
+
+  .how-step-arrow{
+    width:20px;
+    height:20px;
+    flex-shrink:0;
+    transition:transform 0.25s ease;
+    color:var(--neutral-600);
+  }
+
+  .how-step.open .how-step-arrow{ transform:rotate(180deg); }
+  .how-step:not(.open){ opacity:0.8; }
+  .how-step:not(.open) .how-step-arrow{ transform:rotate(180deg); }
+  .how-step.open .how-step-arrow{ transform:rotate(0deg); }
+
+  .how-step-desc{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.3s ease;
+    padding-left:58px;
+    padding-right:10px;
+  }
+
+  .how-step.open .how-step-desc{
+    max-height:120px;
+  }
+
+  .how-step-desc p{
+    font-size:12px;
+    line-height:20px;
+    letter-spacing:-0.16px;
+    color:var(--neutral-600);
+    padding-bottom:6px;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-section{
+    background:var(--white);
+    padding:72px 80px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .faq-inner{
+    width:100%;
+    max-width:1280px;
+    display:flex;
+    flex-direction:column;
+    gap:69px;
+  }
+
+  .faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+  }
+
+  .faq-item{
+    width:100%;
+    border-radius:8px;
+    border:1px solid var(--neutral-100);
+    background:var(--white);
+    padding:32px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    cursor:pointer;
+  }
+
+  .faq-item.featured{
+    border:none;
+    color:var(--neutral-50);
+    background:linear-gradient(120deg,#3a3a3a,#101010);
+  }
+
+  .faq-item p{
+    font-family:'Rethink Sans', sans-serif;
+    font-weight:500;
+    font-size:20px;
+    line-height:24px;
+    color:var(--neutral-600);
+  }
+
+  .faq-item.featured p{
+    color:var(--neutral-50);
+  }
+
+  .faq-item svg{
+    flex-shrink:0;
+    width:24px;
+    height:24px;
+    transition:transform 0.2s ease;
+  }
+
+  .faq-item.featured svg{ transform:rotate(180deg); }
+
+  /* ===== CTA ===== */
+  .cta{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:471px;
+    padding:40px 76px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#151515,#2b2b2b 60%,#3f3f3f);
+  }
+
+  .cta::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.3);
+  }
+
+  .cta-content{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:24px;
+  }
+
+  .cta-content h2{
+    font-family:'Manrope', sans-serif;
+    font-weight:600;
+    font-size:64px;
+    line-height:69.12px;
+    letter-spacing:-2.016px;
+    color:var(--white);
+    text-align:center;
+  }
+
+  .cta .btn-ghost{
+    font-weight:400;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--white);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:0 80px;
+  }
+
+  .footer-inner{
+    width:100%;
+    max-width:1280px;
+  }
+
+  .footer-line{
+    height:1px;
+    width:100%;
+    background:rgba(188,188,188,0.8);
+  }
+
+  .footer-wrapper{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    padding:80px 0 64px;
+    flex-wrap:wrap;
+    gap:40px;
+  }
+
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+
+  .footer-brand img{
+    width:64px;
+    height:64px;
+    border-radius:4px;
+    border:1px solid var(--neutral-100);
+    object-fit:cover;
+  }
+
+  .footer-brand span{
+    font-family:'Rethink Sans', sans-serif;
+    font-weight:600;
+    font-size:24px;
+    letter-spacing:-0.15px;
+    background:linear-gradient(90deg,var(--neutral-700),var(--neutral-900));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .footer-links{
+    display:flex;
+    gap:80px;
+    font-family:'Manrope', sans-serif;
+    font-size:15px;
+    color:var(--neutral-800);
+    flex-wrap:wrap;
+  }
+
+  .footer-links .col{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .footer-links a{
+    color:inherit;
+    text-decoration:none;
+    line-height:1.6;
+  }
+
+  .footer-bottom{
+    padding:49px 24px 40px;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    font-family:'Manrope', sans-serif;
+    color:var(--neutral-700);
+  }
+
+  .footer-bottom .copy{
+    font-size:11px;
+    line-height:24px;
+  }
+
+  .footer-bottom .disclaimer{
+    font-size:12px;
+    letter-spacing:0.105px;
+    line-height:1.6;
+    max-width:1280px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:1100px){
+    .feature-grid{ grid-template-columns:repeat(2, 1fr); }
+    .feature-grid .wide{ grid-column:span 2; }
+    .how-card{ flex-direction:column; }
+    .footer-links{ gap:40px; }
+  }
+
+  @media (max-width:720px){
+    .hero-content{ padding-top:110px; }
+    .hero-headline h1{ font-size:36px; line-height:44px; }
+    .features, .how, .faq-section{ padding:56px 20px; }
+    .section-heading{ flex-direction:column; align-items:flex-start; }
+    .section-heading h2{ font-size:32px; line-height:40px; }
+    .feature-grid{ grid-template-columns:1fr; }
+    .feature-grid .wide{ grid-column:span 1; }
+    .faq-item{ padding:24px 20px; }
+    .faq-item p{ font-size:16px; }
+    .cta-content h2{ font-size:38px; line-height:44px; }
+    .navbar .links{ display:none; }
+    footer{ padding:0 20px; }
+    .footer-wrapper{ padding:56px 0 40px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="navbar-wrap">
+    <nav class="navbar">
+      <img class="logo" src="https://www.figma.com/api/mcp/asset/aff93d44-d29c-44e2-8138-9774a7b65034" alt="Logo">
+      <div class="links">
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" class="active">Sign In</a>
+      </div>
+      <button class="cta-btn">Start</button>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div style="height:56px;"></div>
+      <div class="hero-text">
+        <div class="hero-headline">
+          <h1>
+            <span class="regular">Capture Fun Moments</span><br>
+            <span class="italic">Together, Anytime, Anywhere</span>
+          </h1>
+        </div>
+        <p class="hero-sub">Create beautiful photo strips directly from your browser. No downloads, no complicated setup — just open, smile, and capture memories.</p>
+        <div class="hero-actions">
+          <a href="#how" class="btn btn-ghost">See How It Works</a>
+          <a href="#" class="btn btn-dark">Start Capture</a>
+        </div>
+      </div>
+      <div class="hero-mock">Preview aplikasi photobooth</div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="section-heading">
+      <h2 class="display">Everything You Need for the Perfect Photo Booth Experience.</h2>
+      <p>Create, customize, and share memorable moments with a complete set of tools designed to make every photo fun, effortless, and unforgettable.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card wide">
+        <div class="thumb">Instant camera preview</div>
+        <h3>Instant Camera</h3>
+        <p>Take photos directly from your browser camera in real time — no app or downloads needed.</p>
+      </div>
+      <div class="feature-card wide">
+        <div class="thumb">Custom frame gallery</div>
+        <h3>Custom Frames</h3>
+        <p>Choose from a range of frame designs, or personalize your own to match the mood of your event.</p>
+      </div>
+      <div class="feature-card">
+        <div class="thumb">Filter preview</div>
+        <h3>Filters & Effects</h3>
+        <p>Apply fun filters before saving your photos.</p>
+      </div>
+      <div class="feature-card">
+        <div class="thumb">Multi-device mockup</div>
+        <h3>Works on Any Device</h3>
+        <p>Compatible with desktop, tablet, and mobile.</p>
+      </div>
+      <div class="feature-card">
+        <div class="thumb">Download & share icon</div>
+        <h3>Easy Download & Share</h3>
+        <p>Save your photo strips in seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="section-heading">
+      <h2 class="display">From Camera to Memories in Four Simple Steps.</h2>
+      <p>Getting started takes only a few moments. Create your booth, capture photos, personalize every shot, and share memories with everyone.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-visual" id="howVisual">Choose Your Experience</div>
+      <div class="how-steps" id="howSteps">
+        <button class="how-step open" data-visual="Choose Your Experience">
+          <div class="how-step-row">
+            <div class="how-step-left">
+              <span class="how-step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+              <span class="how-step-title">Choose Your Experience</span>
+            </div>
+            <span class="how-step-arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 12l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="how-step-desc">
+            <p>Select the photo booth experience that fits your event. Join instantly from your browser or use an on-site booth for in-person celebrations.</p>
+          </div>
+        </button>
+
+        <button class="how-step" data-visual="Strike a Pose">
+          <div class="how-step-row">
+            <div class="how-step-left">
+              <span class="how-step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13.5" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 7l1.5-2.5h5L16 7" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+              <span class="how-step-title">Strike a Pose</span>
+            </div>
+            <span class="how-step-arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 12l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="how-step-desc">
+            <p>Smile for the camera. Countdown, capture, and preview each shot instantly before moving on.</p>
+          </div>
+        </button>
+
+        <button class="how-step" data-visual="Personalize Your Frame">
+          <div class="how-step-row">
+            <div class="how-step-left">
+              <span class="how-step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+              <span class="how-step-title">Personalize Your Frame</span>
+            </div>
+            <span class="how-step-arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 12l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="how-step-desc">
+            <p>Pick a frame style, add stickers, filters, and text to make your photo strip one of a kind.</p>
+          </div>
+        </button>
+
+        <button class="how-step" data-visual="Download & Share">
+          <div class="how-step-row">
+            <div class="how-step-left">
+              <span class="how-step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 15v3a2 2 0 002 2h12a2 2 0 002-2v-3" stroke="currentColor" stroke-width="1.5"/><path d="M12 3v11m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="how-step-title">Download & Share</span>
+            </div>
+            <span class="how-step-arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 12l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="how-step-desc">
+            <p>Download your photo strip instantly or share it directly to social media and friends.</p>
+          </div>
+        </button>
+
+        <button class="how-step" data-visual="Order Custom Frame">
+          <div class="how-step-row">
+            <div class="how-step-left">
+              <span class="how-step-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="7" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+              <span class="how-step-title">Order Custom Frame</span>
+            </div>
+            <span class="how-step-arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 12l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="how-step-desc">
+            <p>Want a physical keepsake? Order a printed custom frame delivered to your door.</p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <div class="faq-inner">
+      <div class="section-heading">
+        <h2 class="display">Frequently Asked Questions</h2>
+        <p>Everything you need to know about our photo booth. Can't find the answer you're looking for? Our support team is here to help.</p>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item featured">
+          <p>Our photo booth works seamlessly on desktop, tablet, and mobile — right from your browser, with no downloads required.</p>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-item">
+          <p>How many photos can I take per session?</p>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-item">
+          <p>Can I share my photo strips with my team or guests?</p>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-item">
+          <p>Are my photos stored securely?</p>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="faq-item">
+          <p>Can I try the photo booth for free?</p>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-content">
+      <h2>Let's make something<br>great together.</h2>
+      <a href="#" class="btn btn-ghost">Contact Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-line"></div>
+      <div class="footer-wrapper">
+        <div class="footer-brand">
+          <img src="https://www.figma.com/api/mcp/asset/aff93d44-d29c-44e2-8138-9774a7b65034" alt="Logo">
+          <span>Photobox</span>
+        </div>
+        <div class="footer-links">
+          <div class="col">
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="col">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+          </div>
+          <div class="col">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Copyright © 2026</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copy">Copyright © 2026 Photobox. All rights reserved.</p>
+      <p class="disclaimer">This product focuses on giving people an effortless way to capture and share photo booth memories from any browser. It includes tools for instant capture, custom frames, filters, and one-click sharing so every moment is easy to save and celebrate.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Accordion "How It Works"
+    const steps = document.querySelectorAll('.how-step');
+    const visual = document.getElementById('howVisual');
+
+    steps.forEach(step => {
+      step.addEventListener('click', () => {
+        steps.forEach(s => s.classList.remove('open'));
+        step.classList.add('open');
+        visual.textContent = step.dataset.visual;
+      });
+    });
+
+    // FAQ accordion (single-select visual highlight, like design's featured item)
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        faqItems.forEach(i => i.classList.remove('featured'));
+        item.classList.add('featured');
+      });
+    });
+  </script>
+
+</body>
+</html>
