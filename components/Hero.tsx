@@ -35,7 +35,7 @@ export default function Hero() {
                 <img src={A.badgeX} alt="" aria-hidden className="size-[32px]" />
               </span>
             </div>
-            <div className="flex items-center justify-center px-[8px]">
+            <div className="flex items-center justify-start px-[8px]">
               <p className="text-[24px] whitespace-nowrap text-neutral-600">
                 {profile.role}
               </p>
