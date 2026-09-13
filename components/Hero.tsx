@@ -6,7 +6,17 @@ export default function Hero() {
     <header className="flex w-full flex-col items-center justify-center gap-[40px] pb-[32px]">
       <div className="flex w-full flex-col">
         {/* Cover */}
-        <div className="mb-[-104px] h-[290px] w-full overflow-hidden bg-neutral-200" />
+        <div className="mb-[-104px] h-[290px] w-full overflow-hidden bg-neutral-200">
+  <video
+    src="/assets/cover.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    aria-hidden
+    className="h-full w-full object-cover"
+  />
+</div>
 
         <div className="flex h-[214px] w-full items-end gap-[32px] pl-[80px] pr-[120px]">
           <img
