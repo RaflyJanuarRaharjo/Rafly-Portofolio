@@ -94,26 +94,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 
 /* ── Nav ────────────────────────────────────────────────────────── */
+/* Only the active item reveals its label + 5px underline (Figma: Navigasi variants). */
 .nav{
   display:flex;align-items:center;justify-content:space-between;
   height:97px;padding:0 var(--gutter);background:#fff;
 }
 .nav a{
-  display:flex;align-items:center;gap:16px;height:97px;justify-content:center;
+  display:flex;align-items:center;justify-content:center;height:97px;
   border-bottom:5px solid transparent;color:var(--neutral-600);
   transition:border-color .15s ease,opacity .15s ease;
 }
 .nav a:hover{opacity:.65}
-.nav a.is-active{border-bottom-color:var(--neutral-500)}
-.nav a span{font-size:var(--t-md);line-height:36px}
+.nav a.is-active{gap:16px;border-bottom-color:var(--neutral-500)}
+.nav a span{display:none;font-size:var(--t-md);line-height:36px;white-space:nowrap}
+.nav a.is-active span{display:block}
 .nav img{width:40px;height:40px}
 .nav img.doc{width:37px;height:37px}
 .nav img.work{width:41px;height:40px}
 @media (max-width:640px){
   .nav{height:76px}
   .nav a{height:76px}
-  .nav a span{display:none}
+  .nav a.is-active{gap:10px}
   .nav img,.nav img.doc,.nav img.work{width:28px;height:28px}
+}
+@media (max-width:440px){
+  .nav a.is-active span{display:none}
 }
 
 /* ── Section header ─────────────────────────────────────────────── */
