@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import SiteBackground from "@/components/SiteBackground";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,8 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={GeistSans.variable}>
-      <body className="bg-white font-sans text-neutral-800">
-        <div className="flex justify-center px-[175px] max-[1440px]:px-0">
+      <body className="font-sans text-neutral-800">
+        <SiteBackground />
+        <div className="relative z-10 flex justify-center px-[175px] max-[1440px]:px-0">
           <div className="flex w-[1089px] max-w-full flex-col items-start border-l border-r border-neutral-300 bg-white">
             {children}
           </div>
