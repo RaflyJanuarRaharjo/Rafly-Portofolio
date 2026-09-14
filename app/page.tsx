@@ -5,6 +5,7 @@ import SectionHeader from "@/components/SectionHeader";
 import Row from "@/components/Row";
 import ProjectCard from "@/components/ProjectCard";
 import BlogRow from "@/components/BlogRow";
+import CtaBanner from "@/components/CtaBanner";
 import { awards, counts, experiences, posts, projects } from "@/lib/data";
 
 export default function HomePage() {
@@ -37,7 +38,9 @@ export default function HomePage() {
       <SectionHeader title="Blog" seeAllHref="/blog" />
       <Stripe />
       <BlogRow items={posts} />
+
       <Stripe />
+      <CtaBanner />
     </>
   );
 }

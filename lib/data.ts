@@ -10,20 +10,77 @@ export const profile = {
   ],
 };
 
+export const cta = {
+  headline: "Designing digital products people actually understand.",
+  tagline:
+    "UX research, interface design, and design systems for real operational workflows.",
+  label: "Get in touch",
+  href: "mailto:januarrafly641@gmail.com",
+};
+
 export type ExperienceItem = {
   title: string;
   org: string;
   year: string;
   logo: string;
+  bullets?: string[];
+  images?: string[];
 };
 
 export const experiences: ExperienceItem[] = [
-  { title: "UI / UX Designer", org: "GLI ( Alfagift ) - Internship", year: "2026", logo: A.logoAlfagift },
-  { title: "Resident Lab Assistant", org: "Universitas Brawijaya", year: "2026", logo: A.logoBrawijaya },
-  { title: "Research Member", org: "Universitas Bina Nusantara", year: "2026", logo: A.logoBinus },
+  {
+    title: "UI / UX Designer",
+    org: "GLI ( Alfagift ) - Internship",
+    year: "2026",
+    logo: A.logoAlfagift,
+    bullets: [
+      "Conducted UX research and user observation to identify pain points across rider, warehouse, and delivery workflows.",
+      "Designed UI/UX solutions using Figma, from wireframe to high-fidelity prototype.",
+      "Improved rider & warehouse workflows for better efficiency and usability.",
+      "Collaborated with cross-functional teams to deliver user-centered solutions.",
+      "Redesigned and optimized operational interfaces to improve task efficiency, status visibility, and navigation clarity.",
+      "Built structured design system for development handoff.",
+      "Evaluated existing UX patterns and proposed improvements based on user.",
+    ],
+  },
+  {
+    title: "Resident Lab Assistant",
+    org: "Universitas Brawijaya",
+    year: "2026",
+    logo: A.logoBrawijaya,
+    bullets: [
+      "Led end to end UI/UX design process for web platform project.",
+      "Conducted user flow mapping and wireframing based on business requirements.",
+      "Designed responsive web layouts for desktop and mobile.",
+      "Created high-fidelity prototypes for stakeholder validation.",
+      "Applied usability principles and accessibility standards.",
+      "Built structured design system for development handoff.",
+      "Collaborated with developers to ensure accurate implementation.",
+    ],
+  },
+  {
+    title: "Research Member",
+    org: "Universitas Bina Nusantara",
+    year: "2026",
+    logo: A.logoBinus,
+    bullets: [
+      "Contributed to UI/UX research and information architecture development for the MayanganSiaga early warning system website.",
+      "Assisted in designing user-centered interface structures to improve information readability and public response clarity.",
+      "Conducted wireframing, interface exploration, and usability-focused design planning for emergency information delivery.",
+      "Collaborated with research teams under the Visual Communication Design study program to support digital ecosystem initiatives.",
+      "Supported the development of responsive and accessible web interface concepts aligned with community needs and disaster awareness systems.",
+      "Participated in research activities under the Penelitian Pemula Binus research scheme focusing on integrated coastal and offshore infrastructure technology.",
+    ],
+  },
 ];
 
-export type AwardItem = { title: string; org: string; year: string };
+export type AwardItem = {
+  title: string;
+  org: string;
+  year: string;
+  bullets?: string[];
+  images?: string[];
+};
 
 export const awards: AwardItem[] = [
   { title: "Finalist – PlayIT UI/UX Hackathon", org: "PlayIT Polinema", year: "2026" },
