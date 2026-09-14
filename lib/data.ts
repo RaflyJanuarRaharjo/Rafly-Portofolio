@@ -56,4 +56,7 @@ export const posts: BlogItem[] = [
 ];
 
 /** Jumlah total yang tampil di badge header section. */
-export const counts = { experience: 9, awards: 5 };
+export const counts = {
+  experience: experiences.length,
+  awards: awards.length,
+};
