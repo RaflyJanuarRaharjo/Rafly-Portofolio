@@ -25,11 +25,13 @@ export default function Hero() {
         </div>
 
         <div className="flex w-full flex-col items-start gap-[12px] px-[16px] md:flex-row md:items-end md:gap-[24px] md:px-[48px] lg:h-[214px] lg:gap-[32px] lg:pl-[80px] lg:pr-[120px]">
-          <img
-            src={A.avatar}
-            alt={profile.name}
-            className="size-[90px] shrink-0 rounded-[8px] border-4 border-white object-cover md:size-[130px] lg:size-[167px] lg:border-5"
-          />
+          <div className="size-[90px] shrink-0 overflow-hidden rounded-[8px] border-4 border-white md:size-[130px] lg:size-[167px] lg:border-5">
+            <img
+              src={A.avatar}
+              alt={profile.name}
+              className="size-full scale-[1.4] object-cover object-top"
+            />
+          </div>
 
           <div className="flex w-full flex-col gap-[4px] pb-[4px]">
             <div className="flex flex-wrap items-center gap-[10px] py-[4px] lg:gap-[16px] lg:p-[8px]">
