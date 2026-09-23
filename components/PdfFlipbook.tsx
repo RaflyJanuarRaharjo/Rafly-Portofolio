@@ -56,10 +56,12 @@ export default function PdfFlipbook({ dir, pdf }: Props) {
         width={W}
         height={H}
         size="stretch"
-        minWidth={280}
+        /* Ambang satu-halaman = minWidth x 2. 450 -> di bawah 900px
+           (tablet & HP) tampil satu halaman penuh, bukan spread kecil. */
+        minWidth={450}
         maxWidth={620}
-        minHeight={380}
-        maxHeight={880}
+        minHeight={400}
+        maxHeight={1400}
         maxShadowOpacity={0.4}
         showCover
         mobileScrollSupport

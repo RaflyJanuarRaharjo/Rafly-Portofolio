@@ -94,6 +94,8 @@ export type ProjectItem = {
   summary: string;
   /** PDF asli di /public/case-study, buat tombol unduh. */
   pdf: string;
+  /** Link prototype Figma. Kalau kosong, tombolnya tidak muncul. */
+  prototype?: string;
   /** Deretan screenshot HP (gaya APO Mitra). */
   shots?: string[];
   /** Satu gambar lebar, dipakai kalau tidak ada shots. */
@@ -115,6 +117,8 @@ export const projects: ProjectItem[] = [
     summary:
       "Super-app ecosystem bringing scholarships, financial aid, competitions, courses, and AI-assisted career prep into one platform. Validated with 11 testers: 100% success rate, 20s average completion time.",
     pdf: "/case-study/edunex.pdf",
+    prototype:
+      "https://www.figma.com/proto/A4CUpEVRhXkR5qzuhPBxJ9/Lomba-UI-UX-LDR?node-id=14-3602&starting-point-node-id=14%3A3602",
     cover: A.edunexCover,
   },
 ];
