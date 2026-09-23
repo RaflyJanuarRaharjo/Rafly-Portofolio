@@ -32,7 +32,9 @@ export default function HomePage() {
       <Stripe />
       <SectionHeader title="Project" seeAllHref="/portfolio" />
       <Stripe />
-      <ProjectCard project={projects[0]} />
+      {projects.map((project) => (
+        <ProjectCard key={project.slug} project={project} />
+      ))}
 
       <Stripe />
       <SectionHeader title="Blog" seeAllHref="/blog" />

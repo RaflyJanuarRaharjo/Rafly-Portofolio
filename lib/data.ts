@@ -92,7 +92,12 @@ export type ProjectItem = {
   slug: string;
   title: string;
   summary: string;
-  shots: string[];
+  /** PDF asli di /public/case-study, buat tombol unduh. */
+  pdf: string;
+  /** Deretan screenshot HP (gaya APO Mitra). */
+  shots?: string[];
+  /** Satu gambar lebar, dipakai kalau tidak ada shots. */
+  cover?: string;
 };
 
 export const projects: ProjectItem[] = [
@@ -101,7 +106,16 @@ export const projects: ProjectItem[] = [
     title: "APO Mitra - Alfagift",
     summary:
       "Improving trip visibility, navigation, and delivery workflows to help mitra complete orders more efficiently.",
+    pdf: "/case-study/apo-mitra.pdf",
     shots: [A.apo1, A.apo2, A.apo3, A.apo4, A.apo5],
+  },
+  {
+    slug: "edunex",
+    title: "EDUNEX - Learn. Grow. Connect.",
+    summary:
+      "Super-app ecosystem bringing scholarships, financial aid, competitions, courses, and AI-assisted career prep into one platform. Validated with 11 testers: 100% success rate, 20s average completion time.",
+    pdf: "/case-study/edunex.pdf",
+    cover: A.edunexCover,
   },
 ];
 

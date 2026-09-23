@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
             className="absolute left-[669px] top-[107px] hidden h-[282px] w-[257px] max-w-none lg:block"
           />
           <div className="absolute inset-0 flex items-center justify-between px-[10px] py-[10px] md:px-[24px] lg:px-[40px] lg:py-[16px]">
-            {project.shots.map((shot, i) => (
+            {project.shots?.map((shot, i) => (
               <img
                 key={i}
                 src={shot}
@@ -30,6 +30,14 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
                 className="h-[120px] w-[56px] rounded-[4px] border-2 border-neutral-800 object-cover md:h-[215px] md:w-[100px] lg:h-[312px] lg:w-[144px] lg:rounded-[8px] lg:border-5"
               />
             ))}
+            {!project.shots && project.cover && (
+              <img
+                src={project.cover}
+                alt=""
+                aria-hidden
+                className="h-full w-full rounded-[4px] object-cover lg:rounded-[8px]"
+              />
+            )}
           </div>
         </div>
 
