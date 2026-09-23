@@ -49,7 +49,7 @@ export default function PdfFlipbook({ dir, pdf }: Props) {
   const H = Math.round((W * data.height) / data.width);
 
   return (
-    <div className="flex flex-col items-center gap-[24px]">
+    <div className="flex w-full flex-col items-center gap-[24px] px-[20px] md:px-[12px] lg:px-0">
       {/* @ts-expect-error — react-pageflip belum punya tipe React 19 */}
       <HTMLFlipBook
         ref={bookRef}
