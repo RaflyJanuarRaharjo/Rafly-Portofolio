@@ -12,7 +12,7 @@ export default function Hero() {
     <header className="flex w-full flex-col items-center justify-center gap-[20px] pb-[24px] md:gap-[32px] lg:gap-[40px] lg:pb-[32px]">
       <div className="flex w-full flex-col">
         {/* Cover */}
-        <div className="-mb-[50px] h-[150px] w-full overflow-hidden bg-neutral-200 md:-mb-[76px] md:h-[220px] lg:-mb-[104px] lg:h-[290px]">
+        <div className="relative z-0 -mb-[50px] h-[150px] w-full overflow-hidden bg-neutral-200 md:-mb-[76px] md:h-[220px] lg:-mb-[104px] lg:h-[290px]">
           <video
             src="/assets/cover.mp4"
             autoPlay
@@ -24,7 +24,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="flex w-full flex-col items-start gap-[12px] px-[16px] md:flex-row md:items-end md:gap-[24px] md:px-[48px] lg:h-[214px] lg:gap-[32px] lg:pl-[80px] lg:pr-[120px]">
+        <div className="relative z-10 flex w-full flex-col items-start gap-[12px] px-[16px] md:flex-row md:items-end md:gap-[24px] md:px-[48px] lg:h-[214px] lg:gap-[32px] lg:pl-[80px] lg:pr-[120px]">
           <img
             src={A.avatar}
             alt={profile.name}

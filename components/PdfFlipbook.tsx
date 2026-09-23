@@ -81,18 +81,19 @@ export default function PdfFlipbook({ dir, pdf }: Props) {
         ))}
       </HTMLFlipBook>
 
-      <div className="flex items-center gap-[16px]">
+      {/* Tombol dibagi rata selebar flipbook supaya tidak mepet di HP. */}
+      <div className="flex w-full max-w-[620px] items-stretch justify-center gap-[8px] px-[4px] lg:gap-[16px]">
         <button
           type="button"
           onClick={() => bookRef.current?.pageFlip()?.flipPrev()}
-          className="h-[42px] w-[120px] border border-neutral-200 bg-neutral-100 text-[20px] font-medium text-neutral-600"
+          className="h-[40px] flex-1 basis-0 whitespace-nowrap border border-neutral-200 bg-neutral-100 text-[15px] font-medium text-neutral-600 transition-colors hover:bg-neutral-200 lg:h-[42px] lg:text-[20px]"
         >
           Prev
         </button>
         <button
           type="button"
           onClick={() => bookRef.current?.pageFlip()?.flipNext()}
-          className="h-[42px] w-[120px] border border-neutral-200 bg-neutral-100 text-[20px] font-medium text-neutral-600"
+          className="h-[40px] flex-1 basis-0 whitespace-nowrap border border-neutral-200 bg-neutral-100 text-[15px] font-medium text-neutral-600 transition-colors hover:bg-neutral-200 lg:h-[42px] lg:text-[20px]"
         >
           Next
         </button>
@@ -100,7 +101,7 @@ export default function PdfFlipbook({ dir, pdf }: Props) {
           href={pdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-[42px] items-center justify-center border border-neutral-200 bg-neutral-600 px-[24px] text-[20px] font-medium text-neutral-100"
+          className="flex h-[40px] flex-1 basis-0 items-center justify-center whitespace-nowrap border border-neutral-200 bg-neutral-600 text-[15px] font-medium text-neutral-100 transition-colors hover:bg-neutral-800 lg:h-[42px] lg:text-[20px]"
         >
           Unduh PDF
         </a>

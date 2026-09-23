@@ -17,6 +17,7 @@ export const A = {
   apo4: "/assets/apo-ride-details-1.png",
   apo5: "/assets/apo-ride-details-3.png",
 
+  apoCover: "/assets/apo-cover.png",
   edunexCover: "/assets/edunex-cover.png",
 
   blogThumb: "/assets/blog-thumb.png",

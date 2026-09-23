@@ -109,7 +109,7 @@ export const projects: ProjectItem[] = [
     summary:
       "Improving trip visibility, navigation, and delivery workflows to help mitra complete orders more efficiently.",
     pdf: "/case-study/apo-mitra.pdf",
-    shots: [A.apo1, A.apo2, A.apo3, A.apo4, A.apo5],
+    cover: A.apoCover,
   },
   {
     slug: "edunex",
