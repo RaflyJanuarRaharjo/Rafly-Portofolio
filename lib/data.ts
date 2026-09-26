@@ -94,7 +94,7 @@ export type ProjectItem = {
   summary: string;
   /** PDF asli di /public/case-study, buat tombol unduh. */
   pdf: string;
-  /** Link prototype Figma. Kalau kosong, tombolnya tidak muncul. */
+  /** Link prototype (Figma atau situs live). Kalau kosong, tombolnya tidak muncul. */
   prototype?: string;
   /** Deretan screenshot HP (gaya APO Mitra). */
   shots?: string[];
@@ -127,6 +127,7 @@ export const projects: ProjectItem[] = [
     summary:
       "Landing page for a gaming-focused VPN: early-access waitlist, pricing tiers, and product positioning built around low latency and one-tap connection.",
     pdf: "/case-study/glidexa.pdf",
+    prototype: "https://glidexa-vpn.vercel.app/",
     cover: A.glidexaCover,
   },
 ];
