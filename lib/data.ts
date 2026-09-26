@@ -121,6 +121,14 @@ export const projects: ProjectItem[] = [
       "https://www.figma.com/proto/A4CUpEVRhXkR5qzuhPBxJ9/Lomba-UI-UX-LDR?node-id=14-3602&starting-point-node-id=14%3A3602",
     cover: A.edunexCover,
   },
+  {
+    slug: "glidexa",
+    title: "GLIDEXA VPN - Gaming Acceleration",
+    summary:
+      "Landing page for a gaming-focused VPN: early-access waitlist, pricing tiers, and product positioning built around low latency and one-tap connection.",
+    pdf: "/case-study/glidexa.pdf",
+    cover: A.glidexaCover,
+  },
 ];
 
 export type BlogItem = { excerpt: string; thumb: string };
