@@ -25,7 +25,8 @@ export default function HomePage() {
       <Stripe />
       <SectionHeader title="Project" seeAllHref="/portfolio" />
       <Stripe />
-      {projects.map((project) => (
+      {/* Home cukup menampilkan 2 project; selebihnya di /portfolio. */}
+      {projects.slice(0, 2).map((project) => (
         <ProjectCard key={project.slug} project={project} />
       ))}
 
