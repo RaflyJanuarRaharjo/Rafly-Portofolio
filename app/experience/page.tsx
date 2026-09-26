@@ -1,5 +1,3 @@
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import Stripe from "@/components/Stripe";
 import SectionHeader from "@/components/SectionHeader";
 import Row from "@/components/Row";
@@ -10,11 +8,6 @@ export const metadata = { title: "Experience — Rafly Januar Raharjo" };
 export default function ExperiencePage() {
   return (
     <>
-      <Hero />
-      <Stripe />
-      <Navbar />
-      <Stripe />
-
       <SectionHeader title="Experience" count={counts.experience} />
       <Stripe />
       {experiences.map((item) => (

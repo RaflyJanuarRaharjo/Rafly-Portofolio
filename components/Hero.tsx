@@ -19,6 +19,7 @@ export default function Hero() {
             muted
             loop
             playsInline
+            preload="auto"
             aria-hidden
             className="h-full w-full object-cover"
           />

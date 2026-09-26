@@ -1,5 +1,3 @@
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import Stripe from "@/components/Stripe";
 import SectionHeader from "@/components/SectionHeader";
 import Row from "@/components/Row";
@@ -11,11 +9,6 @@ import { awards, counts, experiences, posts, projects } from "@/lib/data";
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <Stripe />
-      <Navbar />
-      <Stripe />
-
       <SectionHeader title="Experience" count={counts.experience} seeAllHref="/experience" />
       <Stripe />
       {experiences.map((item) => (
