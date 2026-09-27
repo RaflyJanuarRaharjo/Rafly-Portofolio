@@ -21,6 +21,9 @@ export const A = {
   edunexCover: "/assets/edunex-cover.png",
   glidexaCover: "/assets/glidexa-cover.png",
 
+  mewsVideo: "/assets/mews-mayangan.mp4",
+  mewsPoster: "/assets/mews-mayangan-poster.webp",
+
   blogThumb: "/assets/blog-thumb.png",
 
   stripe: "/assets/stripe.svg",

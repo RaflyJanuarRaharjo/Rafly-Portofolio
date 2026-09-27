@@ -100,6 +100,12 @@ export type ProjectItem = {
   shots?: string[];
   /** Satu gambar lebar, dipakai kalau tidak ada shots. */
   cover?: string;
+  /** Video showcase, dipakai kalau tidak ada shots. Menang atas cover. */
+  video?: string;
+  /** Frame pertama video, tampil sebelum video termuat. */
+  poster?: string;
+  /** Rasio banner, mis. "16 / 9". Default "4 / 3". */
+  ratio?: string;
 };
 
 export const projects: ProjectItem[] = [
@@ -129,6 +135,16 @@ export const projects: ProjectItem[] = [
     pdf: "/case-study/glidexa.pdf",
     prototype: "https://glidexa-vpn.vercel.app/",
     cover: A.glidexaCover,
+  },
+  {
+    slug: "mews-mayangan",
+    title: "MEWS Mayangan - Early Warning Dashboard",
+    summary:
+      "Monitoring dashboard for a coastal early-warning station in Desa Mayangan, Subang. Tracks water level, weather, and device health, with three tidal-flood alert tiers wired to a siren and indicator lamp.",
+    pdf: "/case-study/mews-mayangan.pdf",
+    video: A.mewsVideo,
+    poster: A.mewsPoster,
+    ratio: "16 / 9",
   },
 ];
 

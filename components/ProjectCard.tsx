@@ -1,17 +1,20 @@
 import Link from "next/link";
+import ProjectVideo from "@/components/ProjectVideo";
 import { A } from "@/lib/assets";
 import type { ProjectItem } from "@/lib/data";
 
 export default function ProjectCard({ project }: { project: ProjectItem }) {
-  /* Project bergaya satu gambar lebar (EDUNEX) vs deretan HP (APO Mitra). */
-  const isCover = !project.shots && !!project.cover;
+  /* Tiga gaya banner: deretan HP (APO Mitra), satu gambar lebar (EDUNEX,
+     GLIDEXA), atau video (MEWS). Video menang atas cover. */
+  const media = project.shots ? null : project.video ? "video" : project.cover ? "image" : null;
+  const isCover = media !== null;
 
   return (
     <div className="flex w-full flex-col items-center border-b border-neutral-300 px-[16px] py-[32px] md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
       <div className="flex w-full max-w-[927px] flex-col gap-[20px] lg:gap-[32px]">
         {/* Showcase */}
-        {/* Cover: tinggi ikut rasio gambar (3200x2400 = 4:3) lewat inline style,
-            supaya tidak bergantung pada kelas arbitrary Tailwind.
+        {/* Cover/video: tinggi ikut rasio per-project lewat inline style, supaya
+            tidak bergantung pada kelas arbitrary Tailwind.
             Shots: tinggi tetap sesuai Figma. */}
         <div
           className={`relative w-full overflow-hidden ${
@@ -19,7 +22,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
               ? ""
               : "h-[160px] border border-[rgba(213,232,255,0.49)] bg-gradient-to-b from-slate-100 to-blue-100 md:h-[270px] lg:h-[390px]"
           }`}
-          style={isCover ? { aspectRatio: "4 / 3" } : undefined}
+          style={isCover ? { aspectRatio: project.ratio ?? "4 / 3" } : undefined}
         >
           {!isCover && (
             <>
@@ -38,7 +41,9 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
             </>
           )}
 
-          {isCover ? (
+          {media === "video" ? (
+            <ProjectVideo src={project.video!} poster={project.poster} />
+          ) : media === "image" ? (
             <img
               src={project.cover}
               alt=""
