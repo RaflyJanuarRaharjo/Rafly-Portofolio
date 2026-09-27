@@ -106,6 +106,8 @@ export type ProjectItem = {
   poster?: string;
   /** Rasio banner, mis. "16 / 9". Default "4 / 3". */
   ratio?: string;
+  /** Kategori untuk filter di /portfolio. Chip-nya otomatis ikut isi ini. */
+  tags?: string[];
 };
 
 export const projects: ProjectItem[] = [
@@ -115,6 +117,7 @@ export const projects: ProjectItem[] = [
     summary:
       "Improving trip visibility, navigation, and delivery workflows to help mitra complete orders more efficiently.",
     pdf: "/case-study/apo-mitra.pdf",
+    tags: ["Mobile App"],
     cover: A.apoCover,
   },
   {
@@ -123,6 +126,7 @@ export const projects: ProjectItem[] = [
     summary:
       "Super-app ecosystem bringing scholarships, financial aid, competitions, courses, and AI-assisted career prep into one platform. Validated with 11 testers: 100% success rate, 20s average completion time.",
     pdf: "/case-study/edunex.pdf",
+    tags: ["Mobile App"],
     prototype:
       "https://www.figma.com/proto/A4CUpEVRhXkR5qzuhPBxJ9/Lomba-UI-UX-LDR?node-id=14-3602&starting-point-node-id=14%3A3602",
     cover: A.edunexCover,
@@ -133,6 +137,7 @@ export const projects: ProjectItem[] = [
     summary:
       "Landing page for a gaming-focused VPN: early-access waitlist, pricing tiers, and product positioning built around low latency and one-tap connection.",
     pdf: "/case-study/glidexa.pdf",
+    tags: ["Website"],
     prototype: "https://glidexa-vpn.vercel.app/",
     cover: A.glidexaCover,
   },
@@ -142,6 +147,7 @@ export const projects: ProjectItem[] = [
     summary:
       "Monitoring dashboard for a coastal early-warning station in Desa Mayangan, Subang. Tracks water level, weather, and device health, with three tidal-flood alert tiers wired to a siren and indicator lamp.",
     pdf: "/case-study/mews-mayangan.pdf",
+    tags: ["Dashboard"],
     video: A.mewsVideo,
     poster: A.mewsPoster,
     ratio: "16 / 9",
