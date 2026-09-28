@@ -27,7 +27,7 @@ export default function CtaBanner() {
   }, []);
 
   return (
-    <section className="relative h-[260px] w-full overflow-hidden bg-neutral-800 md:h-[320px] lg:h-[360px]">
+    <section className="relative h-[260px] w-full overflow-hidden bg-[#262626] md:h-[320px] lg:h-[360px]">
       <video
         ref={ref}
         src="/assets/cover.mp4"
@@ -45,15 +45,15 @@ export default function CtaBanner() {
       />
 
       <div className="absolute inset-0 flex flex-col justify-center gap-[12px] px-[16px] md:gap-[16px] md:px-[48px] lg:gap-[20px] lg:px-[80px]">
-        <h2 className="max-w-[620px] text-[22px] font-bold leading-[30px] text-white md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px]">
+        <h2 className="max-w-[620px] text-[22px] font-bold leading-[30px] text-[#fff] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px]">
           {cta.headline}
         </h2>
-        <p className="max-w-[520px] text-[14px] leading-[22px] text-white/85 md:text-[16px] md:leading-[26px] lg:text-[18px] lg:leading-[29px]">
+        <p className="max-w-[520px] text-[14px] leading-[22px] text-[#fff]/85 md:text-[16px] md:leading-[26px] lg:text-[18px] lg:leading-[29px]">
           {cta.tagline}
         </p>
         <a
           href={cta.href}
-          className="mt-[4px] flex w-fit items-center justify-center rounded-full bg-white px-[20px] py-[10px] text-[14px] font-medium text-neutral-800 transition-colors hover:bg-neutral-200 md:px-[26px] md:py-[12px] md:text-[16px] lg:px-[30px] lg:py-[14px] lg:text-[18px]"
+          className="mt-[4px] flex w-fit items-center justify-center rounded-full bg-[#fff] px-[20px] py-[10px] text-[14px] font-medium text-[#262626] transition-colors hover:bg-[#e5e5e5] md:px-[26px] md:py-[12px] md:text-[16px] lg:px-[30px] lg:py-[14px] lg:text-[18px]"
         >
           {cta.label}
         </a>

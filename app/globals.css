@@ -155,3 +155,33 @@ button:focus-visible {
     @apply font-sans;
   }
 }
+/* ── Dark mode ────────────────────────────────────────────────────────
+   Utilitas Tailwind v4 memakai var(--color-*), jadi menimpa token di sini
+   membalik seluruh situs tanpa perlu menambah kelas dark: di tiap komponen.
+   Blok ini sengaja diletakkan paling akhir supaya menang atas token di atas. */
+
+:root {
+  /* Latar di luar kolom konten. */
+  --color-page: #f5f5f5;
+  /* Warna kotak berkedip di latar. */
+  --color-square: #d4d4d4;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --color-page: #0a0a0a;
+  --color-square: #2a2a2a;
+
+  --color-white: #141414;      /* permukaan kolom */
+  --color-neutral-100: #1f1f1f; /* isian halus */
+  --color-neutral-200: #2e2e2e; /* garis tepi */
+  --color-neutral-300: #3a3a3a; /* pemisah */
+  --color-neutral-500: #8f8f8f; /* teks redup */
+  --color-neutral-600: #b8b8b8; /* teks isi */
+  --color-neutral-800: #f0f0f0; /* judul */
+
+  /* Gradasi banner project versi gelap. */
+  --color-slate-100: #1a1f27;
+  --color-blue-100: #16202e;
+}

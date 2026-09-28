@@ -30,13 +30,13 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
                 src={A.ornament}
                 alt=""
                 aria-hidden
-                className="absolute left-[-1px] top-[-1px] hidden h-[282px] w-[257px] max-w-none md:block"
+                className="absolute left-[-1px] top-[-1px] hidden h-[282px] w-[257px] max-w-none md:block dark:invert"
               />
               <img
                 src={A.ornament}
                 alt=""
                 aria-hidden
-                className="absolute left-[669px] top-[107px] hidden h-[282px] w-[257px] max-w-none lg:block"
+                className="absolute left-[669px] top-[107px] hidden h-[282px] w-[257px] max-w-none lg:block dark:invert"
               />
             </>
           )}
