@@ -35,7 +35,7 @@ export default function ProjectFilter({ projects }: { projects: ProjectItem[] })
       <div
         role="group"
         aria-label="Filter project"
-        className="flex w-full flex-wrap items-center gap-[8px] border-b border-neutral-300 px-[16px] py-[16px] md:gap-[12px] md:px-[48px] md:py-[20px] lg:px-[80px] lg:py-[24px]"
+        className="flex w-full flex-nowrap items-center gap-[8px] overflow-x-auto border-b border-neutral-300 py-[16px] pl-[16px] pr-[68px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:flex-wrap md:gap-[12px] md:overflow-x-visible md:py-[20px] md:pl-[48px] md:pr-[48px] lg:py-[24px] lg:pl-[80px] lg:pr-[80px]"
       >
         {tags.map((tag) => {
           const on = tag === active;
@@ -45,7 +45,7 @@ export default function ProjectFilter({ projects }: { projects: ProjectItem[] })
               type="button"
               aria-pressed={on}
               onClick={() => setActive(tag)}
-              className={`flex items-center gap-[8px] border px-[14px] py-[8px] text-[14px] font-medium transition-colors md:px-[18px] md:py-[10px] md:text-[17px] lg:px-[22px] lg:py-[12px] lg:text-[20px] ${
+              className={`flex shrink-0 items-center gap-[8px] border px-[14px] py-[8px] text-[14px] font-medium transition-colors md:px-[18px] md:py-[10px] md:text-[17px] lg:px-[22px] lg:py-[12px] lg:text-[20px] ${
                 on
                   ? "border-neutral-600 bg-neutral-600 text-neutral-100"
                   : "border-neutral-200 bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
