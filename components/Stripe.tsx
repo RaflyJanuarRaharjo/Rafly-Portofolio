@@ -9,7 +9,7 @@ export default function Stripe() {
         src={A.stripe}
         alt=""
         aria-hidden
-        className="absolute left-[-174px] top-0 h-full w-[1554px] max-w-none dark:invert dark:brightness-[1.2]"
+        className="absolute left-[-174px] top-0 h-full w-[1554px] max-w-none dark:brightness-[0.8] dark:invert"
       />
     </div>
   );
