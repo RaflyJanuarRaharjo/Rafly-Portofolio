@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { A } from "@/lib/assets";
 
 type Props = {
@@ -11,6 +10,9 @@ type Props = {
   divided?: boolean;
   bullets?: string[];
   images?: string[];
+  /** Dikendalikan dari RowList supaya hanya satu baris terbuka. */
+  open?: boolean;
+  onToggle?: () => void;
 };
 
 export default function Row({
@@ -21,8 +23,9 @@ export default function Row({
   divided,
   bullets,
   images,
+  open = false,
+  onToggle,
 }: Props) {
-  const [open, setOpen] = useState(false);
   const expandable = Boolean(bullets?.length);
 
   return (
@@ -58,7 +61,7 @@ export default function Row({
           {expandable ? (
             <button
               type="button"
-              onClick={() => setOpen((v) => !v)}
+              onClick={onToggle}
               aria-expanded={open}
               aria-label={open ? `Tutup ${title}` : `Buka ${title}`}
               className="flex size-[30px] cursor-pointer items-center justify-center lg:size-[40px]"

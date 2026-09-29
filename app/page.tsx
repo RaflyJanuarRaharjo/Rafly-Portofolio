@@ -1,6 +1,6 @@
 import Stripe from "@/components/Stripe";
 import SectionHeader from "@/components/SectionHeader";
-import Row from "@/components/Row";
+import RowList from "@/components/RowList";
 import ProjectCard from "@/components/ProjectCard";
 import BlogRow from "@/components/BlogRow";
 import CtaBanner from "@/components/CtaBanner";
@@ -11,16 +11,14 @@ export default function HomePage() {
     <>
       <SectionHeader title="Experience" count={counts.experience} seeAllHref="/experience" />
       <Stripe />
-      {experiences.map((item) => (
-        <Row key={item.title} {...item} />
-      ))}
+      {/* Home cukup 3 terbaru; selebihnya di /experience. */}
+      <RowList items={experiences.slice(0, 3)} />
 
       <Stripe />
       <SectionHeader title="Awards" count={counts.awards} seeAllHref="/awards" />
       <Stripe />
-      {awards.map((item) => (
-        <Row key={item.title} {...item} divided />
-      ))}
+      {/* Home cukup 3 terbaru; selebihnya di /awards. */}
+      <RowList items={awards.slice(0, 3)} divided />
 
       <Stripe />
       <SectionHeader title="Project" seeAllHref="/portfolio" />
