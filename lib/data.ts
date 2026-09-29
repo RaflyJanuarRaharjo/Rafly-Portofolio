@@ -22,7 +22,7 @@ export type ExperienceItem = {
   title: string;
   org: string;
   year: string;
-  logo: string;
+  logo?: string;
   bullets?: string[];
   images?: string[];
 };
@@ -72,11 +72,92 @@ export const experiences: ExperienceItem[] = [
       "Participated in research activities under the Penelitian Pemula Binus research scheme focusing on integrated coastal and offshore infrastructure technology.",
     ],
   },
+  {
+    title: "UI / UX Designer",
+    org: "PT. Digital Netwerk Venture Indonesia ( The Netwerk )",
+    year: "2026",
+  },
+  {
+    title: "UI / UX Designer",
+    org: "Gridbrid",
+    year: "2026",
+    bullets: [
+      "Led end to end UI/UX design process for web platform project.",
+      "Conducted user flow mapping and wireframing based on business requirements.",
+      "Designed responsive web layouts for desktop and mobile.",
+      "Created high-fidelity prototypes for stakeholder validation.",
+      "Applied usability principles and accessibility standards.",
+      "Built structured design system for development handoff.",
+      "Collaborated with developers to ensure accurate implementation.",
+    ],
+  },
+  {
+    title: "UI / UX Designer",
+    org: "Fastwork Technologies Indonesia",
+    year: "2026",
+    bullets: [
+      "Worked on UI/UX design tasks for web-based projects.",
+      "Developed intuitive layouts and visual hierarchies to enhance user experience.",
+      "Communicated directly with clients to align design outcomes with expectations.",
+    ],
+  },
+  {
+    title: "UI / UX Designer",
+    org: "Joki Proyek",
+    year: "2026",
+    bullets: [
+      "Designed web and mobile UI based on user needs and project requirements.",
+      "Created user flows, wireframes, and high-fidelity prototypes using Figma.",
+      "Iterated designs based on client feedback to improve usability and clarity.",
+      "Delivered clean, developer-ready design assets.",
+    ],
+  },
+  {
+    title: "Google Student Ambassador",
+    org: "Google",
+    year: "2026",
+    bullets: [
+      "Participated in technology-focused programs and training sessions.",
+      "Actively involved in community engagement and student tech initiatives.",
+    ],
+  },
+  {
+    title: "Blu Ambassador",
+    org: "PT Bank Digital BCA ( BCA Digital )",
+    year: "2026",
+    bullets: [
+      "Supported brand awareness activities and digital campaigns.",
+      "Collaborated with team members in hybrid working environments.",
+    ],
+  },
+  {
+    title: "Campus Ambassador",
+    org: "PopSurvey by Populix",
+    year: "2025",
+    bullets: [
+      "Represented the brand in campus-based digital initiatives.",
+      "Assisted in outreach, engagement, and campaign execution.",
+      "Strengthened communication and professional networking skills.",
+    ],
+  },
+  {
+    title: "Staff Competition",
+    org: "HOLOGY UB",
+    year: "2025",
+    bullets: [
+      "Planned, executed, and evaluated the Scientific Writing (KTI) and Business Plan competitions as part of the HOLOGY 8.0 event series.",
+      "Coordinated with organizing committees, judges, and participants to keep the competition flow smooth and professional.",
+      "Prepared competition timelines, guidelines, and evaluation processes, including judge coordination and assessment procedures.",
+      "Ensured fairness, clarity, and efficiency throughout the judging and competition stages.",
+      "Developed event management, leadership, communication, and problem-solving skills in dynamic, high-pressure environments.",
+    ],
+  },
 ];
 
 export type AwardItem = {
   title: string;
-  org: string;
+  /** Penyelenggara. Opsional — ada award yang penyelenggaranya belum dicatat. */
+  org?: string;
   year: string;
   bullets?: string[];
   images?: string[];
@@ -86,6 +167,9 @@ export const awards: AwardItem[] = [
   { title: "Finalist – PlayIT UI/UX Hackathon", org: "PlayIT Polinema", year: "2026" },
   { title: "3rd Place – Competition RAFAETECH 2025", org: "Universitas Islam Negeri Raden Fatah Palembang", year: "2026" },
   { title: "3rd Place Design Challenge - Intechfest 2025", org: "Politeknik Negeri Bali", year: "2026" },
+  { title: "2nd Place – National UI/UX Design Competition 2025", year: "2025" },
+  { title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025", org: "Silogy Expo Education Fair", year: "2025" },
+  { title: "Finalis 10 Besar – UI/UX in Action", org: "Multimedia in Action LinkAja 2025", year: "2025" },
 ];
 
 export type ProjectItem = {

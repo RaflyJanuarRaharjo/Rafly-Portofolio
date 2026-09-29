@@ -5,7 +5,7 @@ import { A } from "@/lib/assets";
 
 type Props = {
   title: string;
-  org: string;
+  org?: string;
   year: string;
   logo?: string;
   divided?: boolean;
@@ -42,9 +42,11 @@ export default function Row({
             <p className="text-[16px] font-medium text-neutral-800 md:text-[22px] lg:text-[32px]">
               {title}
             </p>
-            <p className="text-[13px] text-neutral-600 md:text-[17px] lg:text-[24px]">
-              {org}
-            </p>
+            {org && (
+              <p className="text-[13px] text-neutral-600 md:text-[17px] lg:text-[24px]">
+                {org}
+              </p>
+            )}
           </div>
         </div>
 
