@@ -40,7 +40,7 @@ export default function Navbar() {
               src={item.icon}
               alt=""
               aria-hidden
-              className={`h-[26px] max-w-none transition-all duration-200 group-hover:scale-110 md:h-[32px] lg:h-[40px] ${item.w} ${
+              className={`h-[26px] max-w-none transition-all duration-200 group-hover:scale-110 dark:invert md:h-[32px] lg:h-[40px] ${item.w} ${
                 active ? "" : "opacity-65 group-hover:opacity-100"
               }`}
             />

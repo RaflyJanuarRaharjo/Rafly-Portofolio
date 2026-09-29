@@ -65,7 +65,7 @@ export default function Row({
                 src={A.iconChevron}
                 alt=""
                 aria-hidden
-                className={`size-[18px] rotate-90 transition-transform duration-200 lg:size-[24px] ${
+                className={`size-[18px] rotate-90 transition-transform duration-200 dark:invert lg:size-[24px] ${
                   open ? "scale-y-[-1]" : ""
                 }`}
               />
@@ -75,7 +75,7 @@ export default function Row({
               src={A.iconChevron}
               alt=""
               aria-hidden
-              className="size-[18px] rotate-90 lg:size-[24px]"
+              className="size-[18px] rotate-90 dark:invert lg:size-[24px]"
             />
           )}
         </div>

@@ -175,8 +175,8 @@ button:focus-visible {
 
   --color-white: #141414;      /* permukaan kolom */
   --color-neutral-100: #1f1f1f; /* isian halus */
-  --color-neutral-200: #2e2e2e; /* garis tepi */
-  --color-neutral-300: #3a3a3a; /* pemisah */
+  --color-neutral-200: #3a3a3a; /* garis tepi */
+  --color-neutral-300: #4a4a4a; /* pemisah */
   --color-neutral-500: #8f8f8f; /* teks redup */
   --color-neutral-600: #b8b8b8; /* teks isi */
   --color-neutral-800: #f0f0f0; /* judul */
