@@ -108,6 +108,30 @@ export type ProjectItem = {
   ratio?: string;
   /** Kategori untuk filter di /portfolio. Chip-nya otomatis ikut isi ini. */
   tags?: string[];
+  /** Case study versi halaman. Kalau ada, dipakai menggantikan flipbook PDF. */
+  story?: Story;
+};
+
+export type StoryStat = { value: string; label: string };
+export type StoryCard = { title: string; meta?: string; body: string };
+
+export type StorySection = {
+  heading: string;
+  /** Kalimat pembuka di bawah judul section. */
+  lead?: string;
+  body?: string[];
+  bullets?: string[];
+  stats?: StoryStat[];
+  cards?: StoryCard[];
+  image?: { src: string; alt: string; caption?: string };
+};
+
+export type Story = {
+  tagline: string;
+  /** Baris ringkas di kepala halaman: peran, tahun, tim, tools. */
+  meta: { label: string; value: string }[];
+  sections: StorySection[];
+  links?: { label: string; href: string }[];
 };
 
 export const projects: ProjectItem[] = [
@@ -130,6 +154,209 @@ export const projects: ProjectItem[] = [
     prototype:
       "https://www.figma.com/proto/A4CUpEVRhXkR5qzuhPBxJ9/Lomba-UI-UX-LDR?node-id=14-3602&starting-point-node-id=14%3A3602",
     cover: A.edunexCover,
+    story: {
+      tagline: "Your Next Step Starts Here",
+      meta: [
+        { label: "Peran", value: "UI/UX Designer" },
+        { label: "Tim", value: "Tim LDR" },
+        { label: "Metode", value: "User Centered Design" },
+        { label: "Tools", value: "Figma, Maze" },
+      ],
+      sections: [
+        {
+          heading: "Latar belakang",
+          lead:
+            "Jutaan masyarakat Indonesia masih menghadapi keterbatasan akses pendidikan dan pekerjaan.",
+          body: [
+            "Per Agustus 2025 tercatat 7,46 juta orang menganggur di Indonesia. Di sisi lain, sekitar 3,9 juta anak diperkirakan berada di luar sekolah, dan 22,4% responden menyebut biaya pendidikan sebagai salah satu alasan tidak bersekolah.",
+            "Keterbatasan akses dan kendala biaya mempersempit peluang seseorang untuk berkembang dan memasuki dunia kerja. Sumber: BPS 2024–2025 dan UNICEF Indonesia.",
+          ],
+          stats: [
+            { value: "7,46 juta", label: "pengangguran, Agustus 2025" },
+            { value: "3,9 juta", label: "anak di luar sekolah" },
+            { value: "22,4%", label: "terhambat biaya pendidikan" },
+          ],
+        },
+        {
+          heading: "Memahami konteks",
+          lead:
+            "Wawancara eksploratif dengan tiga mahasiswa dari disiplin ilmu berbeda.",
+          cards: [
+            {
+              title: "Marrysa Salsabila",
+              meta: "Akuntansi — Polinema",
+              body:
+                "Kesulitan mencari informasi terpusat soal beasiswa, dan sulit mengakses kompetisi di luar kampus. Butuh agregator yang terpusat dan transparan.",
+            },
+            {
+              title: "Febrian Arka Samudra",
+              meta: "Teknik Informatika — Polinema",
+              body:
+                "Sulit menemukan wadah kolaborasi lintas jurusan, dan cemas menghadapi standar rekrutmen industri. Butuh persiapan rekrutmen yang terstruktur.",
+            },
+            {
+              title: "Marwah Sinta",
+              meta: "Akuntansi — Polinema",
+              body:
+                "Menghadapi hambatan finansial mendadak untuk kebutuhan belajar, dan minim sarana latihan wawancara. Butuh bantuan cepat terverifikasi dan simulasi interaktif.",
+            },
+          ],
+        },
+        {
+          heading: "Solusi",
+          lead:
+            "Satu super-app yang merangkum kebutuhan mahasiswa ke dalam delapan pilar fitur.",
+          bullets: [
+            "NexScholar — katalog dan pendaftaran beasiswa",
+            "NexAid — bantuan finansial darurat dan subsidi perangkat",
+            "NexArena — hub kompetisi dan hackathon",
+            "NexCareer — portal lowongan kerja dan magang",
+            "Nex Resume — AI ATS resume optimizer",
+            "Nex Interview — simulator wawancara real-time",
+            "Nex Course & Quiz — modul belajar dan evaluasi",
+            "Community Forum — ruang obrolan dan study jam",
+          ],
+        },
+        {
+          heading: "Design system",
+          body: [
+            "Biru dipilih karena memberi kesan terpercaya dan edukatif, dengan kontras yang lolos standar aksesibilitas. Warna netral membentuk hierarki teks sekaligus menjaga fokus pada konten.",
+            "Font Geist dipakai karena mudah dibaca di layar mobile, dan tiga weight sudah cukup untuk hierarki yang jelas. Grid 4pt menjaga jarak antarelemen konsisten dan mudah diterapkan developer. Radius 8px memberi kesan ramah tanpa kehilangan sisi profesional, dan tinggi tombol 44px mengikuti standar Apple HIG agar nyaman disentuh.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/design-system.webp",
+            alt: "Papan design system EDUNEX: warna, tipografi, grid, dan komponen",
+          },
+        },
+        {
+          heading: "User flow",
+          image: {
+            src: "/case-study/edunex-page/userflow.webp",
+            alt: "Diagram user flow EDUNEX",
+          },
+        },
+        {
+          heading: "Sitemap",
+          body: [
+            "Terdiri dari area onboarding (splash, sign in, lupa password, sign up) dan lima menu utama di bottom navbar. Home memuat NexScholar, NexAid, NexArena, dan NexCareer dengan pola seragam: daftar, detail, formulir, lalu konfirmasi.",
+            "Course berisi kursus, langganan, video, dan quiz. AI berisi chat Nex 4.5 dan Nex Interview. Forum berisi grup diskusi, dan Profile berisi pengaturan akun serta status pengajuan. Hierarkinya dangkal dan konsisten sehingga mudah dinavigasi.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/sitemap.webp",
+            alt: "Sitemap EDUNEX",
+          },
+        },
+        {
+          heading: "NexScholar",
+          lead: "Pendaftaran beasiswa dengan friksi seminimal mungkin.",
+          body: [
+            "Pengguna menelusuri katalog program, meninjau syarat, mengisi formulir terintegrasi, lalu mengunggah dokumen pendukung sampai tahap konfirmasi.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/nexscholar.webp",
+            alt: "Rangkaian layar NexScholar",
+          },
+        },
+        {
+          heading: "NexAid",
+          lead: "Jaring pengaman finansial yang bisa diajukan cepat.",
+          body: [
+            "Pengguna memilih jenis bantuan, mengisi formulir data diri darurat, dan melampirkan bukti persyaratan dalam satu alur linier.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/nexaid.webp",
+            alt: "Rangkaian layar NexAid",
+          },
+        },
+        {
+          heading: "NexArena",
+          lead: "Pendaftaran kompetisi multidisiplin yang disederhanakan.",
+          body: [
+            "Perwakilan tim memilih cabang lomba, mempelajari pedoman, lalu mengirim berkas pendaftaran dengan umpan balik visual seketika.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/nexarena.webp",
+            alt: "Rangkaian layar NexArena",
+          },
+        },
+        {
+          heading: "NexCareer",
+          lead: "Portal transisi dari bangku kuliah ke dunia kerja.",
+          body: [
+            "Mahasiswa mengecek kualifikasi lowongan, mengisi profil profesional, dan mengunggah resume — memangkas cognitive load saat melamar.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/nexcareer.webp",
+            alt: "Rangkaian layar NexCareer",
+          },
+        },
+        {
+          heading: "Nex Course & Quiz",
+          lead: "Belajar mandiri yang terstruktur dan interaktif.",
+          body: [
+            "Modul video terhubung langsung dengan kuis berbatas waktu. Halaman hasil menyajikan metrik pencapaian dan umpan balik dengan visual yang jelas.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/course-quiz.webp",
+            alt: "Rangkaian layar Nex Course dan Quiz",
+          },
+        },
+        {
+          heading: "Nex AI Chat & Interview",
+          lead: "Dari asisten percakapan teks ke simulasi wawancara video.",
+          body: [
+            "Transisinya dibuat mulus, dan alurnya ditutup halaman evaluasi berbasis data yang memberi skor serta actionable feedback.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/ai-chat-interview.webp",
+            alt: "Rangkaian layar Nex AI Chat dan Nex Interview",
+          },
+        },
+        {
+          heading: "Community Forum",
+          lead: "Mengadaptasi pola mental aplikasi pesan instan.",
+          body: [
+            "Kurva belajarnya nyaris nol: pengguna langsung mencari topik, bergabung ke ruang study jam yang difasilitasi mentor, dan berinteraksi lewat hierarki gelembung chat yang familier.",
+          ],
+          image: {
+            src: "/case-study/edunex-page/forum.webp",
+            alt: "Rangkaian layar Community Forum",
+          },
+        },
+        {
+          heading: "Usability testing",
+          lead:
+            "Pengujian daring lewat Maze bersama 11 tester yang sesuai target pengguna.",
+          body: [
+            "Setiap tester diberi skenario dan serangkaian tugas, sementara sistem mencatat perilaku mereka selama pengujian berlangsung.",
+          ],
+          stats: [
+            { value: "11", label: "tester" },
+            { value: "100%", label: "success rate" },
+            { value: "20 detik", label: "rata-rata waktu penyelesaian" },
+          ],
+        },
+        {
+          heading: "Kesimpulan",
+          body: [
+            "EDUNEX menjawab tiga keresahan yang muncul berulang di riset: fragmentasi informasi, kendala finansial, dan kecemasan menghadapi rekrutmen industri — dirangkum ke dalam delapan pilar fitur yang terpusat.",
+            "Design system-nya mengikuti standar Apple HIG untuk menekan cognitive load lewat navigasi yang konsisten. Hasilnya diuji secara empiris: 100% success rate dengan rata-rata penyelesaian 20 detik.",
+          ],
+          bullets: [
+            "SDG 4 — pendidikan inklusif lewat pembelajaran interaktif dan ekosistem mentor",
+            "SDG 8 — kesiapan kerja lewat simulasi wawancara AI dan portal lowongan",
+            "SDG 10 — pemerataan informasi bantuan finansial dan beasiswa",
+          ],
+        },
+      ],
+      links: [
+        {
+          label: "Prototype Figma",
+          href:
+            "https://www.figma.com/proto/A4CUpEVRhXkR5qzuhPBxJ9/Lomba-UI-UX-LDR?node-id=14-3602&starting-point-node-id=14%3A3602",
+        },
+      ],
+    },
   },
   {
     slug: "glidexa",

@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Stripe from "@/components/Stripe";
+import CaseStudy from "@/components/CaseStudy";
 import { projects } from "@/lib/data";
 
 const PdfFlipbook = dynamic(() => import("@/components/PdfFlipbook"));
@@ -47,9 +48,14 @@ export default async function CaseStudyPage({
       <Navbar />
       <Stripe />
 
-      <div className="w-full px-[16px] py-[32px] md:px-[48px] lg:px-[80px] lg:py-[64px]">
-        <PdfFlipbook dir={`/case-study/${project.slug}`} pdf={project.pdf} />
-      </div>
+      {/* Punya `story` -> halaman biasa. Kalau belum, jatuh ke flipbook PDF. */}
+      {project.story ? (
+        <CaseStudy project={project} />
+      ) : (
+        <div className="w-full px-[16px] py-[32px] md:px-[48px] lg:px-[80px] lg:py-[64px]">
+          <PdfFlipbook dir={`/case-study/${project.slug}`} pdf={project.pdf} />
+        </div>
+      )}
       <Stripe />
     </>
   );
