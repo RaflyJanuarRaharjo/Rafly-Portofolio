@@ -244,6 +244,8 @@ export const projects: ProjectItem[] = [
       "Improving trip visibility, navigation, and delivery workflows to help mitra complete orders more efficiently.",
     pdf: "/case-study/apo-mitra.pdf",
     tags: ["Mobile App"],
+    prototype:
+      "https://www.figma.com/proto/ByEBlomNpqZpKN169PWxgt/Intern-Alfagift?node-id=542-4499&starting-point-node-id=542%3A4499",
     cover: A.apoCover,
     story: {
       tagline: "Mitra Management & Order Platform",
@@ -432,11 +434,14 @@ export const projects: ProjectItem[] = [
               label: "Design hi-fi",
               href: "https://www.figma.com/design/ByEBlomNpqZpKN169PWxgt/Intern-Alfagift?node-id=355-1386",
             },
-            {
-              label: "Prototype",
-              href: "https://www.figma.com/proto/ByEBlomNpqZpKN169PWxgt/Intern-Alfagift?node-id=542-4499&starting-point-node-id=542%3A4499",
-            },
           ],
+        },
+      ],
+      links: [
+        {
+          label: "Prototype Figma",
+          href:
+            "https://www.figma.com/proto/ByEBlomNpqZpKN169PWxgt/Intern-Alfagift?node-id=542-4499&starting-point-node-id=542%3A4499",
         },
       ],
     },
@@ -672,6 +677,8 @@ export const projects: ProjectItem[] = [
       "Monitoring dashboard for a coastal early-warning station in Desa Mayangan, Subang. Tracks water level, weather, and device health, with three tidal-flood alert tiers wired to a siren and indicator lamp.",
     pdf: "/case-study/mews-mayangan.pdf",
     tags: ["Dashboard"],
+    prototype:
+      "https://www.figma.com/proto/sgR4tLwhS8lmUuf5MVtt8T/Mayangan-Dashboard-Redesign?node-id=11-2&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=11%3A2&show-proto-sidebar=1",
     video: A.mewsVideo,
     poster: A.mewsPoster,
     ratio: "16 / 9",

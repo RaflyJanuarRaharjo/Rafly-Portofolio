@@ -8,6 +8,8 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
      GLIDEXA), atau video (MEWS). Video menang atas cover. */
   const media = project.shots ? null : project.video ? "video" : project.cover ? "image" : null;
   const isCover = media !== null;
+  /* Project branding tidak punya prototype interaktif, jadi tombolnya disembunyikan. */
+  const showPrototype = Boolean(project.prototype) && !project.tags?.includes("Branding");
 
   return (
     <div className="flex w-full flex-col items-center border-b border-neutral-300 px-[16px] py-[32px] md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
@@ -76,7 +78,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
         </div>
 
         <div className="flex w-full items-stretch gap-[12px] lg:gap-[16px]">
-          {project.prototype && (
+          {showPrototype && (
             <a
               href={project.prototype}
               target="_blank"
