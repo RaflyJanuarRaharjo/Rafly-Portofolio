@@ -471,6 +471,16 @@ export const projects: ProjectItem[] = [
     poster: A.mewsPoster,
     ratio: "16 / 9",
   },
+  {
+    slug: "match",
+    title: "Match - Find Your Job",
+    summary:
+      "Brand identity for a job platform that connects people with work matching their skills, interests, and career goals. Covers the logo, palette, and how the mark carries across the web app, app icon, social profile, and out-of-home placements.",
+    pdf: "/case-study/match.pdf",
+    tags: ["Branding", "Website", "Mobile App"],
+    video: A.matchVideo,
+    poster: A.matchPoster,
+  },
 ];
 
 export type BlogItem = { excerpt: string; thumb: string };
