@@ -76,11 +76,13 @@ export const experiences: ExperienceItem[] = [
     title: "UI / UX Designer",
     org: "PT. Digital Netwerk Venture Indonesia ( The Netwerk )",
     year: "2026",
+    logo: A.logoNetwerk,
   },
   {
     title: "UI / UX Designer",
     org: "Gridbrid",
     year: "2026",
+    logo: A.logoGridbrid,
     bullets: [
       "Led end to end UI/UX design process for web platform project.",
       "Conducted user flow mapping and wireframing based on business requirements.",
@@ -95,6 +97,7 @@ export const experiences: ExperienceItem[] = [
     title: "UI / UX Designer",
     org: "Fastwork Technologies Indonesia",
     year: "2026",
+    logo: A.logoFastwork,
     bullets: [
       "Worked on UI/UX design tasks for web-based projects.",
       "Developed intuitive layouts and visual hierarchies to enhance user experience.",
@@ -105,6 +108,7 @@ export const experiences: ExperienceItem[] = [
     title: "UI / UX Designer",
     org: "Joki Proyek",
     year: "2026",
+    logo: A.logoJokiProyek,
     bullets: [
       "Designed web and mobile UI based on user needs and project requirements.",
       "Created user flows, wireframes, and high-fidelity prototypes using Figma.",
@@ -116,6 +120,7 @@ export const experiences: ExperienceItem[] = [
     title: "Google Student Ambassador",
     org: "Google",
     year: "2026",
+    logo: A.logoGoogle,
     bullets: [
       "Participated in technology-focused programs and training sessions.",
       "Actively involved in community engagement and student tech initiatives.",
@@ -125,6 +130,7 @@ export const experiences: ExperienceItem[] = [
     title: "Blu Ambassador",
     org: "PT Bank Digital BCA ( BCA Digital )",
     year: "2026",
+    logo: A.logoBcaDigital,
     bullets: [
       "Supported brand awareness activities and digital campaigns.",
       "Collaborated with team members in hybrid working environments.",
@@ -134,6 +140,7 @@ export const experiences: ExperienceItem[] = [
     title: "Campus Ambassador",
     org: "PopSurvey by Populix",
     year: "2025",
+    logo: A.logoPopSurvey,
     bullets: [
       "Represented the brand in campus-based digital initiatives.",
       "Assisted in outreach, engagement, and campaign execution.",
@@ -144,6 +151,7 @@ export const experiences: ExperienceItem[] = [
     title: "Staff Competition",
     org: "HOLOGY UB",
     year: "2025",
+    logo: A.logoHology,
     bullets: [
       "Planned, executed, and evaluated the Scientific Writing (KTI) and Business Plan competitions as part of the HOLOGY 8.0 event series.",
       "Coordinated with organizing committees, judges, and participants to keep the competition flow smooth and professional.",

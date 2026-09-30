@@ -99,24 +99,19 @@ export default function Row({
               ))}
             </ul>
 
-            <div className="mt-[16px] flex flex-wrap items-start gap-[12px] md:gap-[20px] lg:mt-[32px] lg:gap-[32px]">
-              {[0, 1].map((i) =>
-                images?.[i] ? (
+            {images?.length ? (
+              <div className="mt-[16px] flex flex-wrap items-start gap-[12px] md:gap-[20px] lg:mt-[32px] lg:gap-[32px]">
+                {images.map((src, i) => (
                   <img
                     key={i}
-                    src={images[i]}
+                    src={src}
                     alt=""
                     aria-hidden
                     className="h-[90px] w-[calc(50%-6px)] max-w-[259px] rounded-[8px] object-cover md:h-[130px] lg:h-[156px] lg:w-[259px]"
                   />
-                ) : (
-                  <div
-                    key={i}
-                    className="h-[90px] w-[calc(50%-6px)] max-w-[259px] rounded-[8px] bg-[#d9d9d9] md:h-[130px] lg:h-[156px] lg:w-[259px]"
-                  />
-                )
-              )}
-            </div>
+                ))}
+              </div>
+            ) : null}
           </div>
         </div>
       )}
