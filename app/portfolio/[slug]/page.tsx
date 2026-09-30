@@ -53,7 +53,7 @@ export default async function CaseStudyPage({
         <CaseStudy project={project} />
       ) : (
         <div className="w-full px-[16px] py-[32px] md:px-[48px] lg:px-[80px] lg:py-[64px]">
-          <PdfFlipbook dir={`/case-study/${project.slug}`} pdf={project.pdf} />
+          <PdfFlipbook dir={`/case-study/${project.slug}`} />
         </div>
       )}
       <Stripe />

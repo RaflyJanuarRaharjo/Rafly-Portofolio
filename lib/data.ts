@@ -222,6 +222,8 @@ export type StorySection = {
   /** Tabel penuh. Sel boleh true (centang) atau false (silang). */
   table?: { head: string[]; rows: (string | boolean)[][] };
   image?: { src: string; alt: string; caption?: string };
+  /** Deretan layar HP. */
+  gallery?: { src: string; alt: string }[];
   /** Tautan di akhir section, mis. "Lihat detail" ke board Figma. */
   links?: { label: string; href: string }[];
 };
@@ -274,6 +276,11 @@ export const projects: ProjectItem[] = [
           body: [
             "APO Mitra dirancang sebagai platform yang membantu mitra menjalankan aktivitas operasional secara lebih mudah dan terstruktur. Namun beberapa proses masih memiliki friction: informasi yang tersebar, status yang kurang jelas, serta alur yang membutuhkan beberapa langkah untuk menyelesaikan satu task.",
           ],
+          image: {
+            src: A.apoCover,
+            alt: "Kumpulan layar hasil redesign APO Mitra",
+            caption: "Redesign APO MITRA — pembaruan flow dan tampilan dengan metode UCD",
+          },
         },
         {
           heading: "Problem",
@@ -412,6 +419,13 @@ export const projects: ProjectItem[] = [
           heading: "High fidelity & prototype",
           body: [
             "Desain akhir dan prototype interaktif untuk menguji alur delivery dari menerima order sampai menyelesaikan pengantaran.",
+          ],
+          gallery: [
+            { src: A.apo1, alt: "Layar menunggu trip" },
+            { src: A.apo2, alt: "Layar trip berjalan" },
+            { src: A.apo3, alt: "Detail order" },
+            { src: A.apo4, alt: "Navigasi menuju customer" },
+            { src: A.apo5, alt: "Proof of delivery" },
           ],
           links: [
             {
