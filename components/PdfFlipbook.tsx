@@ -8,8 +8,8 @@ type Manifest = { width: number; height: number; pages: string[] };
 type Props = {
   /** Folder hasil `npm run pdf` — contoh: "/case-study/edunex" */
   dir: string;
-  /** PDF asli, buat tombol unduh. */
-  pdf: string;
+  /** Tidak dipakai lagi; dibiarkan ada supaya pemanggil lama tetap jalan. */
+  pdf?: string;
 };
 
 /** Seberapa lebar buku dibanding kontainer. Sisanya jadi jarak kiri-kanan. */
@@ -19,7 +19,7 @@ const SPREAD_AT = 900;
 /** Batas atas lebar satu halaman, biar tidak kebesaran di layar lebar. */
 const MAX_PAGE = 560;
 
-export default function PdfFlipbook({ dir, pdf }: Props) {
+export default function PdfFlipbook({ dir }: Props) {
   const [data, setData] = useState<Manifest | null>(null);
   const [error, setError] = useState(false);
   const [box, setBox] = useState(0);
@@ -50,10 +50,7 @@ export default function PdfFlipbook({ dir, pdf }: Props) {
   if (error) {
     return (
       <div className="py-[64px] text-center text-[20px] text-neutral-600">
-        Case study belum tersedia.{" "}
-        <a href={pdf} className="underline" target="_blank" rel="noopener noreferrer">
-          Buka PDF
-        </a>
+        Case study belum tersedia.
       </div>
     );
   }
@@ -117,14 +114,6 @@ export default function PdfFlipbook({ dir, pdf }: Props) {
             >
               Next
             </button>
-            <a
-              href={pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-[40px] flex-1 basis-0 items-center justify-center whitespace-nowrap border border-neutral-200 bg-neutral-600 text-[15px] font-medium text-neutral-100 transition-colors hover:bg-neutral-800 lg:h-[42px] lg:text-[20px]"
-            >
-              Unduh PDF
-            </a>
           </div>
         </>
       )}

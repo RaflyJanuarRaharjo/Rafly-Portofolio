@@ -40,9 +40,9 @@ export default function CaseStudy({ project }: { project: ProjectItem }) {
       ))}
 
       {/* Tautan penutup */}
-      {(story.links?.length || project.pdf) && (
+      {story.links?.length ? (
         <div className="flex w-full flex-col gap-[12px] border-b border-neutral-300 px-[16px] py-[32px] md:flex-row md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
-          {story.links?.map((l) => (
+          {story.links.map((l) => (
             <a
               key={l.href}
               href={l.href}
@@ -53,16 +53,9 @@ export default function CaseStudy({ project }: { project: ProjectItem }) {
               {l.label}
             </a>
           ))}
-          <a
-            href={project.pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center border border-neutral-200 bg-neutral-100 px-[20px] py-[12px] text-center text-[15px] font-medium text-neutral-600 transition-colors hover:bg-neutral-200 md:py-[18px] md:text-[19px] lg:py-[24px] lg:text-[24px]"
-          >
-            Unduh versi PDF
-          </a>
         </div>
-      )}
+      ) : null}
+
     </article>
   );
 }
@@ -226,6 +219,29 @@ function Section({ section }: { section: StorySection }) {
             </li>
           ))}
         </ul>
+      )}
+
+      {section.gallery && (
+        /* Deretan layar HP, digeser mendatar kalau tidak muat. */
+        <div className="mt-[24px] flex gap-[12px] overflow-x-auto pb-[4px] lg:mt-[32px] lg:gap-[20px]">
+          {section.gallery.map((g) => (
+            <a
+              key={g.src}
+              href={g.src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={g.src}
+                alt={g.alt}
+                loading="lazy"
+                className="h-[240px] w-auto rounded-[8px] border border-neutral-200 bg-neutral-100 md:h-[320px] lg:h-[420px]"
+              />
+            </a>
+          ))}
+        </div>
       )}
 
       {section.image && (
