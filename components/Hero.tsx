@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { A } from "@/lib/assets";
 import { profile } from "@/lib/data";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -71,6 +72,9 @@ export default function Hero() {
             )}
           </p>
         ))}
+        <div className="mt-[4px] lg:mt-[8px]">
+          <SocialLinks />
+        </div>
       </div>
     </header>
   );

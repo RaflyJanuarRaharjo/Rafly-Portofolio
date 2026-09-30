@@ -8,6 +8,13 @@ export const profile = {
     "My responsibilities include conducting user research and needs analysis, mapping user flows, creating wireframes and interactive prototypes, developing high-fidelity UI designs, and providing redesign recommendations based on identified pain points. I also contribute to improving information architecture, navigation, and overall user experience to support more efficient operational workflows.",
     "Through an iterative, user-centered approach, I help bridge user needs and business requirements while maintaining consistency, usability, and visual quality across the product experience.",
   ],
+  /** Ikon sosmed di bawah bio. Di HP, link ini otomatis membuka app-nya kalau terpasang. */
+  socials: [
+    { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/rafly-januar-raharjo" },
+    { id: "instagram", label: "Instagram", href: "https://www.instagram.com/rafly_jnr" },
+    { id: "dribbble", label: "Dribbble", href: "https://dribbble.com/KRISSz_" },
+    { id: "fastwork", label: "Fastwork", href: "https://fastwork.id/user/rafproject" },
+  ],
 };
 
 export const cta = {
