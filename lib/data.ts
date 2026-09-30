@@ -236,7 +236,11 @@ export type Story = {
   links?: { label: string; href: string }[];
 };
 
-export const projects: ProjectItem[] = [
+/**
+ * Urutkan sesuai waktu ditambahkan: project baru cukup ditaruh PALING BAWAH
+ * daftar ini, nanti otomatis tampil paling atas di home dan /portfolio.
+ */
+const projectsByDateAdded: ProjectItem[] = [
   {
     slug: "apo-mitra",
     title: "APO Mitra - Alfagift",
@@ -694,6 +698,9 @@ export const projects: ProjectItem[] = [
     poster: A.matchPoster,
   },
 ];
+
+/** Terbaru di atas. */
+export const projects: ProjectItem[] = [...projectsByDateAdded].reverse();
 
 export type BlogItem = { excerpt: string; thumb: string };
 
