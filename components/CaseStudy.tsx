@@ -130,6 +130,90 @@ function Section({ section }: { section: StorySection }) {
         </div>
       )}
 
+      {section.rows && (
+        <dl className="mt-[20px] w-full border-t border-neutral-200 lg:mt-[28px]">
+          {section.rows.map((r) => (
+            <div
+              key={r.label}
+              className="flex flex-col gap-[2px] border-b border-neutral-200 py-[12px] md:flex-row md:gap-[24px] md:py-[14px]"
+            >
+              <dt className="shrink-0 text-[14px] text-neutral-500 md:w-[180px] md:text-[16px] lg:w-[220px] lg:text-[18px]">
+                {r.label}
+              </dt>
+              <dd className="text-[15px] leading-[24px] text-neutral-800 md:text-[17px] md:leading-[28px] lg:text-[19px] lg:leading-[30px]">
+                {r.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      )}
+
+      {section.steps && (
+        <ol className="mt-[20px] flex max-w-[760px] flex-col gap-[16px] lg:mt-[28px] lg:gap-[20px]">
+          {section.steps.map((st, i) => (
+            <li key={st.title} className="flex gap-[14px] lg:gap-[20px]">
+              <span className="shrink-0 pt-[2px] text-[14px] font-medium tabular-nums text-neutral-500 lg:text-[17px]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <p className="text-[15px] font-medium text-neutral-800 md:text-[17px] lg:text-[20px]">
+                  {st.title}
+                </p>
+                <p className="mt-[4px] text-[14px] leading-[22px] text-neutral-600 md:text-[16px] md:leading-[26px] lg:text-[18px] lg:leading-[30px]">
+                  {st.body}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      {section.table && (
+        /* Tabel lebar digeser mendatar di layar sempit, bukan diremas. */
+        <div className="mt-[20px] w-full overflow-x-auto lg:mt-[28px]">
+          <table className="w-full min-w-[560px] border-collapse text-left">
+            <thead>
+              <tr>
+                {section.table.head.map((h) => (
+                  <th
+                    key={h}
+                    scope="col"
+                    className="border border-neutral-200 bg-neutral-100 px-[12px] py-[10px] text-[13px] font-medium text-neutral-800 md:px-[16px] md:text-[15px] lg:text-[17px]"
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.table.rows.map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td
+                      key={j}
+                      className={`border border-neutral-200 px-[12px] py-[10px] text-[13px] text-neutral-600 md:px-[16px] md:text-[15px] lg:text-[17px] ${
+                        typeof cell === "boolean" ? "text-center" : ""
+                      }`}
+                    >
+                      {typeof cell === "boolean" ? (
+                        <span
+                          aria-label={cell ? "ada" : "tidak ada"}
+                          className={cell ? "text-neutral-800" : "text-neutral-500"}
+                        >
+                          {cell ? "\u2713" : "\u2013"}
+                        </span>
+                      ) : (
+                        cell
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
       {section.bullets && (
         <ul className="mt-[20px] flex max-w-[760px] flex-col gap-[8px] lg:mt-[28px] lg:gap-[10px]">
           {section.bullets.map((b) => (
@@ -159,6 +243,22 @@ function Section({ section }: { section: StorySection }) {
             {section.image.caption ?? "Ketuk gambar untuk ukuran penuh"}
           </figcaption>
         </figure>
+      )}
+
+      {section.links && (
+        <div className="mt-[20px] flex flex-wrap gap-[12px] lg:mt-[28px]">
+          {section.links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-neutral-200 bg-neutral-100 px-[18px] py-[10px] text-[14px] font-medium text-neutral-600 transition-colors hover:bg-neutral-200 md:text-[16px] lg:px-[24px] lg:py-[12px] lg:text-[18px]"
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
       )}
     </section>
   );

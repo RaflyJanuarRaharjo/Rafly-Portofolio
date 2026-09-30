@@ -213,9 +213,17 @@ export type StorySection = {
   lead?: string;
   body?: string[];
   bullets?: string[];
+  /** Daftar bernomor, mis. pain point 01..04. */
+  steps?: { title: string; body: string }[];
   stats?: StoryStat[];
   cards?: StoryCard[];
+  /** Tabel dua kolom label-nilai, mis. ringkasan project. */
+  rows?: { label: string; value: string }[];
+  /** Tabel penuh. Sel boleh true (centang) atau false (silang). */
+  table?: { head: string[]; rows: (string | boolean)[][] };
   image?: { src: string; alt: string; caption?: string };
+  /** Tautan di akhir section, mis. "Lihat detail" ke board Figma. */
+  links?: { label: string; href: string }[];
 };
 
 export type Story = {
@@ -235,6 +243,189 @@ export const projects: ProjectItem[] = [
     pdf: "/case-study/apo-mitra.pdf",
     tags: ["Mobile App"],
     cover: A.apoCover,
+    story: {
+      tagline: "Mitra Management & Order Platform",
+      meta: [
+        { label: "Peran", value: "UI/UX Designer" },
+        { label: "Platform", value: "Mobile App" },
+        { label: "Durasi", value: "3 bulan" },
+        { label: "Metode", value: "User Centered Design" },
+      ],
+      sections: [
+        {
+          heading: "Overview",
+          rows: [
+            {
+              label: "Objective",
+              value:
+                "Meningkatkan kemudahan mitra dalam mengelola aktivitas, menerima informasi, dan memantau status order melalui aplikasi APO Mitra.",
+            },
+            {
+              label: "Target user",
+              value:
+                "Mitra atau partner yang menggunakan APO untuk menjalankan aktivitas operasional.",
+            },
+            {
+              label: "Focus",
+              value:
+                "Simplifikasi flow, meningkatkan visibility informasi, dan mengurangi friction dalam proses operasional.",
+            },
+          ],
+          body: [
+            "APO Mitra dirancang sebagai platform yang membantu mitra menjalankan aktivitas operasional secara lebih mudah dan terstruktur. Namun beberapa proses masih memiliki friction: informasi yang tersebar, status yang kurang jelas, serta alur yang membutuhkan beberapa langkah untuk menyelesaikan satu task.",
+          ],
+        },
+        {
+          heading: "Problem",
+          lead:
+            "Aplikasi adalah media utama mitra untuk menerima informasi, mengelola order, dan menjalankan aktivitas layanan.",
+          body: [
+            "Dari evaluasi terhadap experience APO Mitra, ditemukan empat area yang masih bisa dioptimalkan.",
+          ],
+          steps: [
+            {
+              title: "Informasi kurang terstruktur",
+              body:
+                "Informasi penting belum selalu ditampilkan berdasarkan prioritas, sehingga mitra butuh waktu lebih lama untuk menemukan yang dibutuhkan.",
+            },
+            {
+              title: "Status kurang terlihat",
+              body:
+                "Mitra tidak selalu mendapat gambaran yang jelas mengenai status proses atau order yang sedang berjalan.",
+            },
+            {
+              title: "Flow terlalu panjang",
+              body:
+                "Beberapa aktivitas membutuhkan banyak langkah sebelum mitra dapat menyelesaikan task.",
+            },
+            {
+              title: "Informasi operasional tersebar",
+              body:
+                "Informasi terkait aktivitas mitra berada di beberapa bagian aplikasi, sehingga meningkatkan cognitive load.",
+            },
+          ],
+        },
+        {
+          heading: "Goal",
+          lead:
+            "Mengoptimalkan experience APO Mitra dengan informasi yang lebih terstruktur, status yang lebih mudah dipahami, serta alur aktivitas yang lebih sederhana dan efisien.",
+        },
+        {
+          heading: "User research",
+          lead:
+            "Memahami pengalaman mitra saat menggunakan APO Mitra dan menjalankan proses delivery.",
+          bullets: [
+            "Aktivitas yang dilakukan mitra selama proses delivery",
+            "Hambatan saat menjalankan order",
+            "Cara mitra menemukan lokasi customer",
+            "Penggunaan aplikasi saat proses pengantaran",
+            "Kendala komunikasi dengan customer",
+            "Informasi yang dibutuhkan selama delivery",
+            "Feedback dan keluhan dari mitra",
+          ],
+          body: [
+            "Salah satu feedback dari mitra menunjukkan aplikasi memiliki banyak perpindahan halaman dan proses loading yang terasa lama. Mitra juga menginginkan navigasi yang bisa dilakukan langsung di dalam aplikasi, supaya tidak perlu berpindah ke Google Maps.",
+          ],
+        },
+        {
+          heading: "Competitor analysis",
+          lead:
+            "Membandingkan APO Mitra dengan Astro untuk menemukan celah yang bisa digarap.",
+          table: {
+            head: ["Feature", "APO Mitra", "Astro", "Opportunity"],
+            rows: [
+              ["Order status", true, true, "\u2013"],
+              ["Order history", true, true, "\u2013"],
+              ["Navigation", false, true, "Integrated navigation"],
+              ["Progress visibility", false, true, "Clearer delivery progress"],
+              ["Customer notification", false, true, "Better arrival communication"],
+              ["Quick action", false, true, "Reduce unnecessary steps"],
+              ["Route optimization", false, true, "Optimize order sequence"],
+              ["Nearest order selection", false, true, "Prioritize closest order"],
+              ["Delivery issue handling", false, true, "Provide clearer exception flow"],
+              ["Redelivery handling", false, true, "Support structured redelivery"],
+            ],
+          },
+          body: [
+            "Astro menunjukkan pendekatan yang lebih berpihak pada driver dalam hal navigasi, routing, dan penanganan masalah pengiriman. Ini membuka peluang bagi APO Mitra untuk mengurangi perpindahan aplikasi dan membuat keputusan saat delivery lebih actionable.",
+          ],
+        },
+        {
+          heading: "User persona",
+          lead: "Rider mitra yang menjalankan delivery setiap hari.",
+          cards: [
+            {
+              title: "Goals",
+              body:
+                "Menyelesaikan delivery dengan efisien, menemukan lokasi customer dengan mudah, mendapatkan informasi order yang jelas, dan lanjut ke order berikutnya dengan cepat.",
+            },
+            {
+              title: "Pain points",
+              body:
+                "Pin lokasi tidak sesuai, alamat customer tidak lengkap, harus berpindah ke Google Maps, customer tidak merespons, informasi order tidak selalu mudah ditemukan, dan terlalu banyak notifikasi.",
+            },
+            {
+              title: "Needs",
+              body:
+                "Navigasi terintegrasi, informasi order yang mudah ditemukan, status delivery yang jelas, komunikasi customer yang lebih efektif, dan flow penyelesaian order yang sederhana.",
+            },
+          ],
+        },
+        {
+          heading: "How might we",
+          lead:
+            "\u201cHow might we simplify the APO Mitra delivery experience so riders can navigate, communicate with customers, and complete orders without unnecessary friction?\u201d",
+        },
+        {
+          heading: "Information architecture",
+          body: [
+            "Sitemap dan userflow disusun ulang supaya hierarki informasi lebih dangkal dan setiap aktivitas punya jalur yang konsisten.",
+          ],
+          links: [
+            {
+              label: "Sitemap",
+              href: "https://www.figma.com/board/ZZGAb6hvnsQkNnjD7V1wKA/Alfagift?node-id=0-1",
+            },
+            {
+              label: "Userflow",
+              href: "https://www.figma.com/board/ZZGAb6hvnsQkNnjD7V1wKA/Alfagift?node-id=1-186",
+            },
+          ],
+        },
+        {
+          heading: "Wireframe & design system",
+          body: [
+            "Wireframe dipakai untuk menguji struktur layar sebelum masuk ke visual, lalu design system disusun supaya komponen konsisten dan siap diserahkan ke developer.",
+          ],
+          links: [
+            {
+              label: "Wireframe",
+              href: "https://www.figma.com/board/ZZGAb6hvnsQkNnjD7V1wKA/Alfagift?node-id=1-6580",
+            },
+            {
+              label: "Design system",
+              href: "https://www.figma.com/board/ZZGAb6hvnsQkNnjD7V1wKA/Alfagift?node-id=5-2313",
+            },
+          ],
+        },
+        {
+          heading: "High fidelity & prototype",
+          body: [
+            "Desain akhir dan prototype interaktif untuk menguji alur delivery dari menerima order sampai menyelesaikan pengantaran.",
+          ],
+          links: [
+            {
+              label: "Design hi-fi",
+              href: "https://www.figma.com/design/ByEBlomNpqZpKN169PWxgt/Intern-Alfagift?node-id=355-1386",
+            },
+            {
+              label: "Prototype",
+              href: "https://www.figma.com/proto/ByEBlomNpqZpKN169PWxgt/Intern-Alfagift?node-id=542-4499&starting-point-node-id=542%3A4499",
+            },
+          ],
+        },
+      ],
+    },
   },
   {
     slug: "edunex",
