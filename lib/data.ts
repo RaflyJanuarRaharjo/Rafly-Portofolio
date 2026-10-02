@@ -679,11 +679,184 @@ const projectsByDateAdded: ProjectItem[] = [
     slug: "glidexa",
     title: "GLIDEXA VPN - Gaming Acceleration",
     summary:
-      "Landing page for a gaming-focused VPN: early-access waitlist, pricing tiers, and product positioning built around low latency and one-tap connection.",
+      "Redesign landing page dan aplikasi VPN gaming dari brief klien: mekanisme waitlist pra-rilis, tiga janji produk yang diulang di onboarding, dan belasan layar yang belum ada di brief.",
     pdf: "/case-study/glidexa.pdf",
-    tags: ["Website"],
+    tags: ["Website", "Mobile App"],
     prototype: "https://glidexa-vpn.vercel.app/",
     cover: A.glidexaCover,
+    story: {
+      tagline: "Gaming VPN — Landing Page & App Redesign",
+      meta: [
+        { label: "Peran", value: "UI/UX Designer" },
+        { label: "Jenis", value: "Project klien" },
+        { label: "Platform", value: "Website & Mobile App" },
+        { label: "Status", value: "Pra-rilis" },
+      ],
+      sections: [
+        {
+          heading: "Overview",
+          rows: [
+            {
+              label: "Produk",
+              value:
+                "VPN yang diposisikan khusus untuk gaming — menekan latency saat bermain, bukan sekadar menyembunyikan lokasi.",
+            },
+            {
+              label: "Titik awal",
+              value:
+                "Brief dari klien berisi wireframe landing page, empat proposisi, mekanisme booking pra-rilis, dan anotasi alur teknis di balik tiap layar.",
+            },
+            {
+              label: "Objective",
+              value:
+                "Menerjemahkan brief itu jadi landing page dan aplikasi yang siap dibangun, sekaligus menutup celah yang belum terjawab di brief.",
+            },
+          ],
+          body: [
+            "Berbeda dari project lain di portofolio ini, GLIDEXA berangkat dari brief klien, bukan dari riset mandiri. Kebutuhan, fitur, dan mekanisme bisnisnya sudah ditentukan; kontribusi desainnya ada pada menerjemahkan semua itu jadi alur yang bisa dijalankan, lalu melengkapi bagian yang belum terpikirkan.",
+          ],
+        },
+        {
+          heading: "Tantangan: menjual produk yang belum ada",
+          lead:
+            "Saat landing page ini dirancang, aplikasinya belum rilis.",
+          body: [
+            "Situasi ini menutup pola yang biasa dipakai halaman produk — tidak ada tombol install yang benar-benar berfungsi, tidak ada screenshot store, tidak ada ulasan pengguna. Yang tersedia hanya janji.",
+            "Karena itu halamannya dibangun di sekitar satu pertanyaan: apa yang membuat orang mau menunggu? Jawabannya ada pada dua hal — bukti bahwa orang lain sudah menunggu, dan imbalan konkret bagi yang menunggu lebih awal. Brief klien menyebut keduanya; yang perlu dikerjakan adalah membuat keduanya terbaca sejak layar pertama.",
+          ],
+        },
+        {
+          heading: "Hero: dari klaim ke janji yang spesifik",
+          lead:
+            "Headline-nya diganti, dan itu perubahan paling menentukan di halaman ini.",
+          body: [
+            "Brief menuliskan “Fastest VPN ready for online — For your Gaming Acceleration”. Masalahnya, “fastest” adalah klaim yang dipakai hampir semua VPN, dan “gaming acceleration” terdengar seperti istilah teknis ketimbang manfaat.",
+            "Versi redesign memakai “Stable ping. Zero lag. Game like nothing's in your way.” Tiga hal berubah: janjinya jadi spesifik dan bisa diuji, bahasanya memakai kosakata pemain, dan kalimat penutupnya menggambarkan perasaan main tanpa gangguan alih-alih menyebut fitur.",
+            "Counter pun naik derajat. Di brief ia hanya angka di tengah hero; di redesign ia jadi pita tersendiri bertuliskan “80+ Early Access Waitlist”, ditambah pita pengumuman di paling atas halaman yang menjelaskan keuntungan ikut lebih awal. Bukti sosialnya jadi sulit dilewatkan.",
+          ],
+          gallery: [
+            { src: A.glidexaHero, alt: "Hero versi brief klien" },
+            { src: A.gx2Hero, alt: "Hero versi redesign dengan pita waitlist" },
+          ],
+        },
+        {
+          heading: "Tiga janji, diulang dua kali",
+          lead:
+            "Apa yang dijanjikan di web adalah hal pertama yang dibaca di aplikasi.",
+          body: [
+            "Section “Show your gaming skill to the world” memecah produk jadi tiga janji: Built for zero lag, Connect in one tap, dan Privacy not a policy. Masing-masing dapat satu visual yang menunjukkan wujudnya — meteran kecepatan, pemilih server, dan perisai data.",
+            "Tiga janji yang sama persis muncul lagi sebagai tiga layar onboarding di aplikasi, dengan urutan dan visual yang sama. Orang yang mendaftar dari landing page tidak menemukan produk yang berbeda dari yang dijanjikan; ia menemukan kalimat yang sama, kali ini di dalam aplikasinya.",
+          ],
+          gallery: [
+            { src: A.gx2Onb1, alt: "Onboarding 1 — Built for zero lag" },
+            { src: A.gx2Onb2, alt: "Onboarding 2 — Connect in one tap" },
+            { src: A.gx2Onb3, alt: "Onboarding 3 — Privacy, not a policy" },
+          ],
+          image: {
+            src: A.gx2Pillars,
+            alt: "Section tiga janji di landing page",
+          },
+        },
+        {
+          heading: "Empat alasan, dari kartu jadi akordeon",
+          lead:
+            "Isinya tetap, cara membacanya yang berubah.",
+          body: [
+            "Brief menyusun empat alasan — Fastest, Security First, Integrity Reason, Premium for free — sebagai empat kartu sejajar yang semuanya terbuka. Di layar panjang ini memaksa pengunjung membaca empat paragraf sekaligus, padahal hanya satu yang biasanya relevan baginya.",
+            "Versi redesign mengubahnya jadi akordeon dengan satu item terbuka secara default. Judulnya tetap terlihat semua, jadi pengunjung tahu ada empat alasan, tapi hanya membaca yang ia pilih. Slot maskot yang di brief masih kosong akhirnya terisi — bukan maskot, melainkan visual petir di atas potret pemain.",
+          ],
+          gallery: [
+            { src: A.glidexaWhy, alt: "Section Why choose us versi brief, empat kartu terbuka" },
+            { src: A.gx2Why, alt: "Section Why choose us versi redesign, akordeon" },
+          ],
+        },
+        {
+          heading: "Layar yang belum ada di brief",
+          lead:
+            "Brief mengatur jalur utama. Yang menentukan produk bisa dipakai sehari-hari justru jalur sampingnya.",
+          body: [
+            "Brief mencakup login, koneksi, daftar server, riwayat, dan langganan. Yang belum disebut: apa yang terjadi kalau pengguna lupa password, bagaimana ia mengelola perangkat yang sudah login, bagaimana ia mengganti bahasa, dan ke mana ia bertanya kalau ada masalah.",
+            "Lupa password dirancang tiga langkah — kirim email, masukkan enam digit kode, lalu buat password baru — ditutup dialog konfirmasi berhasil. Device Manager menampilkan berapa perangkat terpakai beserta tombol logout per perangkat, yang penting karena tiap paket membatasi jumlah perangkat. Help & Support menaruh kontak dukungan di atas, lalu FAQ di bawahnya.",
+          ],
+          gallery: [
+            { src: A.gx2Forgot1, alt: "Lupa password — masukkan email" },
+            { src: A.gx2Forgot2, alt: "Lupa password — kode enam digit" },
+            { src: A.gx2Forgot3, alt: "Lupa password — password baru" },
+            { src: A.gx2Device, alt: "Device Manager dengan logout per perangkat" },
+            { src: A.gx2History, alt: "Riwayat aktivitas dengan filter waktu" },
+            { src: A.gx2Language, alt: "Pilihan bahasa" },
+            { src: A.gx2Help, alt: "Help & Support dengan kontak dan FAQ" },
+            { src: A.gx2Profile, alt: "Halaman profil" },
+          ],
+        },
+        {
+          heading: "Angka sebelum sambung",
+          lead:
+            "Pemain tidak memilih server berdasarkan nama negara, tapi berdasarkan ping.",
+          body: [
+            "Layar Home menampilkan status tersambung, durasi sesi yang berjalan, dan dua meteran — unduh 50 Mbps dan unggah 20 Mbps — dengan bar yang terisi, bukan sekadar angka. Durasi sesi ini tambahan dari brief, dan berguna justru karena VPN gaming dipakai per pertandingan.",
+            "Daftar server membawa ping dan kecepatan di tiap baris, plus pemisah Recommended dan Global serta kolom pencarian. Server yang menuntut paket berbayar ditandai label Premium di tempatnya, bukan disembunyikan — pengguna tahu apa yang ia lewatkan tanpa harus membuka halaman harga.",
+          ],
+          gallery: [
+            { src: A.gx2Home, alt: "Layar Home dengan durasi sesi dan meteran kecepatan" },
+            { src: A.gx2Server, alt: "Daftar server dengan ping per baris" },
+            { src: A.gx2Signin, alt: "Layar masuk" },
+            { src: A.gx2Splash, alt: "Splash screen" },
+          ],
+        },
+        {
+          heading: "Paket langganan",
+          lead:
+            "Tiga nama paket, disusun ulang dari penamaan di brief.",
+          body: [
+            "Brief memakai nama Basic, Standard 5+1, dan Connected for a year — dua di antaranya menjelaskan durasi, bukan tingkatan. Redesign menggantinya jadi Basic, Plus, dan Prime: tangga yang langsung terbaca urutannya tanpa perlu membaca detail.",
+            "Tiap kartu menampilkan daftar fitur yang sama susunannya, sehingga perbedaan antarpaket terbaca dari membandingkan baris yang sejajar, bukan dari mencari-cari.",
+          ],
+          table: {
+            head: ["Paket", "Harga", "Hemat", "Server", "Perangkat", "Bandwidth"],
+            rows: [
+              ["Basic", "Rp49rb/bln", "15%", "1 server", "2 perangkat", "–"],
+              ["Plus", "Rp40rb/bln", "23%", "Semua server", "3 perangkat", "1 TB"],
+              ["Prime", "Rp36rb/bln", "30%", "Semua server", "3 perangkat", "2 TB"],
+            ],
+          },
+          gallery: [
+            { src: A.gx2Subs, alt: "Halaman paket di aplikasi dengan tab Basic, Plus, Prime" },
+          ],
+          image: {
+            src: A.gx2Pricing,
+            alt: "Section harga di landing page dengan tiga kartu paket",
+          },
+        },
+        {
+          heading: "Membangun kepercayaan",
+          lead:
+            "VPN meminta pengguna mempercayakan seluruh lalu lintas internetnya. Itu permintaan besar untuk produk yang belum rilis.",
+          body: [
+            "Tiga hal ditambahkan untuk menjawab itu, dan ketiganya tidak ada di brief. Halaman Privacy Policy tersendiri, sehingga klaim “tidak menjual data” punya tempat untuk dijabarkan. Badge PSE dan Kominfo di footer, menandakan produknya terdaftar sebagai penyelenggara sistem elektronik di Indonesia. Dan nama badan hukum lengkap — PT Glidexa Inovasi Digital — di baris copyright, bukan sekadar nama merek.",
+            "Section FAQ melengkapi itu dari sisi lain: ia menjawab keberatan yang muncul sebelum orang menekan tombol, mulai dari apakah servernya bisa dipilih sampai apakah aplikasinya jalan di perangkat mobile.",
+          ],
+          gallery: [
+            { src: A.gx2Faq, alt: "Section FAQ dengan satu jawaban terbuka" },
+            { src: A.gx2Footer, alt: "Footer dengan badge PSE dan Kominfo" },
+          ],
+        },
+        {
+          heading: "Yang masih terbuka",
+          lead:
+            "Empat hal yang sebaiknya dibereskan sebelum halaman ini dipublikasikan.",
+          bullets: [
+            "Deretan logo partner di bawah hero masih bertuliskan “Loremipsum” — perlu diisi logo asli atau dihapus, karena placeholder di halaman produksi justru menurunkan kepercayaan",
+            "Prime lebih murah dari Plus (Rp36rb berbanding Rp40rb) padahal durasinya sama 5+1 bulan dan fiturnya lebih lengkap — dengan susunan ini tidak ada alasan memilih Plus",
+            "Urutan paket berbeda antara web dan aplikasi: landing page menampilkan Basic, Prime, Plus sementara aplikasi menampilkan Basic, Plus, Prime",
+            "Kata “Bandwith” di kartu Plus dan Prime seharusnya “Bandwidth”",
+          ],
+        },
+      ],
+      links: [
+        { label: "Lihat prototype", href: "https://glidexa-vpn.vercel.app/" },
+      ],
+    },
   },
   {
     slug: "mews-mayangan",
