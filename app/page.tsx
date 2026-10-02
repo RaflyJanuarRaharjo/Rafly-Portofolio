@@ -31,7 +31,8 @@ export default function HomePage() {
       <Stripe />
       <SectionHeader title="Blog" seeAllHref="/blog" />
       <Stripe />
-      <BlogRow items={posts} />
+      {/* Home cukup 2 terbaru; selebihnya di /blog. */}
+      <BlogRow items={posts.slice(0, 2)} />
 
       <Stripe />
       <CtaBanner />

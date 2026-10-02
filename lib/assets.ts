@@ -67,6 +67,7 @@ export const A = {
 
   blogThumb: "/assets/blog-thumb.png",
   blogRafaetech: "/assets/blog-rafaetech.webp",
+  blogRafaetechFull: "/assets/blog-rafaetech-full.webp",
 
   stripe: "/assets/stripe.svg",
   ornament: "/assets/ornament.svg",

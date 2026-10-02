@@ -183,12 +183,12 @@ export type AwardItem = {
 };
 
 export const awards: AwardItem[] = [
-  { title: "Finalist – PlayIT UI/UX Hackathon", org: "PlayIT Polinema", year: "2026" },
+  { title: "Finalist – PlayIT UI/UX Hackathon", org: "PlayIT", year: "2026" },
   { title: "3rd Place – National UI/UX Design Competition RAFAETECH 2025", org: "Fakultas Sains dan Teknologi, Universitas Islam Negeri Raden Fatah Palembang", year: "2025" },
-  { title: "3rd Place Design Challenge - Intechfest 2025", org: "Politeknik Negeri Bali", year: "2026" },
-  { title: "2nd Place – National UI/UX Design Competition 2025", year: "2025" },
-  { title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025", org: "Silogy Expo Education Fair", year: "2025" },
-  { title: "Finalis 10 Besar – UI/UX in Action", org: "Multimedia in Action LinkAja 2025", year: "2025" },
+  { title: "3rd Place Design Challenge - Intechfest 2025", org: "Politeknik Negeri Bali", year: "2025" },
+  { title: "2nd Place – National UI/UX Design Competition 2025", org: "Himpunan Mahasiswa Sistem Informasi, UNISNU Jepara", year: "2025" },
+  { title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025", org: "HIMSIKA Silogy Expo", year: "2025" },
+  { title: "Finalis 10 Besar – UI/UX in Action", org: "KSM Multimedia UPN \u201cVeteran\u201d Jakarta", year: "2025" },
 ];
 
 export type ProjectItem = {
@@ -1186,25 +1186,107 @@ const projectsByDateAdded: ProjectItem[] = [
 export const projects: ProjectItem[] = [...projectsByDateAdded].reverse();
 
 export type BlogItem = {
-  /** Judul singkat; boleh kosong untuk entri lama yang hanya berupa kutipan. */
-  title?: string;
-  /** Baris kecil di bawah judul: penyelenggara dan tanggal. */
+  /** Dipakai sebagai alamat halaman detail: /blog/<slug>. */
+  slug: string;
+  /** Satu-satunya teks yang tampil di thumbnail. */
+  title: string;
+  /** Baris kecil di halaman detail: penyelenggara dan tanggal. */
   meta?: string;
-  excerpt: string;
-  thumb: string;
+  /** Tahun, dipakai di kartu yang belum punya foto. */
+  year?: string;
+  /** Kosongkan kalau fotonya belum ada; kartunya memakai pola garis. */
+  thumb?: string;
+  /** Gambar di halaman detail; kalau kosong, thumbnail yang dipakai. */
+  image?: string;
+  /** Paragraf isi di halaman detail. */
+  body?: string[];
+  /** Poin-poin capaian di halaman detail. */
+  bullets?: string[];
 };
 
 export const posts: BlogItem[] = [
   {
+    slug: "playit-hackathon",
+    title: "Finalist – PlayIT UI/UX Hackathon",
+    meta: "PlayIT · Juni 2026 · Associated with University of Brawijaya",
+    year: "2026",
+    body: [
+      "Selected as a Finalist in the PlayIT UI/UX Hackathon for designing a user-centered digital solution within a competitive hackathon environment. Collaborated with a multidisciplinary team to research user needs, create intuitive interfaces, develop interactive prototypes, and present the final solution to the judges.",
+    ],
+    bullets: [
+      "Selected as a Finalist in the PlayIT UI/UX Hackathon.",
+      "Awarded 2nd Place – Problem Solver for delivering an innovative and user-centered solution to the challenge.",
+      "Collaborated with a multidisciplinary team to design a digital product within a limited timeframe.",
+      "Conducted UX research, created user flows, wireframes, high-fidelity UI designs, and interactive prototypes using Figma.",
+      "Presented the final solution to the judges while demonstrating strong design thinking, collaboration, and problem-solving skills.",
+    ],
+  },
+  {
+    slug: "rafaetech-2025",
     title: "3rd Place – National UI/UX Design Competition RAFAETECH 2025",
     meta:
-      "Fakultas Sains dan Teknologi, Universitas Islam Negeri Raden Fatah Palembang \u00b7 Oktober 2025",
-    excerpt:
-      "Juara 3 kompetisi UI/UX tingkat nasional RAFAETECH 2025.",
+      "Fakultas Sains dan Teknologi, Universitas Islam Negeri Raden Fatah Palembang · Oktober 2025 · Associated with University of Brawijaya",
+    year: "2025",
     thumb: A.blogRafaetech,
+    image: A.blogRafaetechFull,
+    bullets: [
+      "Awarded 3rd Place in a national-level UI/UX design competition themed “Tech Beyond Limits: Building Our Future Together — Innovation, Competition, and Entrepreneurial Excellence.”",
+      "Designed WISEBITE, a user-centered digital solution focused on accessibility, usability, and efficient food management.",
+      "Emphasized inclusive design principles to improve user experience in modern digital food systems.",
+    ],
   },
-  { excerpt: "Awarded 2nd Place \u2013 Problem Solver for delivering an innovative and user....", thumb: A.blogThumb },
-  { excerpt: "Awarded 2nd Place \u2013 Problem Solver for delivering an innovative and user....", thumb: A.blogThumb },
+  {
+    slug: "intechfest-2025",
+    title: "3rd Place Design Challenge – Intechfest 2025",
+    meta:
+      "Politeknik Negeri Bali · September 2025 · Associated with University of Brawijaya",
+    year: "2025",
+    bullets: [
+      "Achieved 3rd Place in the Design Challenge at the Information and Technology Festival (Intechfest) 2025.",
+      "First experience participating in an offline UI/UX competition, strengthening presentation and collaboration skills.",
+      "Delivered a design pitch without slides, focusing on storytelling and design rationale.",
+      "Gained valuable insights through networking and discussions with fellow designers and mentors.",
+    ],
+  },
+  {
+    slug: "multimedia-in-action-2025",
+    title: "Finalis 10 Besar – UI/UX in Action, Multimedia in Action LinkAja 2025",
+    meta:
+      "KSM Multimedia UPN “Veteran” Jakarta · September 2025 · Associated with University of Brawijaya",
+    year: "2025",
+    body: [
+      "Selected as Top 10 Finalist in UI/UX in Action, part of Multimedia in Action 2025. This competition focused on delivering user-centered UI/UX solutions through research-driven design, usability, and impactful digital experiences. The experience strengthened my skills in UX research, problem-solving, and design presentation.",
+    ],
+  },
+  {
+    slug: "unisnu-jepara-2025",
+    title: "2nd Place – National UI/UX Design Competition 2025",
+    meta:
+      "Himpunan Mahasiswa Sistem Informasi, UNISNU Jepara · Juni 2025 · Associated with University of Brawijaya",
+    year: "2025",
+    body: [
+      "Our team presented “Lokalook: AI-Powered Fashion Platform for Localpreneurs” — a design solution powered by artificial intelligence, built to empower local fashion entrepreneurs through a human-centered, intuitive, and visually appealing mobile interface.",
+      "This experience was a valuable journey of collaboration, research, and purposeful design.",
+    ],
+    bullets: [
+      "Awarded 2nd Place in a national mobile UI/UX design competition.",
+      "Presented “Lokalook”, an AI-powered fashion platform designed to empower local fashion entrepreneurs.",
+      "Focused on human-centered design, intuitive user flow, and visually engaging mobile interfaces.",
+      "Strengthened experience in teamwork, research-driven design, and solution-oriented problem solving.",
+    ],
+  },
+  {
+    slug: "silogy-expo-2025",
+    title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025",
+    meta:
+      "HIMSIKA Silogy Expo · Juni 2025 · Associated with University of Brawijaya",
+    year: "2025",
+    bullets: [
+      "Selected as Top 4 finalist in a national UI/UX design competition.",
+      "Developed an educational application prototype using a user-centered design approach.",
+      "Emphasized intuitive navigation, interactivity, and inclusive user experience.",
+    ],
+  },
 ];
 
 /** Jumlah total yang tampil di badge header section. */

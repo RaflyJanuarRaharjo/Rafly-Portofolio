@@ -10,15 +10,17 @@ import Stripe from "@/components/Stripe";
  * Layout tidak ikut dibongkar saat pindah route, jadi elemen <video> di Hero
  * tetap hidup dan tidak restart — itu yang bikin header kedut sebelumnya.
  *
- * Halaman case study (/portfolio/<slug>) punya header sendiri, jadi dilewati.
+ * Halaman case study (/portfolio/<slug>) dan detail blog (/blog/<slug>) punya
+ * header sendiri, jadi dilewati.
  */
 export default function SiteChrome() {
   const pathname = usePathname();
 
-  const isCaseStudy =
-    pathname.startsWith("/portfolio/") && pathname !== "/portfolio";
+  const isDetail =
+    (pathname.startsWith("/portfolio/") && pathname !== "/portfolio") ||
+    (pathname.startsWith("/blog/") && pathname !== "/blog");
 
-  if (isCaseStudy) return null;
+  if (isDetail) return null;
 
   return (
     <>
