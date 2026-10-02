@@ -59,6 +59,11 @@ export const A = {
 
   mewsVideo: "/assets/mews-mayangan.mp4",
   mewsPoster: "/assets/mews-mayangan-poster.webp",
+  mewsDashboard: "/assets/mews-dashboard.webp",
+  mewsAlert: "/assets/mews-alert.webp",
+  mewsData: "/assets/mews-data.webp",
+  mewsCuaca: "/assets/mews-cuaca.webp",
+  mewsPerangkat: "/assets/mews-perangkat.webp",
 
   blogThumb: "/assets/blog-thumb.png",
 

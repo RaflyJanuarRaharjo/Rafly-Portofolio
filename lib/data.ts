@@ -888,6 +888,142 @@ const projectsByDateAdded: ProjectItem[] = [
     video: A.mewsVideo,
     poster: A.mewsPoster,
     ratio: "16 / 9",
+    story: {
+      tagline: "Early Warning Dashboard — Redesign",
+      meta: [
+        { label: "Peran", value: "UI/UX Designer" },
+        { label: "Jenis", value: "Redesign" },
+        { label: "Platform", value: "Dashboard" },
+        { label: "Lokasi", value: "Desa Mayangan, Subang" },
+      ],
+      sections: [
+        {
+          heading: "Overview",
+          rows: [
+            {
+              label: "Sistem",
+              value:
+                "Mayangan Early Warning System (MEWS) — stasiun pantau laut yang mendeteksi banjir rob dan membunyikan sirine saat air mencapai level kritis.",
+            },
+            {
+              label: "Lokasi",
+              value:
+                "Rumah Edukasi Mangrove Pesisir Utara Jawa Barat, Desa Mayangan, Subang. Dikelola Yayasan Wanadri dengan dukungan PT Bio Farma (Persero).",
+            },
+            {
+              label: "Objective",
+              value:
+                "Merancang ulang dashboard monitoring-nya supaya satu pertanyaan utama — apakah sekarang aman — bisa dijawab dalam hitungan detik.",
+            },
+          ],
+          body: [
+            "MEWS bukan dashboard analitik yang dibuka saat orang punya waktu luang. Ia dibuka justru saat air sedang naik dan orang sedang cemas. Hampir semua keputusan desain di sini berangkat dari kenyataan itu.",
+          ],
+        },
+        {
+          heading: "Yang dipantau",
+          lead: "Tiga level, tiga konsekuensi yang berbeda.",
+          body: [
+            "Alat ini memakai pelampung tiga tingkat. Setiap tingkat yang terangkat menandakan ketinggian air yang berbeda, dan yang membedakan ketiganya bukan sekadar angka melainkan apa yang otomatis terjadi sesudahnya.",
+          ],
+          table: {
+            head: ["Level", "Arti", "Pemicu", "Aksi otomatis"],
+            rows: [
+              ["L1", "Pasang normal", "Pelampung level 1 terangkat", "Status tampil di dashboard dan panel lokasi"],
+              ["L2", "Siaga rob", "Pelampung level 2 terangkat", "Status tampil di dashboard dan panel lokasi"],
+              ["L3", "Banjir rob", "Pelampung level 3 terangkat", "Lampu indikator, sirine, dan email otomatis"],
+            ],
+          },
+        },
+        {
+          heading: "Satu layar, satu pertanyaan",
+          lead:
+            "Urutan isi dashboard mengikuti urutan yang dicari orang saat membukanya.",
+          body: [
+            "Angka tinggi muka air diletakkan paling atas dan paling besar, berdampingan dengan tertinggi, terendah, dan rata-rata hari itu — konteks yang membuat satu angka berarti sesuatu. Di bawahnya grafik, lalu baru status peringatan dini dan status alert.",
+            "Status peringatan dini menampilkan ketiga level sekaligus beserta keterangannya, bukan hanya level yang sedang aktif. Operator jadi tahu posisi air sekarang ada di mana dalam tangga itu, bukan sekadar tahu bahwa keadaan aman.",
+            "Di sidebar paling bawah ada dua hal yang terlihat di semua halaman: badge status “Aman · 0 dari 3” dan indikator “Online · 10 dtk”. Yang kedua sama pentingnya dengan yang pertama — operator perlu yakin bahwa yang ia lihat memang data terbaru.",
+          ],
+          image: {
+            src: A.mewsDashboard,
+            alt: "Halaman Dashboard MEWS Mayangan",
+            caption:
+              "Dashboard — angka utama, grafik, status peringatan, cuaca, riwayat, dan ringkasan perangkat",
+          },
+        },
+        {
+          heading: "Membedakan nol dari tidak terdengar",
+          lead: "Ini keputusan paling menentukan di seluruh redesign.",
+          body: [
+            "Sensor cahaya menunjukkan 0 lux. Kalau ditampilkan apa adanya, angka itu terbaca sebagai keadaan normal di malam hari. Padahal pembacaan terakhirnya pukul 23:41 kemarin — sensornya sudah lama tidak mengirim apa-apa.",
+            "Karena itu “Terlambat” dibuat jadi status tersendiri, berwarna merah, lengkap dengan waktu pembacaan terakhirnya. Ringkasan di atas tabel pun memisahkan ketiganya: 3 normal, 2 perlu perhatian, 1 terlambat.",
+            "Untuk sistem peringatan dini, sensor yang diam tidak boleh terlihat seperti sensor yang melaporkan keadaan tenang. Halaman Tentang Perangkat meneruskan logika yang sama — weather station di sana berstatus “Sebagian terlambat”, bukan sekadar aktif atau mati.",
+          ],
+          image: {
+            src: A.mewsCuaca,
+            alt: "Halaman Cuaca dengan status Terlambat pada sensor cahaya",
+            caption:
+              "Sensor cahaya ditandai Terlambat beserta waktu pembacaan terakhir, bukan ditampilkan sebagai 0 lux biasa",
+          },
+        },
+        {
+          heading: "Peringatan yang bisa dibaca dan diuji",
+          lead: "Halaman Alert menjelaskan mesinnya, bukan cuma melaporkan hasilnya.",
+          body: [
+            "Tabel “Alur peringatan” memetakan tiap level ke pemicunya dan ke aksi otomatis yang menyertainya. Operator jadi bisa memahami apa yang akan terjadi sebelum hal itu terjadi — penting untuk sistem yang sebagian besar waktunya diam.",
+            "Tombol “Uji sirine” menjawab masalah khas alat peringatan: perangkat yang jarang berbunyi tidak pernah ketahuan rusak sampai saat ia paling dibutuhkan. Status sirine dan lampu pun ditulis dua lapis — “Mati” sebagai kondisi, “Standby” sebagai kesiapan — supaya mati tidak tertukar dengan rusak.",
+            "Log alert mencatat tiap perubahan status beserta apa yang ikut menyala: sirine, lampu, dan apakah email terkirim. Jadi sesudah kejadian, jalannya peristiwa masih bisa ditelusuri.",
+          ],
+          image: {
+            src: A.mewsAlert,
+            alt: "Halaman Alert dengan alur peringatan dan log",
+            caption: "Alert — level saat ini, kesiapan aktuator, alur tiap level, dan log kejadian",
+          },
+        },
+        {
+          heading: "Data mentah itu berisik",
+          lead: "333 titik data dalam tiga jam, dan garisnya bergerigi.",
+          body: [
+            "Grafik monitoring menampilkan data apa adanya, dan itu memang perlu — operator harus bisa melihat lonjakan yang sesungguhnya. Tapi data sementah itu menyulitkan ketika yang dicari adalah arah tren.",
+            "Jalan keluarnya bukan memilihkan satu cara penghalusan, melainkan menyediakan lima dan membiarkan operator memilih: Asli, Agregasi per jam, Moving average, Sampling, dan Spline.",
+            "Yang membuatnya benar-benar berguna adalah baris keterangan di bawah tombolnya — tiap mode dijelaskan satu kalimat pendek seperti “ambil tiap n data” atau “kurva dihaluskan”. Tanpa baris itu, lima tombol hanya jadi jargon statistik; dengan baris itu, operator yang bukan analis data tetap tahu apa yang sedang ia lihat dan apa yang disembunyikan tiap mode.",
+          ],
+          image: {
+            src: A.mewsData,
+            alt: "Halaman Data & Grafik dengan lima mode penghalusan grafik",
+            caption: "Lima mode penghalusan, masing-masing dengan keterangan singkat di bawahnya",
+          },
+        },
+        {
+          heading: "Memakai ambang yang sudah dipercaya",
+          lead: "Kategori intensitas hujan tidak dikarang sendiri.",
+          body: [
+            "Panel hujan memakai kategori BMKG — Ringan 1–5, Sedang 5–10, Lebat 10–20, dan Sangat lebat di atas 20 mm per jam — dengan sumbernya ditulis terang di judul panel.",
+            "Untuk sistem yang hasilnya dipakai mengambil keputusan evakuasi, memakai ambang milik lembaga resmi lebih bisa dipertanggungjawabkan daripada menetapkan ambang sendiri, dan menyebut sumbernya membuat angka itu bisa diperiksa orang lain.",
+          ],
+        },
+        {
+          heading: "Menjelaskan dirinya sendiri",
+          lead: "Dashboard ini juga dibuka orang yang belum pernah melihat alatnya.",
+          body: [
+            "Halaman Tentang Perangkat memuat enam langkah “Cara kerja — dari sensor sampai peringatan”, peta lokasi dengan koordinat yang bisa disalin, video liputan, dan tabel delapan komponen lengkap dengan fungsi serta statusnya masing-masing.",
+            "Satu baris di tabel itu menyingkap hal yang mudah terlewat: ada “Panel dashboard lokasi” yang tugasnya memberi informasi untuk warga di lokasi. Artinya sistem ini punya dua audiens — operator yang memantau dari jauh lewat dashboard ini, dan warga yang membaca panel di tempat. Keduanya butuh bentuk informasi yang berbeda.",
+          ],
+          image: {
+            src: A.mewsPerangkat,
+            alt: "Halaman Tentang Perangkat dengan cara kerja dan daftar komponen",
+            caption:
+              "Tentang Perangkat — identitas sistem, lokasi, cara kerja enam langkah, dan status delapan komponen",
+          },
+        },
+      ],
+      links: [
+        {
+          label: "Sistem yang berjalan saat ini",
+          href: "https://mayangansiaga.conservation.id/",
+        },
+      ],
+    },
   },
   {
     slug: "match",
