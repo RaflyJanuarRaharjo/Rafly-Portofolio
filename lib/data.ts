@@ -732,7 +732,7 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               label: "Deliverable",
               value:
-                "Logo, palet warna, arah fotografi, pattern, dan penerapannya di web app, app icon, profil sosial, serta media luar ruang.",
+                "Logo, palet warna, arah fotografi, pattern, penerapan di app icon, profil sosial, dan media luar ruang, sampai sistem warna untuk antarmuka produknya.",
             },
           ],
           body: [
@@ -746,6 +746,7 @@ const projectsByDateAdded: ProjectItem[] = [
           body: [
             "Nama ini dipilih karena persis menggambarkan cara kerja platformnya: mempertemukan skill, minat, dan tujuan karier seseorang dengan lowongan yang benar-benar cocok. Personalisasi AI-nya bekerja sebagai pencocok, bukan sebagai mesin pencari.",
             "Satu suku kata, dan berfungsi sebagai kata kerja sekaligus kata benda — pengguna melakukan match, dan menerima match. Mudah diucapkan lintas bahasa, dan sudah familier di telinga tanpa perlu diterjemahkan.",
+            "Namanya dipakai dalam dua panjang. “Match” untuk wordmark dan sapaan sehari-hari, “Matchwork” untuk nama penuh yang dipakai di domain matchwork.com, handle @matchwork, dan label asisten AI-nya di dalam produk. Bentuk pendek untuk dikenali, bentuk panjang untuk dicari dan dimiliki.",
             "Tagline-nya menurunkan premis itu secara harfiah: “Find your job and discover opportunities that match your skills, interests, and career goals.”",
           ],
         },
@@ -831,9 +832,50 @@ const projectsByDateAdded: ProjectItem[] = [
           },
         },
         {
+          heading: "Dua permukaan, dua sistem warna",
+          lead:
+            "Yang dilihat sekilas dan yang dipakai berjam-jam tidak bisa memakai aturan warna yang sama.",
+          body: [
+            "Permukaan brand — poster, app icon, profil sosial — bekerja dalam hitungan detik. Tugasnya menarik perhatian, jadi lime di atas gelap adalah pilihan yang tepat: kontras 12,88:1 dan warna yang sulit diabaikan.",
+            "Permukaan produk bekerja sebaliknya. Pengguna membaca puluhan lowongan berturut-turut, dan latar gelap dengan aksen neon justru melelahkan di sesi panjang. Karena itu antarmuka Matchwork berdiri di atas sistem terang dengan aksen emerald #0b8457 — kontras 4,72:1 di atas putih, cukup untuk lolos AA sebagai warna tombol, tapi tidak berteriak.",
+            "Keduanya tetap satu keluarga karena berangkat dari hijau. Yang berubah hanya suhu dan terangnya, menyesuaikan lama waktu orang menatapnya.",
+          ],
+          table: {
+            head: ["", "Permukaan brand", "Permukaan produk"],
+            rows: [
+              ["Latar", "#0A0A0A", "#FFFFFF"],
+              ["Aksen", "#A1E433", "#0b8457"],
+              ["Kontras aksen", "12,88:1 di ink", "4,72:1 di putih"],
+              ["Durasi pakai", "Hitungan detik", "Hitungan jam"],
+              ["Tugas", "Menarik perhatian", "Menjaga keterbacaan"],
+            ],
+          },
+        },
+        {
+          heading: "Penerapan di produk",
+          lead:
+            "Janji “match” harus kelihatan angkanya, bukan cuma jadi nama.",
+          body: [
+            "Daftar lowongan tidak diurutkan berdasarkan tanggal, melainkan berdasarkan kecocokan — setiap baris membawa persentasenya sendiri, dari 92% sampai 69%. Pengguna langsung tahu urutannya berdasarkan apa.",
+            "Angka itu lalu dibuka isinya. Panel detail memecah skor 92% menjadi empat baris bernama: Skills, Experience, Domain, dan Work mode, masing-masing ditandai Match, Bonus, atau Check. Satu angka berubah jadi empat alasan yang bisa diperiksa, dan ketidakcocokan tidak disembunyikan — work mode yang belum pas tetap ditandai Check.",
+            "Asisten AI-nya duduk di panel yang sama lewat “Ask about this role”, lengkap dengan pertanyaan siap pakai seperti “Is the salary fair for my level?” dan tombol “Tailor my resume”. Di bawahnya ada satu baris yang sengaja tidak dihilangkan: “AI can make mistakes. Always check details with the employer.”",
+          ],
+          gallery: [
+            {
+              src: A.matchUiFindJobs,
+              alt: "Layar Find jobs: daftar lowongan dengan persentase kecocokan dan panel detail",
+            },
+            {
+              src: A.matchUiAsk,
+              alt: "Panel Ask Matchwork AI: fit breakdown 92% dengan empat baris penilaian",
+            },
+          ],
+        },
+        {
           heading: "Penutup",
           body: [
-            "Identitas ini dibangun dari satu gagasan yang sama di tiap lapisnya: dua sisi yang saling mengunci. Gagasan itu ada di nama, ada di gerigi logonya, dan ada di cara warna sinyal hanya bekerja saat dipasangkan dengan latar yang tepat.",
+            "Identitas ini dibangun dari satu gagasan yang sama di tiap lapisnya: dua sisi yang saling mengunci. Gagasan itu ada di nama, ada di gerigi logonya, dan ada di cara skor kecocokan dipecah jadi alasan yang bisa diperiksa.",
+            "Yang membuatnya bertahan bukan konsistensi warna yang kaku, melainkan konsistensi maksud — tiap permukaan memakai warna yang sesuai dengan berapa lama orang menatapnya.",
           ],
           image: {
             src: A.matchAppIcon,
