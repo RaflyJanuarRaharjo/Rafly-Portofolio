@@ -32,15 +32,6 @@ export const A = {
   matchVideo: "/assets/match-brand.mp4",
   matchPoster: "/assets/match-poster.webp",
 
-  matchLogo: "/assets/match-logo.webp",
-  matchPalette: "/assets/match-palette.webp",
-  matchOoh: "/assets/match-ooh.webp",
-  matchAppIcon: "/assets/match-appicon.webp",
-  matchPortrait: "/assets/match-portrait.webp",
-  matchTransit: "/assets/match-transit.webp",
-  matchUiFindJobs: "/assets/match-ui-findjobs.webp",
-  matchUiAsk: "/assets/match-ui-ask.webp",
-
   mewsVideo: "/assets/mews-mayangan.mp4",
   mewsPoster: "/assets/mews-mayangan-poster.webp",
 

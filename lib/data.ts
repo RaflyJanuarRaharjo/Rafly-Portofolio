@@ -759,11 +759,6 @@ const projectsByDateAdded: ProjectItem[] = [
             "Ruang kosong di antara batang punya bobot yang setara dengan batangnya. Celah itu yang membuat marknya tetap terbaca saat dikecilkan ke ukuran favicon 16px, dan tetap punya tegangan saat dibesarkan ke ukuran billboard.",
             "Konstruksinya kaku dan modular, mendekati karakter huruf monospace. Itu disengaja: produknya digerakkan algoritma, dan logonya tidak berpura-pura ditulis tangan.",
           ],
-          image: {
-            src: A.matchLogo,
-            alt: "Logo Match pada kartu profil — mark berwarna lime di atas lingkaran hitam",
-            caption: "Mark di avatar profil, di atas pattern diagonal turunan logonya",
-          },
         },
         {
           heading: "Palet warna",
@@ -781,10 +776,6 @@ const projectsByDateAdded: ProjectItem[] = [
               ["Arang", "#171717", "Permukaan kartu, pemisah antar layer", "–"],
               ["Kertas", "#FAFAFA", "Teks utama di atas latar gelap", "18,97:1"],
             ],
-          },
-          image: {
-            src: A.matchPalette,
-            alt: "Lima swatch palet Match: hitam, arang, hijau tua, lime, dan putih tulang",
           },
         },
         {
@@ -810,10 +801,6 @@ const projectsByDateAdded: ProjectItem[] = [
             "Arah fotonya memilih momen transit — peron, lorong bawah tanah, perjalanan. Secara harfiah ini adalah orang di antara dua titik, dan itu posisi yang sama dengan pengguna Match: di antara pekerjaan yang sekarang dan yang berikutnya.",
             "Semua foto diberi cast hijau supaya menyatu dengan palet, dan dibiarkan gelap sehingga mark atau teks lime bisa duduk di atasnya tanpa kehilangan kontras.",
           ],
-          gallery: [
-            { src: A.matchPortrait, alt: "Potret siluet dengan cast hijau di atas pattern grid" },
-            { src: A.matchTransit, alt: "Mark Match pada kereta yang bergerak di peron stasiun" },
-          ],
         },
         {
           heading: "Penerapan",
@@ -825,11 +812,6 @@ const projectsByDateAdded: ProjectItem[] = [
             "Profil sosial — avatar bundar dengan pattern diagonal sebagai header",
             "Media luar ruang — mark putih dan tagline di atas foto transit",
           ],
-          image: {
-            src: A.matchOoh,
-            alt: "Poster luar ruang Match di lorong stasiun dengan tagline",
-            caption: "Penerapan luar ruang — mark putih dipakai saat latar foto sudah bermuatan hijau",
-          },
         },
         {
           heading: "Dua permukaan, dua sistem warna",
@@ -860,16 +842,6 @@ const projectsByDateAdded: ProjectItem[] = [
             "Angka itu lalu dibuka isinya. Panel detail memecah skor 92% menjadi empat baris bernama: Skills, Experience, Domain, dan Work mode, masing-masing ditandai Match, Bonus, atau Check. Satu angka berubah jadi empat alasan yang bisa diperiksa, dan ketidakcocokan tidak disembunyikan — work mode yang belum pas tetap ditandai Check.",
             "Asisten AI-nya duduk di panel yang sama lewat “Ask about this role”, lengkap dengan pertanyaan siap pakai seperti “Is the salary fair for my level?” dan tombol “Tailor my resume”. Di bawahnya ada satu baris yang sengaja tidak dihilangkan: “AI can make mistakes. Always check details with the employer.”",
           ],
-          gallery: [
-            {
-              src: A.matchUiFindJobs,
-              alt: "Layar Find jobs: daftar lowongan dengan persentase kecocokan dan panel detail",
-            },
-            {
-              src: A.matchUiAsk,
-              alt: "Panel Ask Matchwork AI: fit breakdown 92% dengan empat baris penilaian",
-            },
-          ],
         },
         {
           heading: "Penutup",
@@ -877,10 +849,6 @@ const projectsByDateAdded: ProjectItem[] = [
             "Identitas ini dibangun dari satu gagasan yang sama di tiap lapisnya: dua sisi yang saling mengunci. Gagasan itu ada di nama, ada di gerigi logonya, dan ada di cara skor kecocokan dipecah jadi alasan yang bisa diperiksa.",
             "Yang membuatnya bertahan bukan konsistensi warna yang kaku, melainkan konsistensi maksud — tiap permukaan memakai warna yang sesuai dengan berapa lama orang menatapnya.",
           ],
-          image: {
-            src: A.matchAppIcon,
-            alt: "App icon Match di home screen iOS di antara ikon aplikasi lain",
-          },
         },
       ],
     },
