@@ -221,29 +221,7 @@ function Section({ section }: { section: StorySection }) {
         </ul>
       )}
 
-      {section.gallery && (
-        /* Deretan layar HP, digeser mendatar kalau tidak muat. */
-        <div className="mt-[24px] flex gap-[12px] overflow-x-auto pb-[4px] lg:mt-[32px] lg:gap-[20px]">
-          {section.gallery.map((g) => (
-            <a
-              key={g.src}
-              href={g.src}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={g.src}
-                alt={g.alt}
-                loading="lazy"
-                className="h-[240px] w-auto rounded-[8px] border border-neutral-200 bg-neutral-100 md:h-[320px] lg:h-[420px]"
-              />
-            </a>
-          ))}
-        </div>
-      )}
-
+      {/* Gambar lebar duluan — ia memberi konteks, deretan layar jadi detailnya. */}
       {section.image && (
         <figure className="mt-[24px] lg:mt-[32px]">
           <a href={section.image.src} target="_blank" rel="noopener noreferrer">
@@ -259,6 +237,57 @@ function Section({ section }: { section: StorySection }) {
             {section.image.caption ?? "Ketuk gambar untuk ukuran penuh"}
           </figcaption>
         </figure>
+      )}
+
+      {section.figures && (
+        /* Gambar lebar bertumpuk — dipakai untuk perbandingan sebelum-sesudah,
+           karena berdampingan membuat keduanya terlalu kecil untuk dibaca. */
+        <div className="mt-[24px] flex flex-col gap-[20px] lg:mt-[32px] lg:gap-[28px]">
+          {section.figures.map((f) => (
+            <figure key={f.src}>
+              <a href={f.src} target="_blank" rel="noopener noreferrer">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={f.src}
+                  alt={f.alt}
+                  loading="lazy"
+                  className="w-full border border-neutral-200 bg-neutral-100"
+                />
+              </a>
+              {f.caption && (
+                <figcaption className="mt-[8px] text-[13px] text-neutral-500 lg:text-[15px]">
+                  {f.caption}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      )}
+
+      {section.gallery && (
+        /* Di layar sempit digeser mendatar; mulai md dibungkus dan ditengahkan
+           supaya satu layar tidak terlihat nyangkut di kiri. */
+        <div className="mt-[24px] -mx-[16px] overflow-x-auto px-[16px] pb-[4px] md:mx-0 md:overflow-x-visible md:px-0 lg:mt-[32px]">
+          <div className="flex w-fit gap-[12px] md:mx-auto md:max-w-full md:flex-wrap md:justify-center lg:gap-[20px]">
+            {section.gallery.map((g) => (
+              <a
+                key={g.src}
+                href={g.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  loading="lazy"
+                  className="h-[240px] w-auto rounded-[8px] border border-neutral-200 bg-neutral-100 md:h-[300px] lg:h-[400px]"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
       )}
 
       {section.links && (

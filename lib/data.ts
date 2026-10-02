@@ -233,6 +233,8 @@ export type StorySection = {
   /** Tabel penuh. Sel boleh true (centang) atau false (silang). */
   table?: { head: string[]; rows: (string | boolean)[][] };
   image?: { src: string; alt: string; caption?: string };
+  /** Gambar lebar bertumpuk, masing-masing berketerangan. Untuk sebelum-sesudah. */
+  figures?: { src: string; alt: string; caption?: string }[];
   /** Deretan layar HP. */
   gallery?: { src: string; alt: string }[];
   /** Tautan di akhir section, mis. "Lihat detail" ke board Figma. */
@@ -734,9 +736,17 @@ const projectsByDateAdded: ProjectItem[] = [
             "Versi redesign memakai “Stable ping. Zero lag. Game like nothing's in your way.” Tiga hal berubah: janjinya jadi spesifik dan bisa diuji, bahasanya memakai kosakata pemain, dan kalimat penutupnya menggambarkan perasaan main tanpa gangguan alih-alih menyebut fitur.",
             "Counter pun naik derajat. Di brief ia hanya angka di tengah hero; di redesign ia jadi pita tersendiri bertuliskan “80+ Early Access Waitlist”, ditambah pita pengumuman di paling atas halaman yang menjelaskan keuntungan ikut lebih awal. Bukti sosialnya jadi sulit dilewatkan.",
           ],
-          gallery: [
-            { src: A.glidexaHero, alt: "Hero versi brief klien" },
-            { src: A.gx2Hero, alt: "Hero versi redesign dengan pita waitlist" },
+          figures: [
+            {
+              src: A.glidexaHero,
+              alt: "Hero versi brief klien",
+              caption: "Versi brief — klaim “Fastest VPN”, counter sebagai angka lepas di tengah",
+            },
+            {
+              src: A.gx2Hero,
+              alt: "Hero versi redesign dengan pita waitlist",
+              caption: "Versi redesign — janji spesifik, pita pengumuman di atas, waitlist jadi pita tersendiri",
+            },
           ],
         },
         {
@@ -765,9 +775,17 @@ const projectsByDateAdded: ProjectItem[] = [
             "Brief menyusun empat alasan — Fastest, Security First, Integrity Reason, Premium for free — sebagai empat kartu sejajar yang semuanya terbuka. Di layar panjang ini memaksa pengunjung membaca empat paragraf sekaligus, padahal hanya satu yang biasanya relevan baginya.",
             "Versi redesign mengubahnya jadi akordeon dengan satu item terbuka secara default. Judulnya tetap terlihat semua, jadi pengunjung tahu ada empat alasan, tapi hanya membaca yang ia pilih. Slot maskot yang di brief masih kosong akhirnya terisi — bukan maskot, melainkan visual petir di atas potret pemain.",
           ],
-          gallery: [
-            { src: A.glidexaWhy, alt: "Section Why choose us versi brief, empat kartu terbuka" },
-            { src: A.gx2Why, alt: "Section Why choose us versi redesign, akordeon" },
+          figures: [
+            {
+              src: A.glidexaWhy,
+              alt: "Section Why choose us versi brief, empat kartu terbuka",
+              caption: "Versi brief — empat kartu terbuka sekaligus, plus slot maskot yang masih kosong",
+            },
+            {
+              src: A.gx2Why,
+              alt: "Section Why choose us versi redesign, akordeon",
+              caption: "Versi redesign — akordeon dengan satu item terbuka, slot maskot terisi visual petir",
+            },
           ],
         },
         {
