@@ -187,7 +187,7 @@ export const awards: AwardItem[] = [
   { title: "3rd Place – National UI/UX Design Competition RAFAETECH 2025", org: "Fakultas Sains dan Teknologi, Universitas Islam Negeri Raden Fatah Palembang", year: "2025" },
   { title: "3rd Place Design Challenge - Intechfest 2025", org: "Politeknik Negeri Bali", year: "2025" },
   { title: "2nd Place – National UI/UX Design Competition 2025", org: "Himpunan Mahasiswa Sistem Informasi, UNISNU Jepara", year: "2025" },
-  { title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025", org: "HIMSIKA Silogy Expo", year: "2025" },
+  { title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025", org: "Himpunan Mahasiswa Sistem Informasi UNSIKA", year: "2025" },
   { title: "Finalis 10 Besar – UI/UX in Action", org: "KSM Multimedia UPN \u201cVeteran\u201d Jakarta", year: "2025" },
 ];
 
@@ -1207,6 +1207,8 @@ export type BlogItem = {
 export const posts: BlogItem[] = [
   {
     slug: "playit-hackathon",
+    thumb: A.blogPlayit,
+    image: A.blogPlayitFull,
     title: "Finalist – PlayIT UI/UX Hackathon",
     meta: "PlayIT · Juni 2026 · Associated with University of Brawijaya",
     year: "2026",
@@ -1237,6 +1239,8 @@ export const posts: BlogItem[] = [
   },
   {
     slug: "intechfest-2025",
+    thumb: A.blogIntechfest,
+    image: A.blogIntechfestFull,
     title: "3rd Place Design Challenge – Intechfest 2025",
     meta:
       "Politeknik Negeri Bali · September 2025 · Associated with University of Brawijaya",
@@ -1250,16 +1254,20 @@ export const posts: BlogItem[] = [
   },
   {
     slug: "multimedia-in-action-2025",
+    thumb: A.blogMultimedia,
+    image: A.blogMultimediaFull,
     title: "Finalis 10 Besar – UI/UX in Action, Multimedia in Action LinkAja 2025",
     meta:
-      "KSM Multimedia UPN “Veteran” Jakarta · September 2025 · Associated with University of Brawijaya",
+      "KSM Multimedia UPN “Veteran” Jakarta · 26 September – 28 November 2025 · Associated with University of Brawijaya",
     year: "2025",
     body: [
-      "Selected as Top 10 Finalist in UI/UX in Action, part of Multimedia in Action 2025. This competition focused on delivering user-centered UI/UX solutions through research-driven design, usability, and impactful digital experiences. The experience strengthened my skills in UX research, problem-solving, and design presentation.",
+      "Selected as Top 10 Finalist in UI/UX in Action, part of Multimedia in Action 2025 \u2014 \u201cEmpowering Visionaries, Impacting Industries\u201d. This competition focused on delivering user-centered UI/UX solutions through research-driven design, usability, and impactful digital experiences. The experience strengthened my skills in UX research, problem-solving, and design presentation.",
     ],
   },
   {
     slug: "unisnu-jepara-2025",
+    thumb: A.blogUnisnu,
+    image: A.blogUnisnuFull,
     title: "2nd Place – National UI/UX Design Competition 2025",
     meta:
       "Himpunan Mahasiswa Sistem Informasi, UNISNU Jepara · Juni 2025 · Associated with University of Brawijaya",
@@ -1277,12 +1285,14 @@ export const posts: BlogItem[] = [
   },
   {
     slug: "silogy-expo-2025",
+    thumb: A.blogSilogy,
+    image: A.blogSilogyFull,
     title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025",
     meta:
-      "HIMSIKA Silogy Expo · Juni 2025 · Associated with University of Brawijaya",
+      "Himpunan Mahasiswa Sistem Informasi UNSIKA (HIMSIKA) · Juni 2025 · Associated with University of Brawijaya",
     year: "2025",
     bullets: [
-      "Selected as Top 4 finalist in a national UI/UX design competition.",
+      "Selected as Top 4 finalist in National Competition Silogy Expo 2025, themed \u201cInnovate Technology with Creativity, Intelligence, and Knowledge\u201d.",
       "Developed an educational application prototype using a user-centered design approach.",
       "Emphasized intuitive navigation, interactivity, and inclusive user experience.",
     ],

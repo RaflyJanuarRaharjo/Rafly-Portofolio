@@ -60,13 +60,14 @@ export default async function BlogDetailPage({
         </header>
 
         <div className="w-full border-b border-neutral-300 px-[16px] py-[32px] md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
-          {/* Lebarnya dibatasi supaya foto tidak dipaksa melar melebihi ukuran aslinya. */}
+          {/* Tanpa w-full: foto tampil seukuran aslinya, mengecil hanya kalau
+              kolomnya lebih sempit. Jadi tidak pernah dipaksa melar. */}
           {(post.image ?? post.thumb) && (
             <img
               src={post.image ?? post.thumb}
               alt=""
               aria-hidden
-              className="mb-[8px] w-full max-w-[450px] border border-neutral-200 bg-neutral-100"
+              className="mb-[8px] h-auto max-w-full border border-neutral-200 bg-neutral-100"
             />
           )}
 
