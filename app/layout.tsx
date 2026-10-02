@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import SiteBackground from "@/components/SiteBackground";
 import AutoMusic from "@/components/AutoMusic";
 import SiteChrome from "@/components/SiteChrome";
+import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
           <div className="flex w-full max-w-[1089px] flex-col items-start border-l border-r border-neutral-300 bg-white">
             <SiteChrome />
             {children}
+            <Footer />
           </div>
         </div>
       </body>
