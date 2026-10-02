@@ -184,7 +184,7 @@ export type AwardItem = {
 
 export const awards: AwardItem[] = [
   { title: "Finalist – PlayIT UI/UX Hackathon", org: "PlayIT Polinema", year: "2026" },
-  { title: "3rd Place – Competition RAFAETECH 2025", org: "Universitas Islam Negeri Raden Fatah Palembang", year: "2026" },
+  { title: "3rd Place – National UI/UX Design Competition RAFAETECH 2025", org: "Fakultas Sains dan Teknologi, Universitas Islam Negeri Raden Fatah Palembang", year: "2025" },
   { title: "3rd Place Design Challenge - Intechfest 2025", org: "Politeknik Negeri Bali", year: "2026" },
   { title: "2nd Place – National UI/UX Design Competition 2025", year: "2025" },
   { title: "Finalis UI/UX Design – Silogy Expo Education Fair 2025", org: "Silogy Expo Education Fair", year: "2025" },
@@ -1185,11 +1185,26 @@ const projectsByDateAdded: ProjectItem[] = [
 /** Terbaru di atas. */
 export const projects: ProjectItem[] = [...projectsByDateAdded].reverse();
 
-export type BlogItem = { excerpt: string; thumb: string };
+export type BlogItem = {
+  /** Judul singkat; boleh kosong untuk entri lama yang hanya berupa kutipan. */
+  title?: string;
+  /** Baris kecil di bawah judul: penyelenggara dan tanggal. */
+  meta?: string;
+  excerpt: string;
+  thumb: string;
+};
 
 export const posts: BlogItem[] = [
-  { excerpt: "Awarded 2nd Place – Problem Solver for delivering an innovative and user....", thumb: A.blogThumb },
-  { excerpt: "Awarded 2nd Place – Problem Solver for delivering an innovative and user....", thumb: A.blogThumb },
+  {
+    title: "3rd Place – National UI/UX Design Competition RAFAETECH 2025",
+    meta:
+      "Fakultas Sains dan Teknologi, Universitas Islam Negeri Raden Fatah Palembang \u00b7 Oktober 2025",
+    excerpt:
+      "Juara 3 kompetisi UI/UX tingkat nasional RAFAETECH 2025.",
+    thumb: A.blogRafaetech,
+  },
+  { excerpt: "Awarded 2nd Place \u2013 Problem Solver for delivering an innovative and user....", thumb: A.blogThumb },
+  { excerpt: "Awarded 2nd Place \u2013 Problem Solver for delivering an innovative and user....", thumb: A.blogThumb },
 ];
 
 /** Jumlah total yang tampil di badge header section. */

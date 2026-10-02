@@ -66,6 +66,7 @@ export const A = {
   mewsPerangkat: "/assets/mews-perangkat.webp",
 
   blogThumb: "/assets/blog-thumb.png",
+  blogRafaetech: "/assets/blog-rafaetech.webp",
 
   stripe: "/assets/stripe.svg",
   ornament: "/assets/ornament.svg",
