@@ -707,6 +707,141 @@ const projectsByDateAdded: ProjectItem[] = [
     tags: ["Branding", "Website", "Mobile App"],
     video: A.matchVideo,
     poster: A.matchPoster,
+    story: {
+      tagline: "Brand Identity & Visual System",
+      meta: [
+        { label: "Peran", value: "Brand & UI Designer" },
+        { label: "Jenis", value: "Brand Identity" },
+        { label: "Platform", value: "Web & Mobile App" },
+        { label: "Tools", value: "Figma" },
+      ],
+      sections: [
+        {
+          heading: "Overview",
+          rows: [
+            {
+              label: "Produk",
+              value:
+                "Platform pencari kerja yang mencocokkan orang dengan lowongan lewat personalisasi AI, bukan lewat penelusuran manual.",
+            },
+            {
+              label: "Objective",
+              value:
+                "Membangun identitas yang membuat mekanisme produk — mencocokkan — terbaca sejak logo, tanpa perlu dijelaskan lewat teks.",
+            },
+            {
+              label: "Deliverable",
+              value:
+                "Logo, palet warna, arah fotografi, pattern, dan penerapannya di web app, app icon, profil sosial, serta media luar ruang.",
+            },
+          ],
+          body: [
+            "Match berangkat dari satu premis: mencari kerja hari ini bukan masalah kekurangan lowongan, melainkan kelebihan lowongan yang tidak relevan. Produknya menjawab itu dengan personalisasi AI, dan identitasnya dibangun untuk menyuarakan hal yang sama.",
+          ],
+        },
+        {
+          heading: "Filosofi nama",
+          lead:
+            "“Match” bukan kiasan — itu nama mekanisme produknya sendiri.",
+          body: [
+            "Nama ini dipilih karena persis menggambarkan cara kerja platformnya: mempertemukan skill, minat, dan tujuan karier seseorang dengan lowongan yang benar-benar cocok. Personalisasi AI-nya bekerja sebagai pencocok, bukan sebagai mesin pencari.",
+            "Satu suku kata, dan berfungsi sebagai kata kerja sekaligus kata benda — pengguna melakukan match, dan menerima match. Mudah diucapkan lintas bahasa, dan sudah familier di telinga tanpa perlu diterjemahkan.",
+            "Tagline-nya menurunkan premis itu secara harfiah: “Find your job and discover opportunities that match your skills, interests, and career goals.”",
+          ],
+        },
+        {
+          heading: "Logo",
+          lead:
+            "Huruf M yang dibangun dari batang vertikal dengan sambungan di ketinggian berbeda.",
+          body: [
+            "Batangnya berlebar sama rata, tapi titik temunya sengaja tidak sejajar — tinggi, rendah, tinggi. Siluetnya jadi terbaca seperti dua sisi bergerigi yang saling mengunci, dan itulah gagasan match yang dibawa ke bentuk.",
+            "Ruang kosong di antara batang punya bobot yang setara dengan batangnya. Celah itu yang membuat marknya tetap terbaca saat dikecilkan ke ukuran favicon 16px, dan tetap punya tegangan saat dibesarkan ke ukuran billboard.",
+            "Konstruksinya kaku dan modular, mendekati karakter huruf monospace. Itu disengaja: produknya digerakkan algoritma, dan logonya tidak berpura-pura ditulis tangan.",
+          ],
+          image: {
+            src: A.matchLogo,
+            alt: "Logo Match pada kartu profil — mark berwarna lime di atas lingkaran hitam",
+            caption: "Mark di avatar profil, di atas pattern diagonal turunan logonya",
+          },
+        },
+        {
+          heading: "Palet warna",
+          lead:
+            "Lima warna, dibangun gelap lebih dulu karena warna sinyalnya memang menuntut itu.",
+          body: [
+            "Lime adalah satu-satunya warna yang boleh berteriak. Ia dipakai untuk logo, CTA, dan apa pun yang menandakan “ini kecocokanmu” — porsinya kecil justru supaya tetap berarti.",
+          ],
+          table: {
+            head: ["Warna", "Hex", "Peran", "Kontras di #0A0A0A"],
+            rows: [
+              ["Lime", "#A1E433", "Sinyal utama — logo, CTA, highlight hasil match", "12,88:1"],
+              ["Hijau tua", "#69A900", "Pendukung — fill, hover, aksen grafis", "6,86:1"],
+              ["Ink", "#0A0A0A", "Latar utama seluruh sistem", "–"],
+              ["Arang", "#171717", "Permukaan kartu, pemisah antar layer", "–"],
+              ["Kertas", "#FAFAFA", "Teks utama di atas latar gelap", "18,97:1"],
+            ],
+          },
+          image: {
+            src: A.matchPalette,
+            alt: "Lima swatch palet Match: hitam, arang, hijau tua, lime, dan putih tulang",
+          },
+        },
+        {
+          heading: "Kenapa gelap, bukan terang",
+          lead:
+            "Keputusan ini datang dari angka, bukan dari selera.",
+          body: [
+            "Lime #A1E433 di atas putih hanya menghasilkan kontras 1,47:1 — jauh di bawah ambang WCAG AA yang 4,5:1, dan praktis tidak terbaca. Warna yang sama di atas #0A0A0A melompat ke 12,88:1, lewat dari ambang AAA.",
+            "Artinya warna sinyal ini hanya hidup di atas gelap. Daripada melemahkannya jadi hijau yang lebih tua dan lebih tumpul demi muat di tema terang, sistemnya dibalik: gelap jadi default, dan lime dibiarkan setajam aslinya.",
+            "Konsekuensinya konsisten di seluruh penerapan — app icon, profil sosial, sampai poster — semuanya berangkat dari latar gelap.",
+          ],
+          stats: [
+            { value: "12,88:1", label: "lime di atas ink — lolos AAA" },
+            { value: "1,47:1", label: "lime di atas putih — gagal AA" },
+            { value: "18,97:1", label: "teks kertas di atas ink" },
+          ],
+        },
+        {
+          heading: "Fotografi",
+          lead:
+            "Orang yang sedang berpindah tempat, bukan orang yang sedang berpose di kantor.",
+          body: [
+            "Arah fotonya memilih momen transit — peron, lorong bawah tanah, perjalanan. Secara harfiah ini adalah orang di antara dua titik, dan itu posisi yang sama dengan pengguna Match: di antara pekerjaan yang sekarang dan yang berikutnya.",
+            "Semua foto diberi cast hijau supaya menyatu dengan palet, dan dibiarkan gelap sehingga mark atau teks lime bisa duduk di atasnya tanpa kehilangan kontras.",
+          ],
+          gallery: [
+            { src: A.matchPortrait, alt: "Potret siluet dengan cast hijau di atas pattern grid" },
+            { src: A.matchTransit, alt: "Mark Match pada kereta yang bergerak di peron stasiun" },
+          ],
+        },
+        {
+          heading: "Penerapan",
+          lead:
+            "Mark yang sama dipakai dari 16 piksel sampai sebesar dinding.",
+          bullets: [
+            "Favicon dan tab browser — mark saja, tanpa wordmark, pada matchwork.com",
+            "App icon iOS — mark lime di atas ink, berdiri di antara ikon sistem tanpa tenggelam",
+            "Profil sosial — avatar bundar dengan pattern diagonal sebagai header",
+            "Media luar ruang — mark putih dan tagline di atas foto transit",
+          ],
+          image: {
+            src: A.matchOoh,
+            alt: "Poster luar ruang Match di lorong stasiun dengan tagline",
+            caption: "Penerapan luar ruang — mark putih dipakai saat latar foto sudah bermuatan hijau",
+          },
+        },
+        {
+          heading: "Penutup",
+          body: [
+            "Identitas ini dibangun dari satu gagasan yang sama di tiap lapisnya: dua sisi yang saling mengunci. Gagasan itu ada di nama, ada di gerigi logonya, dan ada di cara warna sinyal hanya bekerja saat dipasangkan dengan latar yang tepat.",
+          ],
+          image: {
+            src: A.matchAppIcon,
+            alt: "App icon Match di home screen iOS di antara ikon aplikasi lain",
+          },
+        },
+      ],
+    },
   },
 ];
 
