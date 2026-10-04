@@ -26,10 +26,11 @@ const KEY = "lang";
 const LangContext = createContext<{
   lang: Lang;
   setLang: (l: Lang) => void;
-}>({ lang: "id", setLang: () => {} });
+}>({ lang: "en", setLang: () => {} });
 
 export function LangProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("id");
+  /* Inggris jadi bawaan; pilihan yang tersimpan menimpanya setelah mount. */
+  const [lang, setLangState] = useState<Lang>("en");
 
   /* Dibaca setelah mount supaya render pertama di server dan di browser sama. */
   useEffect(() => {
