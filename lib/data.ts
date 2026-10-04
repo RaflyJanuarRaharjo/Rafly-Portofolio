@@ -1217,6 +1217,8 @@ const projectsByDateAdded: ProjectItem[] = [
     },
     pdf: "/case-study/matchwork-web.pdf",
     tags: ["Website", "Dashboard"],
+    prototype:
+      "https://www.figma.com/proto/pUdC01yjQ7qlTqvCCsBY5d/Project-NaraStudio?node-id=68-36377&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=68%3A36377",
     video: A.mwVideo,
     poster: A.mwPoster,
     ratio: "16 / 9",
@@ -1299,12 +1301,13 @@ const projectsByDateAdded: ProjectItem[] = [
             { id: "Tiap baris membawa tanggal, nama posisi, perusahaan, jam, dan satu badge yang menyebut bentuk interviewnya - Video call, On-site, atau Phone. Badge itu kecil tapi menentukan: on-site berarti harus menghitung waktu perjalanan, phone berarti cukup memastikan sinyal.", en: "Every row carries a date, role, company, time, and a badge naming the format - Video call, On-site, or Phone. That badge is small but decisive: on-site means budgeting travel time, phone means just checking you have signal." },
             { id: "Daftarnya ditutup kalimat “That’s all for this week”, bukan dibiarkan menggantung. Pelamar jadi tahu bahwa daftarnya memang habis, bukan terpotong.", en: "The list closes with “That's all for this week” rather than trailing off. The applicant knows the list has genuinely ended, not been cut short." },
             { id: "Grafik di sebelahnya menghitung 48 lamaran terkirim tahun ini dengan bar per bulan, dan September disorot lime sebagai bulan tertinggi. Rentangnya bisa diganti antara 3 bulan, 6 bulan, dan sepanjang tahun.", en: "The chart beside it counts 48 applications sent this year with a bar per month, September highlighted in lime as the peak. The range switches between three months, six months, and year to date." },
+            { id: "Menahan kursor di atas satu bar membuka rinciannya: September 2026, 9 lamaran, naik 80 persen, lalu dipecah jadi Interview 3, In review 4, Offer 1, dan Rejected 1. Jadi bar yang tinggi tidak otomatis berarti bulan yang bagus - isinya yang menentukan.", en: "Hovering a bar opens its breakdown: September 2026, 9 applications, up 80 per cent, split into Interview 3, In review 4, Offer 1, and Rejected 1. So a tall bar does not automatically mean a good month - what is inside it decides that." },
           ],
           image: {
             src: A.mwChart,
             alt: { id: "Grafik lamaran terkirim dan daftar interview mendatang", en: "The applications-sent chart and the upcoming interviews list" },
             caption:
-              { id: "Riwayat panjang di kiri, yang perlu disiapkan minggu ini di kanan", en: "The long history on the left, what needs preparing this week on the right" },
+              { id: "Riwayat panjang di kiri, yang perlu disiapkan minggu ini di kanan - lengkap dengan rincian per bulan saat kursor ditahan", en: "The long history on the left, what needs preparing this week on the right - with a per-month breakdown on hover" },
           },
         },
         {
