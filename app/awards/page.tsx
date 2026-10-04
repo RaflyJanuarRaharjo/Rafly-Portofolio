@@ -3,7 +3,7 @@ import SectionHeader from "@/components/SectionHeader";
 import RowList from "@/components/RowList";
 import { awards, counts } from "@/lib/data";
 
-export const metadata = { title: "Awards — Rafly Januar Raharjo" };
+export const metadata = { title: "Awards - Rafly Januar Raharjo" };
 
 export default function AwardsPage() {
   return (

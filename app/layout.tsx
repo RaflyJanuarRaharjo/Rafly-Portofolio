@@ -10,7 +10,7 @@ import { LangProvider } from "@/lib/i18n";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rafly Januar Raharjo — UI/UX Designer",
+  title: "Rafly Januar Raharjo - UI/UX Designer",
   description:
     "Portofolio UI/UX Designer: experience, awards, project, dan blog.",
 };

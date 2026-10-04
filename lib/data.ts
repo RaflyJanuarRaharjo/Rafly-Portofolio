@@ -193,7 +193,7 @@ export const experiences: ExperienceItem[] = [
 
 export type AwardItem = {
   title: string;
-  /** Penyelenggara. Opsional — ada award yang penyelenggaranya belum dicatat. */
+  /** Penyelenggara. Opsional - ada award yang penyelenggaranya belum dicatat. */
   org?: string;
   year: string;
   bullets?: string[];
@@ -304,7 +304,7 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               label: { id: "Target user", en: "Target user" },
               value:
-                { id: "Mitra atau partner yang menggunakan APO untuk menjalankan aktivitas operasional.", en: "Mitra — the delivery partners who use APO to carry out their daily operations." },
+                { id: "Mitra atau partner yang menggunakan APO untuk menjalankan aktivitas operasional.", en: "Mitra - the delivery partners who use APO to carry out their daily operations." },
             },
             {
               label: { id: "Focus", en: "Focus" },
@@ -318,7 +318,7 @@ const projectsByDateAdded: ProjectItem[] = [
           image: {
             src: A.apoCover,
             alt: { id: "Kumpulan layar hasil redesign APO Mitra", en: "The screens from the APO Mitra redesign" },
-            caption: { id: "Redesign APO MITRA — pembaruan flow dan tampilan dengan metode UCD", en: "APO MITRA redesign — reworked flows and visuals using a user-centered design approach" },
+            caption: { id: "Redesign APO MITRA - pembaruan flow dan tampilan dengan metode UCD", en: "APO MITRA redesign - reworked flows and visuals using a user-centered design approach" },
           },
         },
         {
@@ -525,19 +525,19 @@ const projectsByDateAdded: ProjectItem[] = [
           cards: [
             {
               title: "Marrysa Salsabila",
-              meta: "Akuntansi — Polinema",
+              meta: "Akuntansi - Polinema",
               body:
                 { id: "Kesulitan mencari informasi terpusat soal beasiswa, dan sulit mengakses kompetisi di luar kampus. Butuh agregator yang terpusat dan transparan.", en: "Struggles to find scholarship information in one place, and finds competitions outside campus hard to reach. Needs a single, transparent aggregator." },
             },
             {
               title: "Febrian Arka Samudra",
-              meta: "Teknik Informatika — Polinema",
+              meta: "Teknik Informatika - Polinema",
               body:
                 { id: "Sulit menemukan wadah kolaborasi lintas jurusan, dan cemas menghadapi standar rekrutmen industri. Butuh persiapan rekrutmen yang terstruktur.", en: "Finds it hard to collaborate across majors, and feels anxious about industry recruitment standards. Needs structured recruitment preparation." },
             },
             {
               title: "Marwah Sinta",
-              meta: "Akuntansi — Polinema",
+              meta: "Akuntansi - Polinema",
               body:
                 { id: "Menghadapi hambatan finansial mendadak untuk kebutuhan belajar, dan minim sarana latihan wawancara. Butuh bantuan cepat terverifikasi dan simulasi interaktif.", en: "Hits sudden financial obstacles for study needs, with few places to practise interviews. Needs fast verified help and interactive simulation." },
             },
@@ -548,14 +548,14 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Satu super-app yang merangkum kebutuhan mahasiswa ke dalam delapan pilar fitur.", en: "One super-app that gathers student needs into eight feature pillars." },
           bullets: [
-            { id: "NexScholar — katalog dan pendaftaran beasiswa", en: "NexScholar — scholarship catalogue and applications" },
-            { id: "NexAid — bantuan finansial darurat dan subsidi perangkat", en: "NexAid — emergency financial aid and device subsidies" },
-            { id: "NexArena — hub kompetisi dan hackathon", en: "NexArena — competition and hackathon hub" },
-            { id: "NexCareer — portal lowongan kerja dan magang", en: "NexCareer — job and internship portal" },
-            "Nex Resume — AI ATS resume optimizer",
-            "Nex Interview — simulator wawancara real-time",
-            { id: "Nex Course & Quiz — modul belajar dan evaluasi", en: "Nex Course & Quiz — learning modules and assessment" },
-            { id: "Community Forum — ruang obrolan dan study jam", en: "Community Forum — chat rooms and study jams" },
+            { id: "NexScholar - katalog dan pendaftaran beasiswa", en: "NexScholar - scholarship catalogue and applications" },
+            { id: "NexAid - bantuan finansial darurat dan subsidi perangkat", en: "NexAid - emergency financial aid and device subsidies" },
+            { id: "NexArena - hub kompetisi dan hackathon", en: "NexArena - competition and hackathon hub" },
+            { id: "NexCareer - portal lowongan kerja dan magang", en: "NexCareer - job and internship portal" },
+            "Nex Resume - AI ATS resume optimizer",
+            "Nex Interview - simulator wawancara real-time",
+            { id: "Nex Course & Quiz - modul belajar dan evaluasi", en: "Nex Course & Quiz - learning modules and assessment" },
+            { id: "Community Forum - ruang obrolan dan study jam", en: "Community Forum - chat rooms and study jams" },
           ],
         },
         {
@@ -624,7 +624,7 @@ const projectsByDateAdded: ProjectItem[] = [
           heading: "NexCareer",
           lead: { id: "Portal transisi dari bangku kuliah ke dunia kerja.", en: "A bridge from the lecture hall to working life." },
           body: [
-            { id: "Mahasiswa mengecek kualifikasi lowongan, mengisi profil profesional, dan mengunggah resume — memangkas cognitive load saat melamar.", en: "Students check role requirements, complete a professional profile, and upload a resume — cutting the cognitive load of applying." },
+            { id: "Mahasiswa mengecek kualifikasi lowongan, mengisi profil profesional, dan mengunggah resume - memangkas cognitive load saat melamar.", en: "Students check role requirements, complete a professional profile, and upload a resume - cutting the cognitive load of applying." },
           ],
           image: {
             src: "/case-study/edunex-page/nexcareer.webp",
@@ -680,13 +680,13 @@ const projectsByDateAdded: ProjectItem[] = [
         {
           heading: { id: "Kesimpulan", en: "Conclusion" },
           body: [
-            { id: "EDUNEX menjawab tiga keresahan yang muncul berulang di riset: fragmentasi informasi, kendala finansial, dan kecemasan menghadapi rekrutmen industri — dirangkum ke dalam delapan pilar fitur yang terpusat.", en: "EDUNEX answers three concerns that kept surfacing in research — scattered information, financial barriers, and anxiety about industry recruitment — gathered into eight feature pillars in one place." },
+            { id: "EDUNEX menjawab tiga keresahan yang muncul berulang di riset: fragmentasi informasi, kendala finansial, dan kecemasan menghadapi rekrutmen industri - dirangkum ke dalam delapan pilar fitur yang terpusat.", en: "EDUNEX answers three concerns that kept surfacing in research - scattered information, financial barriers, and anxiety about industry recruitment - gathered into eight feature pillars in one place." },
             { id: "Design system-nya mengikuti standar Apple HIG untuk menekan cognitive load lewat navigasi yang konsisten. Hasilnya diuji secara empiris: 100% success rate dengan rata-rata penyelesaian 20 detik.", en: "Its design system follows Apple HIG to lower cognitive load through consistent navigation. The result was tested empirically: a 100% success rate with an average completion time of 20 seconds." },
           ],
           bullets: [
-            { id: "SDG 4 — pendidikan inklusif lewat pembelajaran interaktif dan ekosistem mentor", en: "SDG 4 — inclusive education through interactive learning and a mentor ecosystem" },
-            { id: "SDG 8 — kesiapan kerja lewat simulasi wawancara AI dan portal lowongan", en: "SDG 8 — work readiness through AI interview simulation and a job portal" },
-            { id: "SDG 10 — pemerataan informasi bantuan finansial dan beasiswa", en: "SDG 10 — equal access to information on financial aid and scholarships" },
+            { id: "SDG 4 - pendidikan inklusif lewat pembelajaran interaktif dan ekosistem mentor", en: "SDG 4 - inclusive education through interactive learning and a mentor ecosystem" },
+            { id: "SDG 8 - kesiapan kerja lewat simulasi wawancara AI dan portal lowongan", en: "SDG 8 - work readiness through AI interview simulation and a job portal" },
+            { id: "SDG 10 - pemerataan informasi bantuan finansial dan beasiswa", en: "SDG 10 - equal access to information on financial aid and scholarships" },
           ],
         },
       ],
@@ -711,7 +711,7 @@ const projectsByDateAdded: ProjectItem[] = [
     prototype: "https://glidexa-vpn.vercel.app/",
     cover: A.glidexaCover,
     story: {
-      tagline: "Gaming VPN — Landing Page & App Redesign",
+      tagline: "Gaming VPN - Landing Page & App Redesign",
       meta: [
         { label: "Peran", value: "UI/UX Designer" },
         { label: { id: "Jenis", en: "Type" }, value: { id: "Project klien", en: "Client project" } },
@@ -725,7 +725,7 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               label: { id: "Produk", en: "Product" },
               value:
-                { id: "VPN yang diposisikan khusus untuk gaming — menekan latency saat bermain, bukan sekadar menyembunyikan lokasi.", en: "A VPN positioned specifically for gaming — cutting in-match latency, not just hiding your location." },
+                { id: "VPN yang diposisikan khusus untuk gaming - menekan latency saat bermain, bukan sekadar menyembunyikan lokasi.", en: "A VPN positioned specifically for gaming - cutting in-match latency, not just hiding your location." },
             },
             {
               label: { id: "Titik awal", en: "Starting point" },
@@ -747,8 +747,8 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Saat landing page ini dirancang, aplikasinya belum rilis.", en: "When this landing page was designed, the app had not launched." },
           body: [
-            { id: "Situasi ini menutup pola yang biasa dipakai halaman produk — tidak ada tombol install yang benar-benar berfungsi, tidak ada screenshot store, tidak ada ulasan pengguna. Yang tersedia hanya janji.", en: "That rules out the patterns a product page normally leans on — no install button that actually works, no store screenshots, no user reviews. All that is left is a promise." },
-            { id: "Karena itu halamannya dibangun di sekitar satu pertanyaan: apa yang membuat orang mau menunggu? Jawabannya ada pada dua hal — bukti bahwa orang lain sudah menunggu, dan imbalan konkret bagi yang menunggu lebih awal. Brief klien menyebut keduanya; yang perlu dikerjakan adalah membuat keduanya terbaca sejak layar pertama.", en: "So the page was built around one question: what makes someone willing to wait? The answer rests on two things — proof that others are already waiting, and a concrete reward for waiting early. The client brief named both; the work was making both readable from the first screen." },
+            { id: "Situasi ini menutup pola yang biasa dipakai halaman produk - tidak ada tombol install yang benar-benar berfungsi, tidak ada screenshot store, tidak ada ulasan pengguna. Yang tersedia hanya janji.", en: "That rules out the patterns a product page normally leans on - no install button that actually works, no store screenshots, no user reviews. All that is left is a promise." },
+            { id: "Karena itu halamannya dibangun di sekitar satu pertanyaan: apa yang membuat orang mau menunggu? Jawabannya ada pada dua hal - bukti bahwa orang lain sudah menunggu, dan imbalan konkret bagi yang menunggu lebih awal. Brief klien menyebut keduanya; yang perlu dikerjakan adalah membuat keduanya terbaca sejak layar pertama.", en: "So the page was built around one question: what makes someone willing to wait? The answer rests on two things - proof that others are already waiting, and a concrete reward for waiting early. The client brief named both; the work was making both readable from the first screen." },
           ],
         },
         {
@@ -756,7 +756,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Headline-nya diganti, dan itu perubahan paling menentukan di halaman ini.", en: "The headline was replaced, and it is the most consequential change on the page." },
           body: [
-            { id: "Brief menuliskan “Fastest VPN ready for online — For your Gaming Acceleration”. Masalahnya, “fastest” adalah klaim yang dipakai hampir semua VPN, dan “gaming acceleration” terdengar seperti istilah teknis ketimbang manfaat.", en: "The brief read “Fastest VPN ready for online — For your Gaming Acceleration”. The trouble is that “fastest” is a claim almost every VPN makes, and “gaming acceleration” sounds like jargon rather than a benefit." },
+            { id: "Brief menuliskan “Fastest VPN ready for online - For your Gaming Acceleration”. Masalahnya, “fastest” adalah klaim yang dipakai hampir semua VPN, dan “gaming acceleration” terdengar seperti istilah teknis ketimbang manfaat.", en: "The brief read “Fastest VPN ready for online - For your Gaming Acceleration”. The trouble is that “fastest” is a claim almost every VPN makes, and “gaming acceleration” sounds like jargon rather than a benefit." },
             { id: "Versi redesign memakai “Stable ping. Zero lag. Game like nothing's in your way.” Tiga hal berubah: janjinya jadi spesifik dan bisa diuji, bahasanya memakai kosakata pemain, dan kalimat penutupnya menggambarkan perasaan main tanpa gangguan alih-alih menyebut fitur.", en: "The redesign uses “Stable ping. Zero lag. Game like nothing's in your way.” Three things change: the promise becomes specific and testable, the language borrows a player's vocabulary, and the closing line describes how it feels to play undisturbed instead of naming a feature." },
             { id: "Counter pun naik derajat. Di brief ia hanya angka di tengah hero; di redesign ia jadi pita tersendiri bertuliskan “80+ Early Access Waitlist”, ditambah pita pengumuman di paling atas halaman yang menjelaskan keuntungan ikut lebih awal. Bukti sosialnya jadi sulit dilewatkan.", en: "The counter is promoted too. In the brief it was just a number in the middle of the hero; in the redesign it becomes its own band reading “80+ Early Access Waitlist”, plus an announcement strip at the very top explaining what joining early is worth. The social proof becomes hard to miss." },
           ],
@@ -764,12 +764,12 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               src: A.glidexaHero,
               alt: { id: "Hero versi brief klien", en: "The hero as specified in the client brief" },
-              caption: { id: "Versi brief — klaim “Fastest VPN”, counter sebagai angka lepas di tengah", en: "Brief version — a “Fastest VPN” claim, with the counter as a loose number in the middle" },
+              caption: { id: "Versi brief - klaim “Fastest VPN”, counter sebagai angka lepas di tengah", en: "Brief version - a “Fastest VPN” claim, with the counter as a loose number in the middle" },
             },
             {
               src: A.gx2Hero,
               alt: { id: "Hero versi redesign dengan pita waitlist", en: "The redesigned hero with its waitlist band" },
-              caption: { id: "Versi redesign — janji spesifik, pita pengumuman di atas, waitlist jadi pita tersendiri", en: "Redesigned version — a specific promise, an announcement strip on top, and the waitlist as its own band" },
+              caption: { id: "Versi redesign - janji spesifik, pita pengumuman di atas, waitlist jadi pita tersendiri", en: "Redesigned version - a specific promise, an announcement strip on top, and the waitlist as its own band" },
             },
           ],
         },
@@ -778,13 +778,13 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Apa yang dijanjikan di web adalah hal pertama yang dibaca di aplikasi.", en: "What the website promises is the first thing you read inside the app." },
           body: [
-            { id: "Section “Show your gaming skill to the world” memecah produk jadi tiga janji: Built for zero lag, Connect in one tap, dan Privacy not a policy. Masing-masing dapat satu visual yang menunjukkan wujudnya — meteran kecepatan, pemilih server, dan perisai data.", en: "The “Show your gaming skill to the world” section breaks the product into three promises: Built for zero lag, Connect in one tap, and Privacy not a policy. Each gets one visual showing what it looks like — a speed gauge, a server picker, and a data shield." },
+            { id: "Section “Show your gaming skill to the world” memecah produk jadi tiga janji: Built for zero lag, Connect in one tap, dan Privacy not a policy. Masing-masing dapat satu visual yang menunjukkan wujudnya - meteran kecepatan, pemilih server, dan perisai data.", en: "The “Show your gaming skill to the world” section breaks the product into three promises: Built for zero lag, Connect in one tap, and Privacy not a policy. Each gets one visual showing what it looks like - a speed gauge, a server picker, and a data shield." },
             { id: "Tiga janji yang sama persis muncul lagi sebagai tiga layar onboarding di aplikasi, dengan urutan dan visual yang sama. Orang yang mendaftar dari landing page tidak menemukan produk yang berbeda dari yang dijanjikan; ia menemukan kalimat yang sama, kali ini di dalam aplikasinya.", en: "Those same three promises reappear as three onboarding screens in the app, in the same order with the same visuals. Someone who signed up from the landing page does not find a different product than the one promised; they find the same sentences, this time inside the app." },
           ],
           gallery: [
-            { src: A.gx2Onb1, alt: { id: "Onboarding 1 — Built for zero lag", en: "Onboarding 1 — Built for zero lag" } },
-            { src: A.gx2Onb2, alt: { id: "Onboarding 2 — Connect in one tap", en: "Onboarding 2 — Connect in one tap" } },
-            { src: A.gx2Onb3, alt: { id: "Onboarding 3 — Privacy, not a policy", en: "Onboarding 3 — Privacy, not a policy" } },
+            { src: A.gx2Onb1, alt: { id: "Onboarding 1 - Built for zero lag", en: "Onboarding 1 - Built for zero lag" } },
+            { src: A.gx2Onb2, alt: { id: "Onboarding 2 - Connect in one tap", en: "Onboarding 2 - Connect in one tap" } },
+            { src: A.gx2Onb3, alt: { id: "Onboarding 3 - Privacy, not a policy", en: "Onboarding 3 - Privacy, not a policy" } },
           ],
           image: {
             src: A.gx2Pillars,
@@ -796,19 +796,19 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Isinya tetap, cara membacanya yang berubah.", en: "The content stays the same; the way you read it changes." },
           body: [
-            { id: "Brief menyusun empat alasan — Fastest, Security First, Integrity Reason, Premium for free — sebagai empat kartu sejajar yang semuanya terbuka. Di layar panjang ini memaksa pengunjung membaca empat paragraf sekaligus, padahal hanya satu yang biasanya relevan baginya.", en: "The brief laid out four reasons — Fastest, Security First, Integrity Reason, Premium for free — as four side-by-side cards, all open. On a long page that forces a visitor to read four paragraphs at once, when usually only one is relevant to them." },
-            { id: "Versi redesign mengubahnya jadi akordeon dengan satu item terbuka secara default. Judulnya tetap terlihat semua, jadi pengunjung tahu ada empat alasan, tapi hanya membaca yang ia pilih. Slot maskot yang di brief masih kosong akhirnya terisi — bukan maskot, melainkan visual petir di atas potret pemain.", en: "The redesign turns it into an accordion with one item open by default. All four headings stay visible, so a visitor knows there are four reasons but only reads the one they pick. The mascot slot left empty in the brief is finally filled — not with a mascot, but with a lightning visual over a portrait of a player." },
+            { id: "Brief menyusun empat alasan - Fastest, Security First, Integrity Reason, Premium for free - sebagai empat kartu sejajar yang semuanya terbuka. Di layar panjang ini memaksa pengunjung membaca empat paragraf sekaligus, padahal hanya satu yang biasanya relevan baginya.", en: "The brief laid out four reasons - Fastest, Security First, Integrity Reason, Premium for free - as four side-by-side cards, all open. On a long page that forces a visitor to read four paragraphs at once, when usually only one is relevant to them." },
+            { id: "Versi redesign mengubahnya jadi akordeon dengan satu item terbuka secara default. Judulnya tetap terlihat semua, jadi pengunjung tahu ada empat alasan, tapi hanya membaca yang ia pilih. Slot maskot yang di brief masih kosong akhirnya terisi - bukan maskot, melainkan visual petir di atas potret pemain.", en: "The redesign turns it into an accordion with one item open by default. All four headings stay visible, so a visitor knows there are four reasons but only reads the one they pick. The mascot slot left empty in the brief is finally filled - not with a mascot, but with a lightning visual over a portrait of a player." },
           ],
           figures: [
             {
               src: A.glidexaWhy,
               alt: { id: "Section Why choose us versi brief, empat kartu terbuka", en: "The Why choose us section in the brief, with four cards open" },
-              caption: { id: "Versi brief — empat kartu terbuka sekaligus, plus slot maskot yang masih kosong", en: "Brief version — four cards open at once, plus an empty mascot slot" },
+              caption: { id: "Versi brief - empat kartu terbuka sekaligus, plus slot maskot yang masih kosong", en: "Brief version - four cards open at once, plus an empty mascot slot" },
             },
             {
               src: A.gx2Why,
               alt: { id: "Section Why choose us versi redesign, akordeon", en: "The redesigned Why choose us section as an accordion" },
-              caption: { id: "Versi redesign — akordeon dengan satu item terbuka, slot maskot terisi visual petir", en: "Redesigned version — an accordion with one item open, the mascot slot filled with a lightning visual" },
+              caption: { id: "Versi redesign - akordeon dengan satu item terbuka, slot maskot terisi visual petir", en: "Redesigned version - an accordion with one item open, the mascot slot filled with a lightning visual" },
             },
           ],
         },
@@ -818,12 +818,12 @@ const projectsByDateAdded: ProjectItem[] = [
             { id: "Brief mengatur jalur utama. Yang menentukan produk bisa dipakai sehari-hari justru jalur sampingnya.", en: "The brief covers the main path. What decides whether a product is usable day to day is the side paths." },
           body: [
             { id: "Brief mencakup login, koneksi, daftar server, riwayat, dan langganan. Yang belum disebut: apa yang terjadi kalau pengguna lupa password, bagaimana ia mengelola perangkat yang sudah login, bagaimana ia mengganti bahasa, dan ke mana ia bertanya kalau ada masalah.", en: "The brief covers login, connection, the server list, history, and subscriptions. What it does not mention: what happens when someone forgets their password, how they manage devices already signed in, how they change language, and where they go when something breaks." },
-            { id: "Lupa password dirancang tiga langkah — kirim email, masukkan enam digit kode, lalu buat password baru — ditutup dialog konfirmasi berhasil. Device Manager menampilkan berapa perangkat terpakai beserta tombol logout per perangkat, yang penting karena tiap paket membatasi jumlah perangkat. Help & Support menaruh kontak dukungan di atas, lalu FAQ di bawahnya.", en: "Forgot password runs in three steps — send an email, enter a six-digit code, then set a new password — closing with a success dialog. Device Manager shows how many devices are in use with a logout button for each, which matters because every plan caps the device count. Help & Support puts contact support at the top and the FAQ below it." },
+            { id: "Lupa password dirancang tiga langkah - kirim email, masukkan enam digit kode, lalu buat password baru - ditutup dialog konfirmasi berhasil. Device Manager menampilkan berapa perangkat terpakai beserta tombol logout per perangkat, yang penting karena tiap paket membatasi jumlah perangkat. Help & Support menaruh kontak dukungan di atas, lalu FAQ di bawahnya.", en: "Forgot password runs in three steps - send an email, enter a six-digit code, then set a new password - closing with a success dialog. Device Manager shows how many devices are in use with a logout button for each, which matters because every plan caps the device count. Help & Support puts contact support at the top and the FAQ below it." },
           ],
           gallery: [
-            { src: A.gx2Forgot1, alt: { id: "Lupa password — masukkan email", en: "Forgot password — enter your email" } },
-            { src: A.gx2Forgot2, alt: { id: "Lupa password — kode enam digit", en: "Forgot password — six-digit code" } },
-            { src: A.gx2Forgot3, alt: { id: "Lupa password — password baru", en: "Forgot password — new password" } },
+            { src: A.gx2Forgot1, alt: { id: "Lupa password - masukkan email", en: "Forgot password - enter your email" } },
+            { src: A.gx2Forgot2, alt: { id: "Lupa password - kode enam digit", en: "Forgot password - six-digit code" } },
+            { src: A.gx2Forgot3, alt: { id: "Lupa password - password baru", en: "Forgot password - new password" } },
             { src: A.gx2Device, alt: { id: "Device Manager dengan logout per perangkat", en: "Device Manager with per-device logout" } },
             { src: A.gx2History, alt: { id: "Riwayat aktivitas dengan filter waktu", en: "Activity history with time filters" } },
             { src: A.gx2Language, alt: "Pilihan bahasa" },
@@ -836,8 +836,8 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Pemain tidak memilih server berdasarkan nama negara, tapi berdasarkan ping.", en: "Players do not pick a server by country name. They pick it by ping." },
           body: [
-            { id: "Layar Home menampilkan status tersambung, durasi sesi yang berjalan, dan dua meteran — unduh 50 Mbps dan unggah 20 Mbps — dengan bar yang terisi, bukan sekadar angka. Durasi sesi ini tambahan dari brief, dan berguna justru karena VPN gaming dipakai per pertandingan.", en: "The Home screen shows connection status, a running session timer, and two meters — 50 Mbps down and 20 Mbps up — drawn as filled bars rather than bare numbers. The session timer is an addition to the brief, and it earns its place precisely because a gaming VPN is used match by match." },
-            { id: "Daftar server membawa ping dan kecepatan di tiap baris, plus pemisah Recommended dan Global serta kolom pencarian. Server yang menuntut paket berbayar ditandai label Premium di tempatnya, bukan disembunyikan — pengguna tahu apa yang ia lewatkan tanpa harus membuka halaman harga.", en: "The server list carries ping and speed on every row, plus a Recommended/Global split and a search field. Servers that require a paid plan are marked Premium in place rather than hidden — users see what they are missing without opening the pricing page." },
+            { id: "Layar Home menampilkan status tersambung, durasi sesi yang berjalan, dan dua meteran - unduh 50 Mbps dan unggah 20 Mbps - dengan bar yang terisi, bukan sekadar angka. Durasi sesi ini tambahan dari brief, dan berguna justru karena VPN gaming dipakai per pertandingan.", en: "The Home screen shows connection status, a running session timer, and two meters - 50 Mbps down and 20 Mbps up - drawn as filled bars rather than bare numbers. The session timer is an addition to the brief, and it earns its place precisely because a gaming VPN is used match by match." },
+            { id: "Daftar server membawa ping dan kecepatan di tiap baris, plus pemisah Recommended dan Global serta kolom pencarian. Server yang menuntut paket berbayar ditandai label Premium di tempatnya, bukan disembunyikan - pengguna tahu apa yang ia lewatkan tanpa harus membuka halaman harga.", en: "The server list carries ping and speed on every row, plus a Recommended/Global split and a search field. Servers that require a paid plan are marked Premium in place rather than hidden - users see what they are missing without opening the pricing page." },
           ],
           gallery: [
             { src: A.gx2Home, alt: { id: "Layar Home dengan durasi sesi dan meteran kecepatan", en: "The Home screen with session timer and speed meters" } },
@@ -851,7 +851,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Tiga nama paket, disusun ulang dari penamaan di brief.", en: "Three plan names, reworked from the ones in the brief." },
           body: [
-            { id: "Brief memakai nama Basic, Standard 5+1, dan Connected for a year — dua di antaranya menjelaskan durasi, bukan tingkatan. Redesign menggantinya jadi Basic, Plus, dan Prime: tangga yang langsung terbaca urutannya tanpa perlu membaca detail.", en: "The brief used Basic, Standard 5+1, and Connected for a year — two of which describe duration rather than tier. The redesign replaces them with Basic, Plus, and Prime: a ladder whose order reads instantly, without having to study the details." },
+            { id: "Brief memakai nama Basic, Standard 5+1, dan Connected for a year - dua di antaranya menjelaskan durasi, bukan tingkatan. Redesign menggantinya jadi Basic, Plus, dan Prime: tangga yang langsung terbaca urutannya tanpa perlu membaca detail.", en: "The brief used Basic, Standard 5+1, and Connected for a year - two of which describe duration rather than tier. The redesign replaces them with Basic, Plus, and Prime: a ladder whose order reads instantly, without having to study the details." },
             { id: "Tiap kartu menampilkan daftar fitur yang sama susunannya, sehingga perbedaan antarpaket terbaca dari membandingkan baris yang sejajar, bukan dari mencari-cari.", en: "Every card lists its features in the same order, so the difference between plans comes from comparing rows that line up rather than hunting for it." },
           ],
           table: {
@@ -875,7 +875,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "VPN meminta pengguna mempercayakan seluruh lalu lintas internetnya. Itu permintaan besar untuk produk yang belum rilis.", en: "A VPN asks users to hand over all of their internet traffic. That is a large request for a product that has not launched." },
           body: [
-            { id: "Tiga hal ditambahkan untuk menjawab itu, dan ketiganya tidak ada di brief. Halaman Privacy Policy tersendiri, sehingga klaim “tidak menjual data” punya tempat untuk dijabarkan. Badge PSE dan Kominfo di footer, menandakan produknya terdaftar sebagai penyelenggara sistem elektronik di Indonesia. Dan nama badan hukum lengkap — PT Glidexa Inovasi Digital — di baris copyright, bukan sekadar nama merek.", en: "Three things were added to answer that, none of them in the brief. A dedicated Privacy Policy page, so the claim of “never selling your data” has somewhere to be spelled out. PSE and Kominfo badges in the footer, marking the product as a registered electronic system provider in Indonesia. And the full legal entity name — PT Glidexa Inovasi Digital — on the copyright line, rather than just a brand name." },
+            { id: "Tiga hal ditambahkan untuk menjawab itu, dan ketiganya tidak ada di brief. Halaman Privacy Policy tersendiri, sehingga klaim “tidak menjual data” punya tempat untuk dijabarkan. Badge PSE dan Kominfo di footer, menandakan produknya terdaftar sebagai penyelenggara sistem elektronik di Indonesia. Dan nama badan hukum lengkap - PT Glidexa Inovasi Digital - di baris copyright, bukan sekadar nama merek.", en: "Three things were added to answer that, none of them in the brief. A dedicated Privacy Policy page, so the claim of “never selling your data” has somewhere to be spelled out. PSE and Kominfo badges in the footer, marking the product as a registered electronic system provider in Indonesia. And the full legal entity name - PT Glidexa Inovasi Digital - on the copyright line, rather than just a brand name." },
             { id: "Section FAQ melengkapi itu dari sisi lain: ia menjawab keberatan yang muncul sebelum orang menekan tombol, mulai dari apakah servernya bisa dipilih sampai apakah aplikasinya jalan di perangkat mobile.", en: "The FAQ section completes that from another angle: it answers the objections that surface before someone taps a button, from whether servers can be chosen to whether the app runs on mobile." },
           ],
           gallery: [
@@ -888,8 +888,8 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Empat hal yang sebaiknya dibereskan sebelum halaman ini dipublikasikan.", en: "Four things worth settling before this page goes live." },
           bullets: [
-            { id: "Deretan logo partner di bawah hero masih bertuliskan “Loremipsum” — perlu diisi logo asli atau dihapus, karena placeholder di halaman produksi justru menurunkan kepercayaan", en: "The partner logo strip below the hero still reads “Loremipsum” — fill it with real logos or remove it, because placeholders on a live page cost more trust than they buy" },
-            { id: "Prime lebih murah dari Plus (Rp36rb berbanding Rp40rb) padahal durasinya sama 5+1 bulan dan fiturnya lebih lengkap — dengan susunan ini tidak ada alasan memilih Plus", en: "Prime costs less than Plus (Rp36k against Rp40k) despite the same 5+1 month term and a fuller feature set — as it stands, there is no reason to choose Plus" },
+            { id: "Deretan logo partner di bawah hero masih bertuliskan “Loremipsum” - perlu diisi logo asli atau dihapus, karena placeholder di halaman produksi justru menurunkan kepercayaan", en: "The partner logo strip below the hero still reads “Loremipsum” - fill it with real logos or remove it, because placeholders on a live page cost more trust than they buy" },
+            { id: "Prime lebih murah dari Plus (Rp36rb berbanding Rp40rb) padahal durasinya sama 5+1 bulan dan fiturnya lebih lengkap - dengan susunan ini tidak ada alasan memilih Plus", en: "Prime costs less than Plus (Rp36k against Rp40k) despite the same 5+1 month term and a fuller feature set - as it stands, there is no reason to choose Plus" },
             { id: "Urutan paket berbeda antara web dan aplikasi: landing page menampilkan Basic, Prime, Plus sementara aplikasi menampilkan Basic, Plus, Prime", en: "Plan order differs between web and app: the landing page shows Basic, Prime, Plus while the app shows Basic, Plus, Prime" },
             { id: "Kata “Bandwith” di kartu Plus dan Prime seharusnya “Bandwidth”", en: "The word “Bandwith” on the Plus and Prime cards should read “Bandwidth”" },
           ],
@@ -915,7 +915,7 @@ const projectsByDateAdded: ProjectItem[] = [
     poster: A.mewsPoster,
     ratio: "16 / 9",
     story: {
-      tagline: "Early Warning Dashboard — Redesign",
+      tagline: "Early Warning Dashboard - Redesign",
       meta: [
         { label: "Peran", value: "UI/UX Designer" },
         { label: "Jenis", value: { id: "Redesign", en: "Redesign" } },
@@ -929,7 +929,7 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               label: { id: "Sistem", en: "System" },
               value:
-                { id: "Mayangan Early Warning System (MEWS) — stasiun pantau laut yang mendeteksi banjir rob dan membunyikan sirine saat air mencapai level kritis.", en: "Mayangan Early Warning System (MEWS) — a coastal monitoring station that detects tidal flooding and sounds a siren when the water reaches a critical level." },
+                { id: "Mayangan Early Warning System (MEWS) - stasiun pantau laut yang mendeteksi banjir rob dan membunyikan sirine saat air mencapai level kritis.", en: "Mayangan Early Warning System (MEWS) - a coastal monitoring station that detects tidal flooding and sounds a siren when the water reaches a critical level." },
             },
             {
               label: "Lokasi",
@@ -939,7 +939,7 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               label: "Objective",
               value:
-                { id: "Merancang ulang dashboard monitoring-nya supaya satu pertanyaan utama — apakah sekarang aman — bisa dijawab dalam hitungan detik.", en: "Redesign its monitoring dashboard so the one question that matters — is it safe right now — can be answered in seconds." },
+                { id: "Merancang ulang dashboard monitoring-nya supaya satu pertanyaan utama - apakah sekarang aman - bisa dijawab dalam hitungan detik.", en: "Redesign its monitoring dashboard so the one question that matters - is it safe right now - can be answered in seconds." },
             },
           ],
           body: [
@@ -966,24 +966,24 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Urutan isi dashboard mengikuti urutan yang dicari orang saat membukanya.", en: "The dashboard is ordered the way people search it when they open it." },
           body: [
-            { id: "Angka tinggi muka air diletakkan paling atas dan paling besar, berdampingan dengan tertinggi, terendah, dan rata-rata hari itu — konteks yang membuat satu angka berarti sesuatu. Di bawahnya grafik, lalu baru status peringatan dini dan status alert.", en: "The water level sits at the very top and largest, beside the day's high, low, and average — the context that makes a single number mean something. Below it the chart, and only then the early-warning status and alert status." },
+            { id: "Angka tinggi muka air diletakkan paling atas dan paling besar, berdampingan dengan tertinggi, terendah, dan rata-rata hari itu - konteks yang membuat satu angka berarti sesuatu. Di bawahnya grafik, lalu baru status peringatan dini dan status alert.", en: "The water level sits at the very top and largest, beside the day's high, low, and average - the context that makes a single number mean something. Below it the chart, and only then the early-warning status and alert status." },
             { id: "Status peringatan dini menampilkan ketiga level sekaligus beserta keterangannya, bukan hanya level yang sedang aktif. Operator jadi tahu posisi air sekarang ada di mana dalam tangga itu, bukan sekadar tahu bahwa keadaan aman.", en: "The early-warning panel shows all three levels with their descriptions, not just the active one. An operator learns where the water currently stands on that ladder, rather than only that things are safe." },
-            { id: "Di sidebar paling bawah ada dua hal yang terlihat di semua halaman: badge status “Aman · 0 dari 3” dan indikator “Online · 10 dtk”. Yang kedua sama pentingnya dengan yang pertama — operator perlu yakin bahwa yang ia lihat memang data terbaru.", en: "At the bottom of the sidebar, two things stay visible on every page: the status badge “Aman · 0 dari 3” and the indicator “Online · 10 dtk”. The second matters as much as the first — an operator needs to trust that what they are seeing is current." },
+            { id: "Di sidebar paling bawah ada dua hal yang terlihat di semua halaman: badge status “Aman · 0 dari 3” dan indikator “Online · 10 dtk”. Yang kedua sama pentingnya dengan yang pertama - operator perlu yakin bahwa yang ia lihat memang data terbaru.", en: "At the bottom of the sidebar, two things stay visible on every page: the status badge “Aman · 0 dari 3” and the indicator “Online · 10 dtk”. The second matters as much as the first - an operator needs to trust that what they are seeing is current." },
           ],
           image: {
             src: A.mewsDashboard,
             alt: { id: "Halaman Dashboard MEWS Mayangan", en: "The MEWS Mayangan dashboard" },
             caption:
-              { id: "Dashboard — angka utama, grafik, status peringatan, cuaca, riwayat, dan ringkasan perangkat", en: "Dashboard — headline number, chart, warning status, weather, history, and a device summary" },
+              { id: "Dashboard - angka utama, grafik, status peringatan, cuaca, riwayat, dan ringkasan perangkat", en: "Dashboard - headline number, chart, warning status, weather, history, and a device summary" },
           },
         },
         {
           heading: { id: "Membedakan nol dari tidak terdengar", en: "Telling zero apart from silence" },
           lead: { id: "Ini keputusan paling menentukan di seluruh redesign.", en: "This is the most consequential decision in the whole redesign." },
           body: [
-            { id: "Sensor cahaya menunjukkan 0 lux. Kalau ditampilkan apa adanya, angka itu terbaca sebagai keadaan normal di malam hari. Padahal pembacaan terakhirnya pukul 23:41 kemarin — sensornya sudah lama tidak mengirim apa-apa.", en: "The light sensor reads 0 lux. Shown as-is, that number reads as a normal night. But its last reading was 23:41 yesterday — the sensor has not sent anything in a long time." },
-            { id: "Karena itu “Terlambat” dibuat jadi status tersendiri, berwarna merah, lengkap dengan waktu pembacaan terakhirnya. Ringkasan di atas tabel pun memisahkan ketiganya: 3 normal, 2 perlu perhatian, 1 terlambat.", en: "So “Terlambat” — stale — became a status of its own, in red, carrying the time of its last reading. The summary above the table separates all three: 3 normal, 2 needing attention, 1 stale." },
-            { id: "Untuk sistem peringatan dini, sensor yang diam tidak boleh terlihat seperti sensor yang melaporkan keadaan tenang. Halaman Tentang Perangkat meneruskan logika yang sama — weather station di sana berstatus “Sebagian terlambat”, bukan sekadar aktif atau mati.", en: "In an early-warning system, a silent sensor must never look like a sensor reporting calm. The About Device page carries the same logic — the weather station there reads “Partially stale”, not simply active or off." },
+            { id: "Sensor cahaya menunjukkan 0 lux. Kalau ditampilkan apa adanya, angka itu terbaca sebagai keadaan normal di malam hari. Padahal pembacaan terakhirnya pukul 23:41 kemarin - sensornya sudah lama tidak mengirim apa-apa.", en: "The light sensor reads 0 lux. Shown as-is, that number reads as a normal night. But its last reading was 23:41 yesterday - the sensor has not sent anything in a long time." },
+            { id: "Karena itu “Terlambat” dibuat jadi status tersendiri, berwarna merah, lengkap dengan waktu pembacaan terakhirnya. Ringkasan di atas tabel pun memisahkan ketiganya: 3 normal, 2 perlu perhatian, 1 terlambat.", en: "So “Terlambat” - stale - became a status of its own, in red, carrying the time of its last reading. The summary above the table separates all three: 3 normal, 2 needing attention, 1 stale." },
+            { id: "Untuk sistem peringatan dini, sensor yang diam tidak boleh terlihat seperti sensor yang melaporkan keadaan tenang. Halaman Tentang Perangkat meneruskan logika yang sama - weather station di sana berstatus “Sebagian terlambat”, bukan sekadar aktif atau mati.", en: "In an early-warning system, a silent sensor must never look like a sensor reporting calm. The About Device page carries the same logic - the weather station there reads “Partially stale”, not simply active or off." },
           ],
           image: {
             src: A.mewsCuaca,
@@ -996,23 +996,23 @@ const projectsByDateAdded: ProjectItem[] = [
           heading: { id: "Peringatan yang bisa dibaca dan diuji", en: "A warning you can read, and test" },
           lead: { id: "Halaman Alert menjelaskan mesinnya, bukan cuma melaporkan hasilnya.", en: "The Alert page explains the machinery, not just its output." },
           body: [
-            { id: "Tabel “Alur peringatan” memetakan tiap level ke pemicunya dan ke aksi otomatis yang menyertainya. Operator jadi bisa memahami apa yang akan terjadi sebelum hal itu terjadi — penting untuk sistem yang sebagian besar waktunya diam.", en: "The “Alur peringatan” table maps each level to its trigger and the automatic action that follows. An operator can understand what will happen before it happens — which matters for a system that is quiet most of the time." },
-            { id: "Tombol “Uji sirine” menjawab masalah khas alat peringatan: perangkat yang jarang berbunyi tidak pernah ketahuan rusak sampai saat ia paling dibutuhkan. Status sirine dan lampu pun ditulis dua lapis — “Mati” sebagai kondisi, “Standby” sebagai kesiapan — supaya mati tidak tertukar dengan rusak.", en: "The “Test siren” button answers a problem peculiar to warning equipment: a device that rarely sounds is never found broken until the moment it is needed most. Siren and lamp status are written in two layers — “Off” as the condition, “Standby” as the readiness — so off is never mistaken for broken." },
+            { id: "Tabel “Alur peringatan” memetakan tiap level ke pemicunya dan ke aksi otomatis yang menyertainya. Operator jadi bisa memahami apa yang akan terjadi sebelum hal itu terjadi - penting untuk sistem yang sebagian besar waktunya diam.", en: "The “Alur peringatan” table maps each level to its trigger and the automatic action that follows. An operator can understand what will happen before it happens - which matters for a system that is quiet most of the time." },
+            { id: "Tombol “Uji sirine” menjawab masalah khas alat peringatan: perangkat yang jarang berbunyi tidak pernah ketahuan rusak sampai saat ia paling dibutuhkan. Status sirine dan lampu pun ditulis dua lapis - “Mati” sebagai kondisi, “Standby” sebagai kesiapan - supaya mati tidak tertukar dengan rusak.", en: "The “Test siren” button answers a problem peculiar to warning equipment: a device that rarely sounds is never found broken until the moment it is needed most. Siren and lamp status are written in two layers - “Off” as the condition, “Standby” as the readiness - so off is never mistaken for broken." },
             { id: "Log alert mencatat tiap perubahan status beserta apa yang ikut menyala: sirine, lampu, dan apakah email terkirim. Jadi sesudah kejadian, jalannya peristiwa masih bisa ditelusuri.", en: "The alert log records every status change along with what fired: siren, lamp, and whether the email went out. So after an event, the sequence can still be traced." },
           ],
           image: {
             src: A.mewsAlert,
             alt: { id: "Halaman Alert dengan alur peringatan dan log", en: "The Alert page with its warning flow and log" },
-            caption: { id: "Alert — level saat ini, kesiapan aktuator, alur tiap level, dan log kejadian", en: "Alert — current level, actuator readiness, the flow for each level, and the event log" },
+            caption: { id: "Alert - level saat ini, kesiapan aktuator, alur tiap level, dan log kejadian", en: "Alert - current level, actuator readiness, the flow for each level, and the event log" },
           },
         },
         {
           heading: { id: "Data mentah itu berisik", en: "Raw data is noisy" },
           lead: { id: "333 titik data dalam tiga jam, dan garisnya bergerigi.", en: "333 data points in three hours, and the line is jagged." },
           body: [
-            { id: "Grafik monitoring menampilkan data apa adanya, dan itu memang perlu — operator harus bisa melihat lonjakan yang sesungguhnya. Tapi data sementah itu menyulitkan ketika yang dicari adalah arah tren.", en: "The monitoring chart shows the data as it is, and that is necessary — an operator has to be able to see a real spike. But data that raw gets in the way when what you want is the direction of a trend." },
+            { id: "Grafik monitoring menampilkan data apa adanya, dan itu memang perlu - operator harus bisa melihat lonjakan yang sesungguhnya. Tapi data sementah itu menyulitkan ketika yang dicari adalah arah tren.", en: "The monitoring chart shows the data as it is, and that is necessary - an operator has to be able to see a real spike. But data that raw gets in the way when what you want is the direction of a trend." },
             { id: "Jalan keluarnya bukan memilihkan satu cara penghalusan, melainkan menyediakan lima dan membiarkan operator memilih: Asli, Agregasi per jam, Moving average, Sampling, dan Spline.", en: "The answer was not to pick one smoothing method, but to offer five and let the operator choose: Raw, Hourly aggregate, Moving average, Sampling, and Spline." },
-            { id: "Yang membuatnya benar-benar berguna adalah baris keterangan di bawah tombolnya — tiap mode dijelaskan satu kalimat pendek seperti “ambil tiap n data” atau “kurva dihaluskan”. Tanpa baris itu, lima tombol hanya jadi jargon statistik; dengan baris itu, operator yang bukan analis data tetap tahu apa yang sedang ia lihat dan apa yang disembunyikan tiap mode.", en: "What makes it genuinely useful is the caption row beneath the buttons — each mode explained in one short line, like “take every nth point” or “curve smoothed”. Without that row, five buttons are just statistical jargon; with it, an operator who is not a data analyst still knows what they are looking at and what each mode hides." },
+            { id: "Yang membuatnya benar-benar berguna adalah baris keterangan di bawah tombolnya - tiap mode dijelaskan satu kalimat pendek seperti “ambil tiap n data” atau “kurva dihaluskan”. Tanpa baris itu, lima tombol hanya jadi jargon statistik; dengan baris itu, operator yang bukan analis data tetap tahu apa yang sedang ia lihat dan apa yang disembunyikan tiap mode.", en: "What makes it genuinely useful is the caption row beneath the buttons - each mode explained in one short line, like “take every nth point” or “curve smoothed”. Without that row, five buttons are just statistical jargon; with it, an operator who is not a data analyst still knows what they are looking at and what each mode hides." },
           ],
           image: {
             src: A.mewsData,
@@ -1024,7 +1024,7 @@ const projectsByDateAdded: ProjectItem[] = [
           heading: { id: "Memakai ambang yang sudah dipercaya", en: "Borrowing thresholds people already trust" },
           lead: { id: "Kategori intensitas hujan tidak dikarang sendiri.", en: "The rain intensity categories were not invented here." },
           body: [
-            { id: "Panel hujan memakai kategori BMKG — Ringan 1–5, Sedang 5–10, Lebat 10–20, dan Sangat lebat di atas 20 mm per jam — dengan sumbernya ditulis terang di judul panel.", en: "The rain panel uses BMKG's categories — Light 1–5, Moderate 5–10, Heavy 10–20, and Very heavy above 20 mm per hour — with the source named plainly in the panel title." },
+            { id: "Panel hujan memakai kategori BMKG - Ringan 1–5, Sedang 5–10, Lebat 10–20, dan Sangat lebat di atas 20 mm per jam - dengan sumbernya ditulis terang di judul panel.", en: "The rain panel uses BMKG's categories - Light 1–5, Moderate 5–10, Heavy 10–20, and Very heavy above 20 mm per hour - with the source named plainly in the panel title." },
             { id: "Untuk sistem yang hasilnya dipakai mengambil keputusan evakuasi, memakai ambang milik lembaga resmi lebih bisa dipertanggungjawabkan daripada menetapkan ambang sendiri, dan menyebut sumbernya membuat angka itu bisa diperiksa orang lain.", en: "For a system whose output informs evacuation decisions, using an official agency's thresholds is more defensible than setting your own, and naming the source lets someone else check the numbers." },
           ],
         },
@@ -1032,14 +1032,14 @@ const projectsByDateAdded: ProjectItem[] = [
           heading: { id: "Menjelaskan dirinya sendiri", en: "Explaining itself" },
           lead: { id: "Dashboard ini juga dibuka orang yang belum pernah melihat alatnya.", en: "This dashboard is also opened by people who have never seen the equipment." },
           body: [
-            { id: "Halaman Tentang Perangkat memuat enam langkah “Cara kerja — dari sensor sampai peringatan”, peta lokasi dengan koordinat yang bisa disalin, video liputan, dan tabel delapan komponen lengkap dengan fungsi serta statusnya masing-masing.", en: "The About Device page carries six steps under “How it works — from sensor to warning”, a location map with copyable coordinates, a news video, and a table of eight components with each one's function and status." },
-            { id: "Satu baris di tabel itu menyingkap hal yang mudah terlewat: ada “Panel dashboard lokasi” yang tugasnya memberi informasi untuk warga di lokasi. Artinya sistem ini punya dua audiens — operator yang memantau dari jauh lewat dashboard ini, dan warga yang membaca panel di tempat. Keduanya butuh bentuk informasi yang berbeda.", en: "One row in that table reveals something easy to miss: an “on-site dashboard panel” whose job is to inform residents at the location. Which means the system has two audiences — operators monitoring remotely through this dashboard, and residents reading the panel on site. Each needs information shaped differently." },
+            { id: "Halaman Tentang Perangkat memuat enam langkah “Cara kerja - dari sensor sampai peringatan”, peta lokasi dengan koordinat yang bisa disalin, video liputan, dan tabel delapan komponen lengkap dengan fungsi serta statusnya masing-masing.", en: "The About Device page carries six steps under “How it works - from sensor to warning”, a location map with copyable coordinates, a news video, and a table of eight components with each one's function and status." },
+            { id: "Satu baris di tabel itu menyingkap hal yang mudah terlewat: ada “Panel dashboard lokasi” yang tugasnya memberi informasi untuk warga di lokasi. Artinya sistem ini punya dua audiens - operator yang memantau dari jauh lewat dashboard ini, dan warga yang membaca panel di tempat. Keduanya butuh bentuk informasi yang berbeda.", en: "One row in that table reveals something easy to miss: an “on-site dashboard panel” whose job is to inform residents at the location. Which means the system has two audiences - operators monitoring remotely through this dashboard, and residents reading the panel on site. Each needs information shaped differently." },
           ],
           image: {
             src: A.mewsPerangkat,
             alt: { id: "Halaman Tentang Perangkat dengan cara kerja dan daftar komponen", en: "The About Device page with how it works and the component list" },
             caption:
-              { id: "Tentang Perangkat — identitas sistem, lokasi, cara kerja enam langkah, dan status delapan komponen", en: "About Device — system identity, location, the six-step flow, and the status of eight components" },
+              { id: "Tentang Perangkat - identitas sistem, lokasi, cara kerja enam langkah, dan status delapan komponen", en: "About Device - system identity, location, the six-step flow, and the status of eight components" },
           },
         },
       ],
@@ -1082,7 +1082,7 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               label: "Objective",
               value:
-                { id: "Membangun identitas yang membuat mekanisme produk — mencocokkan — terbaca sejak logo, tanpa perlu dijelaskan lewat teks.", en: "Build an identity that makes the product's mechanism — matching — legible from the logo alone, without needing text to explain it." },
+                { id: "Membangun identitas yang membuat mekanisme produk - mencocokkan - terbaca sejak logo, tanpa perlu dijelaskan lewat teks.", en: "Build an identity that makes the product's mechanism - matching - legible from the logo alone, without needing text to explain it." },
             },
             {
               label: { id: "Deliverable", en: "Deliverable" },
@@ -1097,10 +1097,10 @@ const projectsByDateAdded: ProjectItem[] = [
         {
           heading: { id: "Filosofi nama", en: "The name" },
           lead:
-            { id: "“Match” bukan kiasan — itu nama mekanisme produknya sendiri.", en: "“Match” is not a metaphor — it is the name of the product's own mechanism." },
+            { id: "“Match” bukan kiasan - itu nama mekanisme produknya sendiri.", en: "“Match” is not a metaphor - it is the name of the product's own mechanism." },
           body: [
             { id: "Nama ini dipilih karena persis menggambarkan cara kerja platformnya: mempertemukan skill, minat, dan tujuan karier seseorang dengan lowongan yang benar-benar cocok. Personalisasi AI-nya bekerja sebagai pencocok, bukan sebagai mesin pencari.", en: "The name was chosen because it describes exactly how the platform works: bringing someone's skills, interests, and career goals together with roles that genuinely fit. Its AI personalisation works as a matcher, not as a search engine." },
-            { id: "Satu suku kata, dan berfungsi sebagai kata kerja sekaligus kata benda — pengguna melakukan match, dan menerima match. Mudah diucapkan lintas bahasa, dan sudah familier di telinga tanpa perlu diterjemahkan.", en: "One syllable, working as both verb and noun — a user matches, and receives matches. Easy to say across languages, and already familiar without needing translation." },
+            { id: "Satu suku kata, dan berfungsi sebagai kata kerja sekaligus kata benda - pengguna melakukan match, dan menerima match. Mudah diucapkan lintas bahasa, dan sudah familier di telinga tanpa perlu diterjemahkan.", en: "One syllable, working as both verb and noun - a user matches, and receives matches. Easy to say across languages, and already familiar without needing translation." },
             { id: "Namanya dipakai dalam dua panjang. “Match” untuk wordmark dan sapaan sehari-hari, “Matchwork” untuk nama penuh yang dipakai di domain matchwork.com, handle @matchwork, dan label asisten AI-nya di dalam produk. Bentuk pendek untuk dikenali, bentuk panjang untuk dicari dan dimiliki.", en: "The name runs at two lengths. “Match” for the wordmark and everyday use, “Matchwork” as the full name carried by matchwork.com, the handle @matchwork, and the AI assistant's label inside the product. The short form to be recognised, the long form to be searched for and owned." },
             { id: "Tagline-nya menurunkan premis itu secara harfiah: “Find your job and discover opportunities that match your skills, interests, and career goals.”", en: "The tagline states that premise literally: “Find your job and discover opportunities that match your skills, interests, and career goals.”" },
           ],
@@ -1110,7 +1110,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Huruf M yang dibangun dari batang vertikal dengan sambungan di ketinggian berbeda.", en: "An M built from vertical bars whose joints sit at different heights." },
           body: [
-            { id: "Batangnya berlebar sama rata, tapi titik temunya sengaja tidak sejajar — tinggi, rendah, tinggi. Siluetnya jadi terbaca seperti dua sisi bergerigi yang saling mengunci, dan itulah gagasan match yang dibawa ke bentuk.", en: "The bars share one width, but their meeting points are deliberately uneven — high, low, high. The silhouette reads as two toothed edges locking together, which is the idea of a match carried into form." },
+            { id: "Batangnya berlebar sama rata, tapi titik temunya sengaja tidak sejajar - tinggi, rendah, tinggi. Siluetnya jadi terbaca seperti dua sisi bergerigi yang saling mengunci, dan itulah gagasan match yang dibawa ke bentuk.", en: "The bars share one width, but their meeting points are deliberately uneven - high, low, high. The silhouette reads as two toothed edges locking together, which is the idea of a match carried into form." },
             { id: "Ruang kosong di antara batang punya bobot yang setara dengan batangnya. Celah itu yang membuat marknya tetap terbaca saat dikecilkan ke ukuran favicon 16px, dan tetap punya tegangan saat dibesarkan ke ukuran billboard.", en: "The space between the bars carries as much weight as the bars themselves. Those gaps are what keep the mark legible shrunk to a 16px favicon, and what keep it taut blown up to billboard size." },
             { id: "Konstruksinya kaku dan modular, mendekati karakter huruf monospace. Itu disengaja: produknya digerakkan algoritma, dan logonya tidak berpura-pura ditulis tangan.", en: "The construction is rigid and modular, close to the character of a monospace face. That is deliberate: the product is driven by an algorithm, and its logo does not pretend to be handwritten." },
           ],
@@ -1120,13 +1120,13 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Lima warna, dibangun gelap lebih dulu karena warna sinyalnya memang menuntut itu.", en: "Five colours, built dark-first because the signal colour demands it." },
           body: [
-            { id: "Lime adalah satu-satunya warna yang boleh berteriak. Ia dipakai untuk logo, CTA, dan apa pun yang menandakan “ini kecocokanmu” — porsinya kecil justru supaya tetap berarti.", en: "Lime is the only colour allowed to shout. It carries the logo, the CTA, and anything that marks “this one is your match” — kept to small doses precisely so it keeps meaning something." },
+            { id: "Lime adalah satu-satunya warna yang boleh berteriak. Ia dipakai untuk logo, CTA, dan apa pun yang menandakan “ini kecocokanmu” - porsinya kecil justru supaya tetap berarti.", en: "Lime is the only colour allowed to shout. It carries the logo, the CTA, and anything that marks “this one is your match” - kept to small doses precisely so it keeps meaning something." },
           ],
           table: {
             head: [{ id: "Warna", en: "Colour" }, { id: "Hex", en: "Hex" }, "Peran", { id: "Kontras di #0A0A0A", en: "Contrast on #0A0A0A" }],
             rows: [
-              [{ id: "Lime", en: "Lime" }, "#A1E433", { id: "Sinyal utama — logo, CTA, highlight hasil match", en: "Primary signal — logo, CTA, match result highlights" }, "12,88:1"],
-              [{ id: "Hijau tua", en: "Deep green" }, "#69A900", { id: "Pendukung — fill, hover, aksen grafis", en: "Supporting — fills, hover, graphic accents" }, "6,86:1"],
+              [{ id: "Lime", en: "Lime" }, "#A1E433", { id: "Sinyal utama - logo, CTA, highlight hasil match", en: "Primary signal - logo, CTA, match result highlights" }, "12,88:1"],
+              [{ id: "Hijau tua", en: "Deep green" }, "#69A900", { id: "Pendukung - fill, hover, aksen grafis", en: "Supporting - fills, hover, graphic accents" }, "6,86:1"],
               [{ id: "Ink", en: "Ink" }, "#0A0A0A", { id: "Latar utama seluruh sistem", en: "The base background across the system" }, "–"],
               [{ id: "Arang", en: "Charcoal" }, "#171717", { id: "Permukaan kartu, pemisah antar layer", en: "Card surfaces, separating layers" }, "–"],
               [{ id: "Kertas", en: "Paper" }, "#FAFAFA", { id: "Teks utama di atas latar gelap", en: "Body text on dark" }, "18,97:1"],
@@ -1138,13 +1138,13 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Keputusan ini datang dari angka, bukan dari selera.", en: "This decision came from numbers, not taste." },
           body: [
-            { id: "Lime #A1E433 di atas putih hanya menghasilkan kontras 1,47:1 — jauh di bawah ambang WCAG AA yang 4,5:1, dan praktis tidak terbaca. Warna yang sama di atas #0A0A0A melompat ke 12,88:1, lewat dari ambang AAA.", en: "Lime #A1E433 on white yields a contrast of just 1.47:1 — far under the WCAG AA threshold of 4.5:1, and effectively unreadable. The same colour on #0A0A0A jumps to 12.88:1, clearing AAA." },
+            { id: "Lime #A1E433 di atas putih hanya menghasilkan kontras 1,47:1 - jauh di bawah ambang WCAG AA yang 4,5:1, dan praktis tidak terbaca. Warna yang sama di atas #0A0A0A melompat ke 12,88:1, lewat dari ambang AAA.", en: "Lime #A1E433 on white yields a contrast of just 1.47:1 - far under the WCAG AA threshold of 4.5:1, and effectively unreadable. The same colour on #0A0A0A jumps to 12.88:1, clearing AAA." },
             { id: "Artinya warna sinyal ini hanya hidup di atas gelap. Daripada melemahkannya jadi hijau yang lebih tua dan lebih tumpul demi muat di tema terang, sistemnya dibalik: gelap jadi default, dan lime dibiarkan setajam aslinya.", en: "Which means this signal colour only lives on dark. Rather than dulling it into a deeper, blunter green to fit a light theme, the system was inverted: dark became the default, and lime was left as sharp as it is." },
-            { id: "Konsekuensinya konsisten di seluruh penerapan — app icon, profil sosial, sampai poster — semuanya berangkat dari latar gelap.", en: "The consequence runs consistently through every application — app icon, social profile, posters — all of them starting from a dark ground." },
+            { id: "Konsekuensinya konsisten di seluruh penerapan - app icon, profil sosial, sampai poster - semuanya berangkat dari latar gelap.", en: "The consequence runs consistently through every application - app icon, social profile, posters - all of them starting from a dark ground." },
           ],
           stats: [
-            { value: "12,88:1", label: { id: "lime di atas ink — lolos AAA", en: "lime on ink — clears AAA" } },
-            { value: "1,47:1", label: { id: "lime di atas putih — gagal AA", en: "lime on white — fails AA" } },
+            { value: "12,88:1", label: { id: "lime di atas ink - lolos AAA", en: "lime on ink - clears AAA" } },
+            { value: "1,47:1", label: { id: "lime di atas putih - gagal AA", en: "lime on white - fails AA" } },
             { value: "18,97:1", label: { id: "teks kertas di atas ink", en: "paper text on ink" } },
           ],
         },
@@ -1153,7 +1153,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Orang yang sedang berpindah tempat, bukan orang yang sedang berpose di kantor.", en: "People in the middle of going somewhere, not people posing in an office." },
           body: [
-            { id: "Arah fotonya memilih momen transit — peron, lorong bawah tanah, perjalanan. Secara harfiah ini adalah orang di antara dua titik, dan itu posisi yang sama dengan pengguna Match: di antara pekerjaan yang sekarang dan yang berikutnya.", en: "The photography direction chooses moments of transit — platforms, underpasses, journeys. Literally, these are people between two points, which is exactly where a Match user stands: between the job they have and the next one." },
+            { id: "Arah fotonya memilih momen transit - peron, lorong bawah tanah, perjalanan. Secara harfiah ini adalah orang di antara dua titik, dan itu posisi yang sama dengan pengguna Match: di antara pekerjaan yang sekarang dan yang berikutnya.", en: "The photography direction chooses moments of transit - platforms, underpasses, journeys. Literally, these are people between two points, which is exactly where a Match user stands: between the job they have and the next one." },
             { id: "Semua foto diberi cast hijau supaya menyatu dengan palet, dan dibiarkan gelap sehingga mark atau teks lime bisa duduk di atasnya tanpa kehilangan kontras.", en: "Every photo carries a green cast so it sits inside the palette, and stays dark so the mark or lime text can sit on top without losing contrast." },
           ],
         },
@@ -1162,10 +1162,10 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Mark yang sama dipakai dari 16 piksel sampai sebesar dinding.", en: "The same mark runs from 16 pixels to the size of a wall." },
           bullets: [
-            { id: "Favicon dan tab browser — mark saja, tanpa wordmark, pada matchwork.com", en: "Favicon and browser tab — the mark alone, no wordmark, on matchwork.com" },
-            { id: "App icon iOS — mark lime di atas ink, berdiri di antara ikon sistem tanpa tenggelam", en: "iOS app icon — lime mark on ink, holding its own among system icons" },
-            { id: "Profil sosial — avatar bundar dengan pattern diagonal sebagai header", en: "Social profile — a round avatar with the diagonal pattern as header" },
-            { id: "Media luar ruang — mark putih dan tagline di atas foto transit", en: "Out-of-home — the white mark and tagline over a transit photograph" },
+            { id: "Favicon dan tab browser - mark saja, tanpa wordmark, pada matchwork.com", en: "Favicon and browser tab - the mark alone, no wordmark, on matchwork.com" },
+            { id: "App icon iOS - mark lime di atas ink, berdiri di antara ikon sistem tanpa tenggelam", en: "iOS app icon - lime mark on ink, holding its own among system icons" },
+            { id: "Profil sosial - avatar bundar dengan pattern diagonal sebagai header", en: "Social profile - a round avatar with the diagonal pattern as header" },
+            { id: "Media luar ruang - mark putih dan tagline di atas foto transit", en: "Out-of-home - the white mark and tagline over a transit photograph" },
           ],
         },
         {
@@ -1173,8 +1173,8 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Yang dilihat sekilas dan yang dipakai berjam-jam tidak bisa memakai aturan warna yang sama.", en: "What is glanced at and what is used for hours cannot follow the same colour rules." },
           body: [
-            { id: "Permukaan brand — poster, app icon, profil sosial — bekerja dalam hitungan detik. Tugasnya menarik perhatian, jadi lime di atas gelap adalah pilihan yang tepat: kontras 12,88:1 dan warna yang sulit diabaikan.", en: "Brand surfaces — posters, app icon, social profile — work in seconds. Their job is to catch attention, so lime on dark is the right call: 12.88:1 contrast in a colour that is hard to ignore." },
-            { id: "Permukaan produk bekerja sebaliknya. Pengguna membaca puluhan lowongan berturut-turut, dan latar gelap dengan aksen neon justru melelahkan di sesi panjang. Karena itu antarmuka Matchwork berdiri di atas sistem terang dengan aksen emerald #0b8457 — kontras 4,72:1 di atas putih, cukup untuk lolos AA sebagai warna tombol, tapi tidak berteriak.", en: "Product surfaces work the other way. Users read dozens of listings in a row, and a dark ground with a neon accent is tiring over a long session. So the Matchwork interface stands on a light system with an emerald accent, #0b8457 — 4.72:1 on white, enough to clear AA as a button colour without shouting." },
+            { id: "Permukaan brand - poster, app icon, profil sosial - bekerja dalam hitungan detik. Tugasnya menarik perhatian, jadi lime di atas gelap adalah pilihan yang tepat: kontras 12,88:1 dan warna yang sulit diabaikan.", en: "Brand surfaces - posters, app icon, social profile - work in seconds. Their job is to catch attention, so lime on dark is the right call: 12.88:1 contrast in a colour that is hard to ignore." },
+            { id: "Permukaan produk bekerja sebaliknya. Pengguna membaca puluhan lowongan berturut-turut, dan latar gelap dengan aksen neon justru melelahkan di sesi panjang. Karena itu antarmuka Matchwork berdiri di atas sistem terang dengan aksen emerald #0b8457 - kontras 4,72:1 di atas putih, cukup untuk lolos AA sebagai warna tombol, tapi tidak berteriak.", en: "Product surfaces work the other way. Users read dozens of listings in a row, and a dark ground with a neon accent is tiring over a long session. So the Matchwork interface stands on a light system with an emerald accent, #0b8457 - 4.72:1 on white, enough to clear AA as a button colour without shouting." },
             { id: "Keduanya tetap satu keluarga karena berangkat dari hijau. Yang berubah hanya suhu dan terangnya, menyesuaikan lama waktu orang menatapnya.", en: "Both stay in one family because both start from green. Only the temperature and lightness shift, tuned to how long someone looks at them." },
           ],
           table: {
@@ -1193,8 +1193,8 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Janji “match” harus kelihatan angkanya, bukan cuma jadi nama.", en: "The promise of a “match” has to show its number, not just be a name." },
           body: [
-            { id: "Daftar lowongan tidak diurutkan berdasarkan tanggal, melainkan berdasarkan kecocokan — setiap baris membawa persentasenya sendiri, dari 92% sampai 69%. Pengguna langsung tahu urutannya berdasarkan apa.", en: "The listing is ordered by fit rather than by date — every row carries its own percentage, from 92% down to 69%. Users see immediately what the order is based on." },
-            { id: "Angka itu lalu dibuka isinya. Panel detail memecah skor 92% menjadi empat baris bernama: Skills, Experience, Domain, dan Work mode, masing-masing ditandai Match, Bonus, atau Check. Satu angka berubah jadi empat alasan yang bisa diperiksa, dan ketidakcocokan tidak disembunyikan — work mode yang belum pas tetap ditandai Check.", en: "Then the number is opened up. The detail panel breaks 92% into four named rows: Skills, Experience, Domain, and Work mode, each tagged Match, Bonus, or Check. One number becomes four reasons that can be inspected, and mismatches are not hidden — a work mode that does not fit still gets a Check." },
+            { id: "Daftar lowongan tidak diurutkan berdasarkan tanggal, melainkan berdasarkan kecocokan - setiap baris membawa persentasenya sendiri, dari 92% sampai 69%. Pengguna langsung tahu urutannya berdasarkan apa.", en: "The listing is ordered by fit rather than by date - every row carries its own percentage, from 92% down to 69%. Users see immediately what the order is based on." },
+            { id: "Angka itu lalu dibuka isinya. Panel detail memecah skor 92% menjadi empat baris bernama: Skills, Experience, Domain, dan Work mode, masing-masing ditandai Match, Bonus, atau Check. Satu angka berubah jadi empat alasan yang bisa diperiksa, dan ketidakcocokan tidak disembunyikan - work mode yang belum pas tetap ditandai Check.", en: "Then the number is opened up. The detail panel breaks 92% into four named rows: Skills, Experience, Domain, and Work mode, each tagged Match, Bonus, or Check. One number becomes four reasons that can be inspected, and mismatches are not hidden - a work mode that does not fit still gets a Check." },
             { id: "Asisten AI-nya duduk di panel yang sama lewat “Ask about this role”, lengkap dengan pertanyaan siap pakai seperti “Is the salary fair for my level?” dan tombol “Tailor my resume”. Di bawahnya ada satu baris yang sengaja tidak dihilangkan: “AI can make mistakes. Always check details with the employer.”", en: "The AI assistant sits in that same panel under “Ask about this role”, with ready-made prompts like “Is the salary fair for my level?” and a “Tailor my resume” button. Below it sits one line kept deliberately in place: “AI can make mistakes. Always check details with the employer.”" },
           ],
         },
@@ -1202,7 +1202,7 @@ const projectsByDateAdded: ProjectItem[] = [
           heading: { id: "Penutup", en: "Closing" },
           body: [
             { id: "Identitas ini dibangun dari satu gagasan yang sama di tiap lapisnya: dua sisi yang saling mengunci. Gagasan itu ada di nama, ada di gerigi logonya, dan ada di cara skor kecocokan dipecah jadi alasan yang bisa diperiksa.", en: "This identity is built from one idea repeated at every layer: two edges locking together. It is in the name, in the teeth of the logo, and in the way a match score breaks apart into reasons you can check." },
-            { id: "Yang membuatnya bertahan bukan konsistensi warna yang kaku, melainkan konsistensi maksud — tiap permukaan memakai warna yang sesuai dengan berapa lama orang menatapnya.", en: "What holds it together is not rigid colour consistency but consistency of intent — each surface uses the colour that suits how long someone looks at it." },
+            { id: "Yang membuatnya bertahan bukan konsistensi warna yang kaku, melainkan konsistensi maksud - tiap permukaan memakai warna yang sesuai dengan berapa lama orang menatapnya.", en: "What holds it together is not rigid colour consistency but consistency of intent - each surface uses the colour that suits how long someone looks at it." },
           ],
         },
       ],
@@ -1212,8 +1212,8 @@ const projectsByDateAdded: ProjectItem[] = [
     slug: "matchwork-web",
     title: "Matchwork - Job Search Dashboard",
     summary: {
-      id: "Web app untuk pencari kerja: memantau lamaran, jadwal interview, dan skor kecocokan dalam satu layar. Dibangun dengan palet brand Match — lime di atas gelap.",
-      en: "Web app for job seekers: track applications, interviews, and match scores on one screen. Built on the Match brand palette — lime on dark.",
+      id: "Web app untuk pencari kerja: memantau lamaran, jadwal interview, dan skor kecocokan dalam satu layar. Dibangun dengan palet brand Match - lime di atas gelap.",
+      en: "Web app for job seekers: track applications, interviews, and match scores on one screen. Built on the Match brand palette - lime on dark.",
     },
     pdf: "/case-study/matchwork-web.pdf",
     tags: ["Website", "Dashboard"],
@@ -1235,7 +1235,7 @@ const projectsByDateAdded: ProjectItem[] = [
             {
               label: "Produk",
               value:
-                { id: "Matchwork — platform pencari kerja yang mencocokkan orang dengan lowongan lewat personalisasi AI.", en: "Matchwork — a job platform that matches people to roles through AI personalisation." },
+                { id: "Matchwork - platform pencari kerja yang mencocokkan orang dengan lowongan lewat personalisasi AI.", en: "Matchwork - a job platform that matches people to roles through AI personalisation." },
             },
             {
               label: { id: "Layar ini", en: "This screen" },
@@ -1249,7 +1249,7 @@ const projectsByDateAdded: ProjectItem[] = [
             },
           ],
           body: [
-            { id: "Mencari kerja itu proses panjang yang tersebar di banyak tempat — email, kalender, catatan sendiri. Dashboard ini menarik semuanya ke satu layar supaya pelamar tidak perlu mengingat-ingat lamaran mana yang sudah dibalas dan mana yang belum.", en: "Job hunting is a long process scattered across many places — email, calendar, your own notes. This dashboard pulls all of it onto one screen so an applicant never has to remember which applications got a reply and which did not." },
+            { id: "Mencari kerja itu proses panjang yang tersebar di banyak tempat - email, kalender, catatan sendiri. Dashboard ini menarik semuanya ke satu layar supaya pelamar tidak perlu mengingat-ingat lamaran mana yang sudah dibalas dan mana yang belum.", en: "Job hunting is a long process scattered across many places - email, calendar, your own notes. This dashboard pulls all of it onto one screen so an applicant never has to remember which applications got a reply and which did not." },
           ],
         },
         {
@@ -1257,14 +1257,14 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Empat kartu di atas, dan tidak satu pun berdiri sendirian.", en: "Four cards along the top, and not one of them stands alone." },
           body: [
-            { id: "New matches 24, Applications 12, Interviews 3, Response rate 50%. Tiap kartu membawa sparkline dan selisih terhadap minggu lalu, jadi angkanya langsung punya arah — naik atau turun — tanpa perlu membuka halaman lain.", en: "New matches 24, Applications 12, Interviews 3, Response rate 50%. Each card carries a sparkline and the change against last week, so every number arrives with a direction — up or down — without opening another page." },
+            { id: "New matches 24, Applications 12, Interviews 3, Response rate 50%. Tiap kartu membawa sparkline dan selisih terhadap minggu lalu, jadi angkanya langsung punya arah - naik atau turun - tanpa perlu membuka halaman lain.", en: "New matches 24, Applications 12, Interviews 3, Response rate 50%. Each card carries a sparkline and the change against last week, so every number arrives with a direction - up or down - without opening another page." },
             { id: "Yang menarik, kartu Response rate menunjukkan −3% dan ditandai merah. Dashboard ini tidak menyembunyikan angka yang sedang memburuk, padahal itu angka yang paling menyakitkan untuk pencari kerja. Menyembunyikannya justru akan membuat pelamar tidak tahu kapan harus mengubah strategi.", en: "Notably, the Response rate card shows −3% marked in red. This dashboard does not hide the number that is getting worse, even though it is the most painful one for a job seeker. Hiding it would only leave the applicant unaware of when to change approach." },
           ],
           image: {
             src: A.mwKpi,
             alt: { id: "Empat kartu ringkasan dengan sparkline dan selisih mingguan", en: "Four summary cards with sparklines and weekly change" },
             caption:
-              { id: "Tiap angka didampingi tren mingguan — termasuk yang sedang turun", en: "Every number comes with its weekly trend — including the one falling" },
+              { id: "Tiap angka didampingi tren mingguan - termasuk yang sedang turun", en: "Every number comes with its weekly trend - including the one falling" },
           },
         },
         {
@@ -1272,7 +1272,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Janji “match” tidak berhenti di halaman pencarian.", en: "The promise of a “match” does not stop at the search page." },
           body: [
-            { id: "Di tabel lamaran aktif, tiap baris membawa kolom MATCH beserta bar-nya — 92%, 88%, 85%, 81%, 76%, 58%. Angka yang dipakai saat merekomendasikan lowongan tetap menempel setelah lamaran dikirim.", en: "In the active applications table, every row carries a MATCH column with its bar — 92%, 88%, 85%, 81%, 76%, 58%. The number used to recommend a role stays attached after the application is sent." },
+            { id: "Di tabel lamaran aktif, tiap baris membawa kolom MATCH beserta bar-nya - 92%, 88%, 85%, 81%, 76%, 58%. Angka yang dipakai saat merekomendasikan lowongan tetap menempel setelah lamaran dikirim.", en: "In the active applications table, every row carries a MATCH column with its bar - 92%, 88%, 85%, 81%, 76%, 58%. The number used to recommend a role stays attached after the application is sent." },
             { id: "Karena skor itu berdampingan dengan kolom STAGE, pelamar bisa melihat sendiri hubungan antara seberapa cocok sebuah lowongan dengan sejauh mana lamarannya berjalan. Itu umpan balik yang berguna: bukan cuma “lamaranmu ditolak”, tapi juga bahan untuk menilai lowongan mana yang sebenarnya layak dikejar.", en: "Because that score sits beside the STAGE column, an applicant can see for themselves how a role's fit relates to how far the application got. That is useful feedback: not just “you were rejected”, but material for judging which roles are actually worth chasing." },
           ],
           image: {
@@ -1296,7 +1296,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Empat interview minggu ini, lengkap dengan cara pelaksanaannya.", en: "Four interviews this week, each with how it will be held." },
           body: [
-            { id: "Tiap baris membawa tanggal, nama posisi, perusahaan, jam, dan satu badge yang menyebut bentuk interviewnya — Video call, On-site, atau Phone. Badge itu kecil tapi menentukan: on-site berarti harus menghitung waktu perjalanan, phone berarti cukup memastikan sinyal.", en: "Every row carries a date, role, company, time, and a badge naming the format — Video call, On-site, or Phone. That badge is small but decisive: on-site means budgeting travel time, phone means just checking you have signal." },
+            { id: "Tiap baris membawa tanggal, nama posisi, perusahaan, jam, dan satu badge yang menyebut bentuk interviewnya - Video call, On-site, atau Phone. Badge itu kecil tapi menentukan: on-site berarti harus menghitung waktu perjalanan, phone berarti cukup memastikan sinyal.", en: "Every row carries a date, role, company, time, and a badge naming the format - Video call, On-site, or Phone. That badge is small but decisive: on-site means budgeting travel time, phone means just checking you have signal." },
             { id: "Daftarnya ditutup kalimat “That’s all for this week”, bukan dibiarkan menggantung. Pelamar jadi tahu bahwa daftarnya memang habis, bukan terpotong.", en: "The list closes with “That's all for this week” rather than trailing off. The applicant knows the list has genuinely ended, not been cut short." },
             { id: "Grafik di sebelahnya menghitung 48 lamaran terkirim tahun ini dengan bar per bulan, dan September disorot lime sebagai bulan tertinggi. Rentangnya bisa diganti antara 3 bulan, 6 bulan, dan sepanjang tahun.", en: "The chart beside it counts 48 applications sent this year with a bar per month, September highlighted in lime as the peak. The range switches between three months, six months, and year to date." },
           ],
@@ -1312,7 +1312,7 @@ const projectsByDateAdded: ProjectItem[] = [
           lead:
             { id: "Menunya tidak disusun berdasarkan fitur, tapi berdasarkan tahap yang dilalui pelamar.", en: "The menu is grouped not by feature but by the stage an applicant is in." },
           body: [
-            { id: "Kelompok pertama untuk mencari — Dashboard, Matchwork AI, Find jobs, Saved jobs, Companies. Kelompok Applications untuk yang sedang berjalan — Applied, Interviews, Messages. Kelompok Profile untuk bekal yang dibawa — Resume, Portfolio, Job alerts.", en: "The first group is for searching — Dashboard, Matchwork AI, Find jobs, Saved jobs, Companies. The Applications group is for what is in flight — Applied, Interviews, Messages. The Profile group is for what you bring with you — Resume, Portfolio, Job alerts." },
+            { id: "Kelompok pertama untuk mencari - Dashboard, Matchwork AI, Find jobs, Saved jobs, Companies. Kelompok Applications untuk yang sedang berjalan - Applied, Interviews, Messages. Kelompok Profile untuk bekal yang dibawa - Resume, Portfolio, Job alerts.", en: "The first group is for searching - Dashboard, Matchwork AI, Find jobs, Saved jobs, Companies. The Applications group is for what is in flight - Applied, Interviews, Messages. The Profile group is for what you bring with you - Resume, Portfolio, Job alerts." },
             { id: "Di bawahnya ada Saved searches dengan jumlah lowongan baru di tiap pencarian: Frontend · Jakarta +5, Remote UI/UX +3, ML Internship +2. Pencarian yang disimpan jadi terasa hidup, bukan sekadar daftar kata kunci.", en: "Below that sit Saved searches with a count of new roles in each: Frontend · Jakarta +5, Remote UI/UX +3, ML Internship +2. A saved search feels alive rather than being a list of keywords." },
             { id: "Di paling atas ada sakelar “Open to work”, diletakkan tepat di bawah logo. Posisinya menandakan status itu sesuatu yang sering diubah, bukan pengaturan yang disembunyikan di halaman profil.", en: "At the very top sits an “Open to work” switch, placed directly under the logo. Its position says this status is something you change often, not a setting buried in a profile page." },
           ],
@@ -1372,7 +1372,7 @@ export const posts: BlogItem[] = [
     thumb: A.blogRafaetech,
     image: A.blogRafaetechFull,
     bullets: [
-      "Awarded 3rd Place in a national-level UI/UX design competition themed “Tech Beyond Limits: Building Our Future Together — Innovation, Competition, and Entrepreneurial Excellence.”",
+      "Awarded 3rd Place in a national-level UI/UX design competition themed “Tech Beyond Limits: Building Our Future Together - Innovation, Competition, and Entrepreneurial Excellence.”",
       "Designed WISEBITE, a user-centered digital solution focused on accessibility, usability, and efficient food management.",
       "Emphasized inclusive design principles to improve user experience in modern digital food systems.",
     ],
@@ -1413,7 +1413,7 @@ export const posts: BlogItem[] = [
       "Himpunan Mahasiswa Sistem Informasi, UNISNU Jepara · Juni 2025 · Associated with University of Brawijaya",
     year: "2025",
     body: [
-      "Our team presented “Lokalook: AI-Powered Fashion Platform for Localpreneurs” — a design solution powered by artificial intelligence, built to empower local fashion entrepreneurs through a human-centered, intuitive, and visually appealing mobile interface.",
+      "Our team presented “Lokalook: AI-Powered Fashion Platform for Localpreneurs” - a design solution powered by artificial intelligence, built to empower local fashion entrepreneurs through a human-centered, intuitive, and visually appealing mobile interface.",
       "This experience was a valuable journey of collaboration, research, and purposeful design.",
     ],
     bullets: [
