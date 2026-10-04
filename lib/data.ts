@@ -1180,6 +1180,120 @@ const projectsByDateAdded: ProjectItem[] = [
       ],
     },
   },
+  {
+    slug: "matchwork-web",
+    title: "Matchwork - Job Search Dashboard",
+    summary:
+      "Web app untuk pencari kerja: memantau lamaran, jadwal interview, dan skor kecocokan dalam satu layar. Dibangun dengan palet brand Match — lime di atas gelap.",
+    pdf: "/case-study/matchwork-web.pdf",
+    tags: ["Website", "Dashboard"],
+    video: A.mwVideo,
+    poster: A.mwPoster,
+    ratio: "16 / 9",
+    story: {
+      tagline: "Job Search Dashboard",
+      meta: [
+        { label: "Peran", value: "UI/UX Designer" },
+        { label: "Platform", value: "Web App" },
+        { label: "Bagian", value: "Dashboard pelamar" },
+        { label: "Tema", value: "Gelap, aksen lime" },
+      ],
+      sections: [
+        {
+          heading: "Overview",
+          rows: [
+            {
+              label: "Produk",
+              value:
+                "Matchwork — platform pencari kerja yang mencocokkan orang dengan lowongan lewat personalisasi AI.",
+            },
+            {
+              label: "Layar ini",
+              value:
+                "Dashboard milik pelamar: ringkasan lamaran yang sedang berjalan, jadwal interview terdekat, dan tabel lamaran aktif.",
+            },
+            {
+              label: "Objective",
+              value:
+                "Menjawab satu pertanyaan yang paling sering muncul di kepala pencari kerja: sudah sejauh mana lamaranku, dan apa yang perlu disiapkan minggu ini.",
+            },
+          ],
+          body: [
+            "Mencari kerja itu proses panjang yang tersebar di banyak tempat — email, kalender, catatan sendiri. Dashboard ini menarik semuanya ke satu layar supaya pelamar tidak perlu mengingat-ingat lamaran mana yang sudah dibalas dan mana yang belum.",
+          ],
+        },
+        {
+          heading: "Angka yang selalu membawa pembanding",
+          lead:
+            "Empat kartu di atas, dan tidak satu pun berdiri sendirian.",
+          body: [
+            "New matches 24, Applications 12, Interviews 3, Response rate 50%. Tiap kartu membawa sparkline dan selisih terhadap minggu lalu, jadi angkanya langsung punya arah — naik atau turun — tanpa perlu membuka halaman lain.",
+            "Yang menarik, kartu Response rate menunjukkan −3% dan ditandai merah. Dashboard ini tidak menyembunyikan angka yang sedang memburuk, padahal itu angka yang paling menyakitkan untuk pencari kerja. Menyembunyikannya justru akan membuat pelamar tidak tahu kapan harus mengubah strategi.",
+          ],
+          image: {
+            src: A.mwKpi,
+            alt: "Empat kartu ringkasan dengan sparkline dan selisih mingguan",
+            caption:
+              "Tiap angka didampingi tren mingguan — termasuk yang sedang turun",
+          },
+        },
+        {
+          heading: "Skor kecocokan ikut sampai ke tabel lamaran",
+          lead:
+            "Janji “match” tidak berhenti di halaman pencarian.",
+          body: [
+            "Di tabel lamaran aktif, tiap baris membawa kolom MATCH beserta bar-nya — 92%, 88%, 85%, 81%, 76%, 58%. Angka yang dipakai saat merekomendasikan lowongan tetap menempel setelah lamaran dikirim.",
+            "Karena skor itu berdampingan dengan kolom STAGE, pelamar bisa melihat sendiri hubungan antara seberapa cocok sebuah lowongan dengan sejauh mana lamarannya berjalan. Itu umpan balik yang berguna: bukan cuma “lamaranmu ditolak”, tapi juga bahan untuk menilai lowongan mana yang sebenarnya layak dikejar.",
+          ],
+          image: {
+            src: A.mwTable,
+            alt: "Tabel lamaran aktif dengan kolom stage dan skor kecocokan",
+            caption:
+              "Kolom MATCH berdampingan dengan STAGE, jadi kecocokan dan hasil terbaca bersamaan",
+          },
+        },
+        {
+          heading: "Menyaring tanpa berpindah halaman",
+          lead:
+            "Tab stage menyaring di tempat, dan baris yang tidak cocok diredupkan, bukan dihapus.",
+          body: [
+            "Tab All, Interview, In review, dan Offer ada di kepala tabel. Menekan salah satunya membuat baris yang tidak termasuk meredup sementara barisnya tetap di tempatnya.",
+            "Pilihan ini menjaga rasa posisi: pelamar tetap melihat keseluruhan daftarnya dan tahu di mana baris yang disorot berada di antara yang lain. Kalau barisnya dihapus dan daftarnya memendek, tiap penyaringan akan terasa seperti berpindah ke halaman baru.",
+          ],
+        },
+        {
+          heading: "Jadwal yang benar-benar dekat",
+          lead:
+            "Empat interview minggu ini, lengkap dengan cara pelaksanaannya.",
+          body: [
+            "Tiap baris membawa tanggal, nama posisi, perusahaan, jam, dan satu badge yang menyebut bentuk interviewnya — Video call, On-site, atau Phone. Badge itu kecil tapi menentukan: on-site berarti harus menghitung waktu perjalanan, phone berarti cukup memastikan sinyal.",
+            "Daftarnya ditutup kalimat “That’s all for this week”, bukan dibiarkan menggantung. Pelamar jadi tahu bahwa daftarnya memang habis, bukan terpotong.",
+            "Grafik di sebelahnya menghitung 48 lamaran terkirim tahun ini dengan bar per bulan, dan September disorot lime sebagai bulan tertinggi. Rentangnya bisa diganti antara 3 bulan, 6 bulan, dan sepanjang tahun.",
+          ],
+          image: {
+            src: A.mwChart,
+            alt: "Grafik lamaran terkirim dan daftar interview mendatang",
+            caption:
+              "Riwayat panjang di kiri, yang perlu disiapkan minggu ini di kanan",
+          },
+        },
+        {
+          heading: "Sidebar sebagai peta proses",
+          lead:
+            "Menunya tidak disusun berdasarkan fitur, tapi berdasarkan tahap yang dilalui pelamar.",
+          body: [
+            "Kelompok pertama untuk mencari — Dashboard, Matchwork AI, Find jobs, Saved jobs, Companies. Kelompok Applications untuk yang sedang berjalan — Applied, Interviews, Messages. Kelompok Profile untuk bekal yang dibawa — Resume, Portfolio, Job alerts.",
+            "Di bawahnya ada Saved searches dengan jumlah lowongan baru di tiap pencarian: Frontend · Jakarta +5, Remote UI/UX +3, ML Internship +2. Pencarian yang disimpan jadi terasa hidup, bukan sekadar daftar kata kunci.",
+            "Di paling atas ada sakelar “Open to work”, diletakkan tepat di bawah logo. Posisinya menandakan status itu sesuatu yang sering diubah, bukan pengaturan yang disembunyikan di halaman profil.",
+          ],
+          image: {
+            src: A.mwSidebar,
+            alt: "Sidebar Matchwork dengan kelompok menu dan saved searches",
+          },
+        },
+      ],
+    },
+  },
 ];
 
 /** Terbaru di atas. */

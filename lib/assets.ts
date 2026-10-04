@@ -57,6 +57,13 @@ export const A = {
   matchVideo: "/assets/match-brand.mp4",
   matchPoster: "/assets/match-poster.webp",
 
+  mwVideo: "/assets/matchwork-web.mp4",
+  mwPoster: "/assets/matchwork-web-poster.webp",
+  mwKpi: "/assets/mw-kpi.webp",
+  mwChart: "/assets/mw-chart.webp",
+  mwTable: "/assets/mw-table.webp",
+  mwSidebar: "/assets/mw-sidebar.webp",
+
   mewsVideo: "/assets/mews-mayangan.mp4",
   mewsPoster: "/assets/mews-mayangan-poster.webp",
   mewsDashboard: "/assets/mews-dashboard.webp",
