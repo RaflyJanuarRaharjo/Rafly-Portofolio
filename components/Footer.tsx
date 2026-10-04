@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { cta, profile } from "@/lib/data";
+import { pick, ui, useLang } from "@/lib/i18n";
 
 const pages = [
   { href: "/", label: "Home" },
@@ -13,6 +16,7 @@ const pages = [
 const email = cta.href.replace("mailto:", "");
 
 export default function Footer() {
+  const { lang } = useLang();
   return (
     <footer className="w-full border-t border-neutral-300">
       <div className="flex w-full flex-col gap-[32px] px-[16px] py-[32px] md:flex-row md:justify-between md:gap-[48px] md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
@@ -22,7 +26,7 @@ export default function Footer() {
             {profile.name}
           </p>
           <p className="text-[14px] text-neutral-500 md:text-[16px] lg:text-[18px]">
-            {profile.headline}
+            {pick(profile.headline, lang)}
           </p>
           <a
             href={cta.href}
@@ -36,7 +40,7 @@ export default function Footer() {
         <div className="flex gap-[48px] md:gap-[64px] lg:gap-[96px]">
           <nav aria-label="Halaman" className="flex flex-col gap-[10px]">
             <p className="text-[13px] uppercase tracking-[0.08em] text-neutral-500 lg:text-[14px]">
-              Halaman
+              {pick(ui.pages, lang)}
             </p>
             {pages.map((p) => (
               <Link
@@ -51,7 +55,7 @@ export default function Footer() {
 
           <nav aria-label="Sosial" className="flex flex-col gap-[10px]">
             <p className="text-[13px] uppercase tracking-[0.08em] text-neutral-500 lg:text-[14px]">
-              Sosial
+              {pick(ui.social, lang)}
             </p>
             {profile.socials.map((s) => (
               <a

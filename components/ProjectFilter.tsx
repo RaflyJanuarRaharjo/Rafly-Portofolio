@@ -3,10 +3,12 @@
 import { useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import type { ProjectItem } from "@/lib/data";
+import { pick, ui, useLang } from "@/lib/i18n";
 
 const ALL = "All";
 
 export default function ProjectFilter({ projects }: { projects: ProjectItem[] }) {
+  const { lang } = useLang();
   /* Daftar chip diturunkan dari data, urut sesuai kemunculan pertama.
      Jadi menambah kategori cukup lewat `tags` di lib/data.ts. */
   const tags = [ALL, ...Array.from(new Set(projects.flatMap((p) => p.tags ?? [])))];
@@ -51,7 +53,7 @@ export default function ProjectFilter({ projects }: { projects: ProjectItem[] })
                   : "border-neutral-200 bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
               }`}
             >
-              {tag}
+              {tag === ALL ? pick(ui.filterAll, lang) : tag}
               <span className={on ? "text-neutral-300" : "text-neutral-400"}>
                 {countOf(tag)}
               </span>
@@ -62,7 +64,7 @@ export default function ProjectFilter({ projects }: { projects: ProjectItem[] })
 
       {shown.length === 0 ? (
         <div className="w-full px-[16px] py-[48px] text-center text-[16px] text-neutral-500 md:px-[48px] lg:px-[80px] lg:text-[20px]">
-          Belum ada project di kategori ini.
+          {pick(ui.emptyCategory, lang)}
         </div>
       ) : (
         shown.map((project) => <ProjectCard key={project.slug} project={project} />)

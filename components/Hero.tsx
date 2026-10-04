@@ -3,11 +3,14 @@
 import { useState } from "react";
 import { A } from "@/lib/assets";
 import { profile } from "@/lib/data";
+import { pick, useLang } from "@/lib/i18n";
 import SocialLinks from "@/components/SocialLinks";
 
 export default function Hero() {
+  const { lang } = useLang();
   const [open, setOpen] = useState(false);
-  const shown = open ? profile.bio : profile.bio.slice(0, 1);
+  const bio = profile.bio.map((b) => pick(b, lang));
+  const shown = open ? bio : bio.slice(0, 1);
 
   return (
     <header className="flex w-full flex-col items-center justify-center gap-[20px] pb-[24px] md:gap-[32px] lg:gap-[40px] lg:pb-[32px]">
@@ -45,7 +48,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center lg:px-[8px]">
               <p className="text-[15px] text-neutral-600 md:text-[19px] lg:text-[24px]">
-                {profile.role}
+                {pick(profile.role, lang)}
               </p>
             </div>
           </div>
@@ -67,7 +70,13 @@ export default function Hero() {
                 aria-expanded={open}
                 className="ml-[8px] cursor-pointer font-medium text-neutral-600 underline underline-offset-4 transition-colors hover:text-neutral-800"
               >
-                {open ? "Read less" : "Read more"}
+                {open
+                  ? lang === "en"
+                    ? "Read less"
+                    : "Tutup"
+                  : lang === "en"
+                    ? "Read more"
+                    : "Selengkapnya"}
               </button>
             )}
           </p>

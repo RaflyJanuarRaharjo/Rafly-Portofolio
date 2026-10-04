@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
+import { pick, ui, useLang } from "@/lib/i18n";
 
 type Manifest = { width: number; height: number; pages: string[] };
 
@@ -20,6 +21,7 @@ const SPREAD_AT = 900;
 const MAX_PAGE = 560;
 
 export default function PdfFlipbook({ dir }: Props) {
+  const { lang } = useLang();
   const [data, setData] = useState<Manifest | null>(null);
   const [error, setError] = useState(false);
   const [box, setBox] = useState(0);
@@ -50,7 +52,7 @@ export default function PdfFlipbook({ dir }: Props) {
   if (error) {
     return (
       <div className="py-[64px] text-center text-[20px] text-neutral-600">
-        Case study belum tersedia.
+        {pick(ui.caseStudyMissing, lang)}
       </div>
     );
   }
@@ -65,7 +67,7 @@ export default function PdfFlipbook({ dir }: Props) {
   return (
     <div ref={wrapRef} className="flex w-full flex-col items-center gap-[24px]">
       {!ready ? (
-        <div className="py-[64px] text-[20px] text-neutral-500">Memuat…</div>
+        <div className="py-[64px] text-[20px] text-neutral-500">{pick(ui.loading, lang)}</div>
       ) : (
         <>
           {/* key: paksa flipbook dibangun ulang saat ukuran berubah. */}

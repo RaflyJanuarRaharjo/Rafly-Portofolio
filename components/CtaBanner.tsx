@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import { cta } from "@/lib/data";
+import { pick, useLang } from "@/lib/i18n";
 
 /** Banner ajakan di bagian bawah halaman. Memakai video yang sama dengan hero. */
 export default function CtaBanner() {
+  const { lang } = useLang();
   const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -46,16 +48,16 @@ export default function CtaBanner() {
 
       <div className="absolute inset-0 flex flex-col justify-center gap-[12px] px-[16px] md:gap-[16px] md:px-[48px] lg:gap-[20px] lg:px-[80px]">
         <h2 className="max-w-[620px] text-[22px] font-bold leading-[30px] text-[#fff] md:text-[30px] md:leading-[40px] lg:text-[38px] lg:leading-[48px]">
-          {cta.headline}
+          {pick(cta.headline, lang)}
         </h2>
         <p className="max-w-[520px] text-[14px] leading-[22px] text-[#fff]/85 md:text-[16px] md:leading-[26px] lg:text-[18px] lg:leading-[29px]">
-          {cta.tagline}
+          {pick(cta.tagline, lang)}
         </p>
         <a
           href={cta.href}
           className="mt-[4px] flex w-fit items-center justify-center rounded-full bg-[#fff] px-[20px] py-[10px] text-[14px] font-medium text-[#262626] transition-colors hover:bg-[#e5e5e5] md:px-[26px] md:py-[12px] md:text-[16px] lg:px-[30px] lg:py-[14px] lg:text-[18px]"
         >
-          {cta.label}
+          {pick(cta.label, lang)}
         </a>
       </div>
     </section>

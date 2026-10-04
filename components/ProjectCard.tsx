@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import ProjectVideo from "@/components/ProjectVideo";
 import { A } from "@/lib/assets";
 import type { ProjectItem } from "@/lib/data";
+import { pick, ui, useLang } from "@/lib/i18n";
 
 export default function ProjectCard({ project }: { project: ProjectItem }) {
+  const { lang } = useLang();
   /* Tiga gaya banner: deretan HP (APO Mitra), satu gambar lebar (EDUNEX,
      GLIDEXA), atau video (MEWS). Video menang atas cover. */
   const media = project.shots ? null : project.video ? "video" : project.cover ? "image" : null;
@@ -73,7 +77,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
             {project.title}
           </h3>
           <p className="text-[14px] leading-[22px] text-neutral-500 md:text-[18px] md:leading-[28px] lg:text-[24px] lg:leading-[36px]">
-            {project.summary}
+            {pick(project.summary, lang)}
           </p>
         </div>
 
@@ -85,14 +89,14 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
               rel="noopener noreferrer"
               className="flex flex-1 items-center justify-center border border-neutral-200 bg-neutral-100 px-[20px] py-[12px] text-center text-[15px] font-medium text-neutral-600 transition-colors hover:bg-neutral-200 md:py-[18px] md:text-[19px] lg:px-[32px] lg:py-[24px] lg:text-[24px]"
             >
-              View Prototype
+              {pick(ui.viewPrototype, lang)}
             </a>
           )}
           <Link
             href={`/portfolio/${project.slug}`}
             className="flex flex-1 items-center justify-center border border-neutral-200 bg-neutral-600 px-[20px] py-[12px] text-center text-[15px] font-medium text-neutral-100 transition-colors hover:bg-neutral-800 md:py-[18px] md:text-[19px] lg:px-[32px] lg:py-[24px] lg:text-[24px]"
           >
-            View Case Study
+            {pick(ui.viewCaseStudy, lang)}
           </Link>
         </div>
       </div>

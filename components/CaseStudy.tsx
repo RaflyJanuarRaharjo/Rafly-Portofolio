@@ -1,11 +1,18 @@
+"use client";
+
 import type { ProjectItem, StorySection } from "@/lib/data";
+import { pick, ui, useLang, type Lang } from "@/lib/i18n";
 
 /**
  * Case study versi halaman biasa — alternatif dari flipbook PDF.
  * Isinya datang dari `story` di lib/data.ts, jadi project lain tinggal
  * menambah datanya tanpa menyentuh komponen ini.
+ *
+ * Semua teks dibungkus pick() supaya ikut tombol bahasa. Field yang isinya
+ * cuma satu string tetap tampil apa adanya di kedua bahasa.
  */
 export default function CaseStudy({ project }: { project: ProjectItem }) {
+  const { lang } = useLang();
   const story = project.story;
   if (!story) return null;
 
@@ -14,29 +21,31 @@ export default function CaseStudy({ project }: { project: ProjectItem }) {
       {/* Kepala */}
       <header className="w-full border-b border-neutral-300 px-[16px] py-[32px] md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
         <p className="text-[15px] text-neutral-500 md:text-[18px] lg:text-[20px]">
-          {story.tagline}
+          {pick(story.tagline, lang)}
         </p>
         <h1 className="mt-[8px] text-[26px] font-medium leading-[34px] text-neutral-800 md:text-[36px] md:leading-[44px] lg:text-[44px] lg:leading-[54px]">
           {project.title}
         </h1>
         <p className="mt-[16px] max-w-[760px] text-[15px] leading-[24px] text-neutral-600 md:text-[18px] md:leading-[28px] lg:text-[20px] lg:leading-[32px]">
-          {project.summary}
+          {pick(project.summary, lang)}
         </p>
 
         <dl className="mt-[28px] grid grid-cols-2 gap-[16px] md:grid-cols-4 lg:mt-[36px]">
-          {story.meta.map((m) => (
-            <div key={m.label}>
-              <dt className="text-[13px] text-neutral-500 md:text-[15px]">{m.label}</dt>
+          {story.meta.map((m, i) => (
+            <div key={i}>
+              <dt className="text-[13px] text-neutral-500 md:text-[15px]">
+                {pick(m.label, lang)}
+              </dt>
               <dd className="mt-[2px] text-[15px] font-medium text-neutral-800 md:text-[18px]">
-                {m.value}
+                {pick(m.value, lang)}
               </dd>
             </div>
           ))}
         </dl>
       </header>
 
-      {story.sections.map((section) => (
-        <Section key={section.heading} section={section} />
+      {story.sections.map((section, i) => (
+        <Section key={i} section={section} lang={lang} />
       ))}
 
       {/* Tautan penutup */}
@@ -50,26 +59,25 @@ export default function CaseStudy({ project }: { project: ProjectItem }) {
               rel="noopener noreferrer"
               className="flex flex-1 items-center justify-center border border-neutral-200 bg-neutral-600 px-[20px] py-[12px] text-center text-[15px] font-medium text-neutral-100 transition-colors hover:bg-neutral-800 md:py-[18px] md:text-[19px] lg:py-[24px] lg:text-[24px]"
             >
-              {l.label}
+              {pick(l.label, lang)}
             </a>
           ))}
         </div>
       ) : null}
-
     </article>
   );
 }
 
-function Section({ section }: { section: StorySection }) {
+function Section({ section, lang }: { section: StorySection; lang: Lang }) {
   return (
     <section className="w-full border-b border-neutral-300 px-[16px] py-[32px] md:px-[48px] md:py-[48px] lg:px-[80px] lg:py-[64px]">
       <h2 className="text-[20px] font-medium text-neutral-800 md:text-[26px] lg:text-[32px]">
-        {section.heading}
+        {pick(section.heading, lang)}
       </h2>
 
       {section.lead && (
         <p className="mt-[10px] max-w-[760px] text-[16px] leading-[26px] text-neutral-800 md:text-[20px] md:leading-[32px] lg:text-[24px] lg:leading-[38px]">
-          {section.lead}
+          {pick(section.lead, lang)}
         </p>
       )}
 
@@ -78,22 +86,22 @@ function Section({ section }: { section: StorySection }) {
           key={i}
           className="mt-[14px] max-w-[760px] text-[15px] leading-[24px] text-neutral-600 md:text-[17px] md:leading-[28px] lg:text-[19px] lg:leading-[32px]"
         >
-          {p}
+          {pick(p, lang)}
         </p>
       ))}
 
       {section.stats && (
         <div className="mt-[24px] grid grid-cols-1 gap-[12px] sm:grid-cols-3 lg:mt-[32px] lg:gap-[16px]">
-          {section.stats.map((s) => (
+          {section.stats.map((s, i) => (
             <div
-              key={s.label}
+              key={i}
               className="border border-neutral-200 bg-neutral-100 px-[16px] py-[16px] lg:px-[24px] lg:py-[20px]"
             >
               <p className="text-[22px] font-medium text-neutral-800 md:text-[28px] lg:text-[34px]">
-                {s.value}
+                {pick(s.value, lang)}
               </p>
               <p className="mt-[2px] text-[13px] text-neutral-600 md:text-[15px] lg:text-[17px]">
-                {s.label}
+                {pick(s.label, lang)}
               </p>
             </div>
           ))}
@@ -102,21 +110,21 @@ function Section({ section }: { section: StorySection }) {
 
       {section.cards && (
         <div className="mt-[24px] grid grid-cols-1 gap-[12px] md:grid-cols-3 lg:mt-[32px] lg:gap-[16px]">
-          {section.cards.map((c) => (
+          {section.cards.map((c, i) => (
             <div
-              key={c.title}
+              key={i}
               className="border border-neutral-200 px-[16px] py-[16px] lg:px-[20px] lg:py-[20px]"
             >
               <p className="text-[16px] font-medium text-neutral-800 lg:text-[19px]">
-                {c.title}
+                {pick(c.title, lang)}
               </p>
               {c.meta && (
                 <p className="mt-[2px] text-[13px] text-neutral-500 lg:text-[15px]">
-                  {c.meta}
+                  {pick(c.meta, lang)}
                 </p>
               )}
               <p className="mt-[10px] text-[14px] leading-[22px] text-neutral-600 lg:text-[16px] lg:leading-[26px]">
-                {c.body}
+                {pick(c.body, lang)}
               </p>
             </div>
           ))}
@@ -125,16 +133,16 @@ function Section({ section }: { section: StorySection }) {
 
       {section.rows && (
         <dl className="mt-[20px] w-full border-t border-neutral-200 lg:mt-[28px]">
-          {section.rows.map((r) => (
+          {section.rows.map((r, i) => (
             <div
-              key={r.label}
+              key={i}
               className="flex flex-col gap-[2px] border-b border-neutral-200 py-[12px] md:flex-row md:gap-[24px] md:py-[14px]"
             >
               <dt className="shrink-0 text-[14px] text-neutral-500 md:w-[180px] md:text-[16px] lg:w-[220px] lg:text-[18px]">
-                {r.label}
+                {pick(r.label, lang)}
               </dt>
               <dd className="text-[15px] leading-[24px] text-neutral-800 md:text-[17px] md:leading-[28px] lg:text-[19px] lg:leading-[30px]">
-                {r.value}
+                {pick(r.value, lang)}
               </dd>
             </div>
           ))}
@@ -144,16 +152,16 @@ function Section({ section }: { section: StorySection }) {
       {section.steps && (
         <ol className="mt-[20px] flex max-w-[760px] flex-col gap-[16px] lg:mt-[28px] lg:gap-[20px]">
           {section.steps.map((st, i) => (
-            <li key={st.title} className="flex gap-[14px] lg:gap-[20px]">
+            <li key={i} className="flex gap-[14px] lg:gap-[20px]">
               <span className="shrink-0 pt-[2px] text-[14px] font-medium tabular-nums text-neutral-500 lg:text-[17px]">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
                 <p className="text-[15px] font-medium text-neutral-800 md:text-[17px] lg:text-[20px]">
-                  {st.title}
+                  {pick(st.title, lang)}
                 </p>
                 <p className="mt-[4px] text-[14px] leading-[22px] text-neutral-600 md:text-[16px] md:leading-[26px] lg:text-[18px] lg:leading-[30px]">
-                  {st.body}
+                  {pick(st.body, lang)}
                 </p>
               </div>
             </li>
@@ -167,13 +175,13 @@ function Section({ section }: { section: StorySection }) {
           <table className="w-full min-w-[560px] border-collapse text-left">
             <thead>
               <tr>
-                {section.table.head.map((h) => (
+                {section.table.head.map((h, i) => (
                   <th
-                    key={h}
+                    key={i}
                     scope="col"
                     className="border border-neutral-200 bg-neutral-100 px-[12px] py-[10px] text-[13px] font-medium text-neutral-800 md:px-[16px] md:text-[15px] lg:text-[17px]"
                   >
-                    {h}
+                    {pick(h, lang)}
                   </th>
                 ))}
               </tr>
@@ -193,10 +201,10 @@ function Section({ section }: { section: StorySection }) {
                           aria-label={cell ? "ada" : "tidak ada"}
                           className={cell ? "text-neutral-800" : "text-neutral-500"}
                         >
-                          {cell ? "\u2713" : "\u2013"}
+                          {cell ? "✓" : "–"}
                         </span>
                       ) : (
-                        cell
+                        pick(cell, lang)
                       )}
                     </td>
                   ))}
@@ -209,13 +217,13 @@ function Section({ section }: { section: StorySection }) {
 
       {section.bullets && (
         <ul className="mt-[20px] flex max-w-[760px] flex-col gap-[8px] lg:mt-[28px] lg:gap-[10px]">
-          {section.bullets.map((b) => (
+          {section.bullets.map((b, i) => (
             <li
-              key={b}
+              key={i}
               className="flex gap-[10px] text-[15px] leading-[24px] text-neutral-600 md:text-[17px] md:leading-[28px] lg:text-[19px] lg:leading-[32px]"
             >
               <span aria-hidden className="mt-[9px] size-[5px] shrink-0 bg-neutral-500 lg:mt-[12px]" />
-              {b}
+              {pick(b, lang)}
             </li>
           ))}
         </ul>
@@ -224,17 +232,27 @@ function Section({ section }: { section: StorySection }) {
       {/* Gambar lebar duluan — ia memberi konteks, deretan layar jadi detailnya. */}
       {section.image && (
         <figure className="mt-[24px] lg:mt-[32px]">
-          <a href={section.image.src} target="_blank" rel="noopener noreferrer">
+          {/* Tanpa w-full: gambar tampil paling besar seukuran aslinya dan
+              hanya mengecil kalau kolomnya lebih sempit, jadi tidak pernah
+              dipaksa melar sampai pecah. */}
+          <a
+            href={section.image.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-fit max-w-full"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={section.image.src}
-              alt={section.image.alt}
+              alt={pick(section.image.alt, lang)}
               loading="lazy"
-              className="w-full border border-neutral-200 bg-neutral-100"
+              className="h-auto max-w-full border border-neutral-200 bg-neutral-100"
             />
           </a>
           <figcaption className="mt-[8px] text-[13px] text-neutral-500 lg:text-[15px]">
-            {section.image.caption ?? "Ketuk gambar untuk ukuran penuh"}
+            {section.image.caption
+              ? pick(section.image.caption, lang)
+              : pick(ui.tapForFullSize, lang)}
           </figcaption>
         </figure>
       )}
@@ -245,18 +263,23 @@ function Section({ section }: { section: StorySection }) {
         <div className="mt-[24px] flex flex-col gap-[20px] lg:mt-[32px] lg:gap-[28px]">
           {section.figures.map((f) => (
             <figure key={f.src}>
-              <a href={f.src} target="_blank" rel="noopener noreferrer">
+              <a
+                href={f.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-fit max-w-full"
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={f.src}
-                  alt={f.alt}
+                  alt={pick(f.alt, lang)}
                   loading="lazy"
-                  className="w-full border border-neutral-200 bg-neutral-100"
+                  className="h-auto max-w-full border border-neutral-200 bg-neutral-100"
                 />
               </a>
               {f.caption && (
                 <figcaption className="mt-[8px] text-[13px] text-neutral-500 lg:text-[15px]">
-                  {f.caption}
+                  {pick(f.caption, lang)}
                 </figcaption>
               )}
             </figure>
@@ -280,7 +303,7 @@ function Section({ section }: { section: StorySection }) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={g.src}
-                  alt={g.alt}
+                  alt={pick(g.alt, lang)}
                   loading="lazy"
                   className="h-[240px] w-auto rounded-[8px] border border-neutral-200 bg-neutral-100 md:h-[300px] lg:h-[400px]"
                 />
@@ -300,7 +323,7 @@ function Section({ section }: { section: StorySection }) {
               rel="noopener noreferrer"
               className="border border-neutral-200 bg-neutral-100 px-[18px] py-[10px] text-[14px] font-medium text-neutral-600 transition-colors hover:bg-neutral-200 md:text-[16px] lg:px-[24px] lg:py-[12px] lg:text-[18px]"
             >
-              {l.label}
+              {pick(l.label, lang)}
             </a>
           ))}
         </div>
